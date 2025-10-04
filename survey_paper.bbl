@@ -1,0 +1,322 @@
+\begin{thebibliography}{10}
+
+\bibitem{abdollahpouri2019unfairness}
+{\sc Abdollahpouri, H., Mansoury, M., Burke, R., and Mobasher, B.}
+\newblock The unfairness of popularity bias in recommendation.
+\newblock {\em arXiv preprint arXiv:1907.13286\/} (2019).
+
+\bibitem{adomavicius2011context}
+{\sc Adomavicius, G., and Tuzhilin, A.}
+\newblock Context-aware recommender systems.
+\newblock In {\em Recommender systems handbook\/} (2011), Springer,
+  pp.~217--253.
+
+\bibitem{bennett2007netflix}
+{\sc Bennett, J., and Lanning, S.}
+\newblock The netflix prize.
+\newblock In {\em Proceedings of KDD cup and workshop\/} (2007), vol.~2007,
+  p.~35.
+
+\bibitem{bonner2018causal}
+{\sc Bonner, S., and Vasile, F.}
+\newblock Causal embeddings for recommendation.
+\newblock In {\em Proceedings of the 12th ACM Conference on Recommender
+  Systems\/} (2018), pp.~104--112.
+
+\bibitem{breese1998empirical}
+{\sc Breese, J.~S., Heckerman, D., and Kadie, C.}
+\newblock Empirical analysis of predictive algorithms for collaborative
+  filtering.
+\newblock In {\em Proceedings of the Fourteenth conference on Uncertainty in
+  artificial intelligence\/} (1998), pp.~43--52.
+
+\bibitem{chai2020secure}
+{\sc Chai, D., Wang, L., Chen, K., and Yang, Q.}
+\newblock Secure federated matrix factorization.
+\newblock In {\em IEEE Intelligent Systems\/} (2021), vol.~36, IEEE,
+  pp.~11--20.
+
+\bibitem{chen2017attentive}
+{\sc Chen, J., Zhang, H., He, X., Nie, L., Liu, W., and Chua, T.-S.}
+\newblock Attentive collaborative filtering: Multimedia recommendation with
+  item-and component-level attention.
+\newblock In {\em Proceedings of the 40th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval\/} (2017), pp.~335--344.
+
+\bibitem{chen2019large}
+{\sc Chen, L., Lv, Y., Wang, H., Huang, X., Gu, L., and Sun, J.}
+\newblock Large-scale interactive recommendation with tree-structured policy
+  gradient.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence\/} (2019), vol.~33, pp.~3411--3418.
+
+\bibitem{dacrema2019we}
+{\sc Dacrema, M.~F., Cremonesi, P., and Jannach, D.}
+\newblock Are we really making much progress? a worrying analysis of recent
+  neural recommendation approaches.
+\newblock In {\em Proceedings of the 13th ACM Conference on Recommender
+  Systems\/} (2019), pp.~101--109.
+
+\bibitem{dwork2014algorithmic}
+{\sc Dwork, C., and Roth, A.}
+\newblock The algorithmic foundations of differential privacy.
+\newblock {\em Foundations and Trends{\textregistered} in Theoretical Computer
+  Science 9}, 3--4 (2014), 211--407.
+
+\bibitem{ekstrand2022fairness}
+{\sc Ekstrand, M.~D., Tian, M., Kazi, M. R.~I., Mehrpouyan, H., and Kluver, D.}
+\newblock Fairness in recommendation: Foundations, methods and applications.
+\newblock In {\em International Conference on Artificial Intelligence and
+  Statistics\/} (2022), PMLR, pp.~9267--9278.
+
+\bibitem{gao2019neural}
+{\sc Gao, C., Zhang, X., Wang, X., Li, X., and Xiao, W.}
+\newblock Neural multi-task recommendation from multi-behavior data.
+\newblock In {\em 2019 IEEE 35th International Conference on Data Engineering
+  (ICDE)\/} (2019), IEEE, pp.~1546--1551.
+
+\bibitem{geyik2019fairness}
+{\sc Geyik, S.~C., Ambler, S., and Kenthapadi, K.}
+\newblock Fairness-aware ranking in search \& recommendation systems with
+  application to linkedin talent search.
+\newblock In {\em Proceedings of the 25th ACM SIGKDD International Conference
+  on Knowledge Discovery \& Data Mining\/} (2019), pp.~2221--2231.
+
+\bibitem{harper2015movielens}
+{\sc Harper, F.~M., and Konstan, J.~A.}
+\newblock The movielens datasets: History and context.
+\newblock {\em ACM transactions on interactive intelligent systems (tiis) 5}, 4
+  (2015), 1--19.
+
+\bibitem{he2020lightgcn}
+{\sc He, X., Deng, K., Wang, X., Li, Y., Zhang, Y., and Wang, M.}
+\newblock Lightgcn: Simplifying and powering graph convolution network for
+  recommendation.
+\newblock In {\em Proceedings of the 43rd International ACM SIGIR conference on
+  research and development in Information Retrieval\/} (2020), pp.~639--648.
+
+\bibitem{he2016ups}
+{\sc He, X., Liao, L., Zhang, H., Nie, L., Hu, X., and Chua, T.-S.}
+\newblock Neural collaborative filtering.
+\newblock In {\em Proceedings of the 26th international conference on world
+  wide web\/} (2016), pp.~173--182.
+
+\bibitem{he2017neural}
+{\sc He, X., Liao, L., Zhang, H., Nie, L., Hu, X., and Chua, T.-S.}
+\newblock Neural collaborative filtering.
+\newblock In {\em Proceedings of the 26th international conference on world
+  wide web\/} (2017), pp.~173--182.
+
+\bibitem{he2016fast}
+{\sc He, X., Zhang, H., Kan, M.-Y., and Chua, T.-S.}
+\newblock Fast matrix factorization for online recommendation with implicit
+  feedback.
+\newblock In {\em Proceedings of the 39th International ACM SIGIR conference on
+  Research and Development in Information Retrieval\/} (2016), pp.~549--558.
+
+\bibitem{herlocker2004evaluating}
+{\sc Herlocker, J.~L., Konstan, J.~A., Terveen, L.~G., and Riedl, J.~T.}
+\newblock Evaluating collaborative filtering recommender systems.
+\newblock {\em ACM Transactions on Information Systems (TOIS) 22}, 1 (2004),
+  5--53.
+
+\bibitem{hidasi2015session}
+{\sc Hidasi, B., Karatzoglou, A., Baltrunas, L., and Tikk, D.}
+\newblock Session-based recommendations with recurrent neural networks.
+\newblock In {\em International Conference on Learning Representations\/}
+  (2015).
+
+\bibitem{hou2023large}
+{\sc Hou, Y., Li, J., He, Z., Yan, A., Chen, X., and McAuley, J.}
+\newblock Large language models are zero-shot rankers for recommender systems.
+\newblock In {\em arXiv preprint arXiv:2305.08845\/} (2023).
+
+\bibitem{hu2008collaborative}
+{\sc Hu, Y., Koren, Y., and Volinsky, C.}
+\newblock Collaborative filtering for implicit feedback datasets.
+\newblock {\em 2008 Eighth IEEE International Conference on Data Mining\/}
+  (2008), 263--272.
+
+\bibitem{huang2012you}
+{\sc Huang, Z., and Zeng, D.}
+\newblock You are what you click: User profiling based on click behavior.
+\newblock In {\em Proceedings of the 21st ACM international conference on
+  Information and knowledge management\/} (2012), pp.~2317--2321.
+
+\bibitem{joachims2017accurately}
+{\sc Joachims, T., Swaminathan, A., and Schnabel, T.}
+\newblock Accurately predicting user experience of web search: Offline
+  evaluation, word order, and the mysterious case of position truncation.
+\newblock In {\em Proceedings of the 2017 ACM on Conference on Information and
+  Knowledge Management\/} (2017), pp.~237--246.
+
+\bibitem{koren2009matrix}
+{\sc Koren, Y., Bell, R., and Volinsky, C.}
+\newblock Matrix factorization techniques for recommender systems.
+\newblock {\em Computer 42}, 8 (2009), 30--37.
+
+\bibitem{lian2017cccfnet}
+{\sc Lian, J., Zhang, F., Xie, X., and Sun, G.}
+\newblock Cccfnet: A content-boosted collaborative filtering neural network for
+  cross domain recommender systems.
+\newblock In {\em Proceedings of the 26th International Conference on World
+  Wide Web Companion\/} (2017), pp.~817--818.
+
+\bibitem{linden2003amazon}
+{\sc Linden, G., Smith, B., and York, J.}
+\newblock Amazon. com recommendations: Item-to-item collaborative filtering.
+\newblock vol.~7, IEEE, pp.~76--80.
+
+\bibitem{liu2010personalized}
+{\sc Liu, J., Dolan, P., and Pedersen, E.~R.}
+\newblock Personalized news recommendation based on click behavior.
+\newblock In {\em Proceedings of the 15th international conference on
+  Intelligent user interfaces\/} (2010), pp.~31--40.
+
+\bibitem{ma2011recommender}
+{\sc Ma, H., King, I., and Lyu, M.~R.}
+\newblock Recommender systems with social regularization.
+\newblock In {\em Proceedings of the fourth ACM international conference on Web
+  search and data mining\/} (2011), pp.~287--296.
+
+\bibitem{ma2011learning}
+{\sc Ma, H., Yang, H., Lyu, M.~R., and King, I.}
+\newblock Learning to recommend with explicit and implicit social relations.
+\newblock In {\em ACM Transactions on Intelligent Systems and Technology
+  (TIST)\/} (2011), vol.~2, ACM, pp.~1--19.
+
+\bibitem{mcmahan2017communication}
+{\sc McMahan, B., Moore, E., Ramage, D., Hampson, S., and Arcas, B. A.~y.}
+\newblock Communication-efficient learning of deep networks from decentralized
+  data.
+\newblock {\em Artificial intelligence and statistics\/} (2017), 1273--1282.
+
+\bibitem{pan2008one}
+{\sc Pan, R., Zhou, Y., Cao, B., Liu, N.~N., Lukose, R., Scholz, M., and Yang,
+  Q.}
+\newblock One-class collaborative filtering.
+\newblock In {\em 2008 Eighth IEEE International Conference on Data Mining\/}
+  (2008), IEEE, pp.~502--511.
+
+\bibitem{rendle2009bpr}
+{\sc Rendle, S., Freudenthaler, C., Gantner, Z., and Schmidt-Thieme, L.}
+\newblock Bpr: Bayesian personalized ranking from implicit feedback.
+\newblock In {\em Proceedings of the twenty-fifth conference on uncertainty in
+  artificial intelligence\/} (2009), pp.~452--461.
+
+\bibitem{schein2002methods}
+{\sc Schein, A.~I., Popescul, A., Ungar, L.~H., and Pennock, D.~M.}
+\newblock Methods and metrics for cold-start recommendations.
+\newblock In {\em Proceedings of the 25th annual international ACM SIGIR
+  conference on Research and development in information retrieval\/} (2002),
+  pp.~253--260.
+
+\bibitem{sedhain2015autorec}
+{\sc Sedhain, S., Menon, A.~K., Sanner, S., and Xie, L.}
+\newblock Autorec: Autoencoders meet collaborative filtering.
+\newblock In {\em Proceedings of the 24th international conference on World
+  Wide Web\/} (2015), pp.~111--112.
+
+\bibitem{solove2006taxonomy}
+{\sc Solove, D.~J.}
+\newblock {\em A taxonomy of privacy}.
+\newblock University of Pennsylvania Law Review, 2006.
+
+\bibitem{steck2011item}
+{\sc Steck, H.}
+\newblock Item popularity and recommendation accuracy.
+\newblock In {\em Proceedings of the fifth ACM conference on Recommender
+  systems\/} (2011), pp.~125--132.
+
+\bibitem{sun2019bert4rec}
+{\sc Sun, F., Liu, J., Wu, J., Pei, C., Lin, X., Ou, W., and Jiang, P.}
+\newblock Bert4rec: Sequential recommendation with bidirectional encoder
+  representations from transformer.
+\newblock In {\em Proceedings of the 28th ACM international conference on
+  information and knowledge management\/} (2019), pp.~1441--1450.
+
+\bibitem{tang2018personalized}
+{\sc Tang, J., and Wang, K.}
+\newblock Personalized top-n sequential recommendation via convolutional
+  sequence embedding.
+\newblock In {\em Proceedings of the eleventh ACM international conference on
+  web search and data mining\/} (2018), pp.~565--573.
+
+\bibitem{van2013deep}
+{\sc Van~den Oord, A., Dieleman, S., and Schrauwen, B.}
+\newblock Deep content-based music recommendation.
+\newblock In {\em Advances in neural information processing systems\/} (2013),
+  vol.~26.
+
+\bibitem{wang2017irgan}
+{\sc Wang, J., Yu, L., Zhang, W., Gong, Y., Xu, Y., Wang, B., Zhang, P., and
+  Zhang, D.}
+\newblock Irgan: A minimax game for unifying generative and discriminative
+  information retrieval models.
+\newblock In {\em Proceedings of the 40th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval\/} (2017), pp.~515--524.
+
+\bibitem{wang2019neural}
+{\sc Wang, X., He, X., Wang, M., Feng, F., and Chua, T.-S.}
+\newblock Neural graph collaborative filtering.
+\newblock In {\em Proceedings of the 42nd international ACM SIGIR conference on
+  Research and development in Information Retrieval\/} (2019), pp.~165--174.
+
+\bibitem{wei2021contrastive}
+{\sc Wei, Y., Wang, X., Nie, L., He, X., Chen, R., and Chua, T.-S.}
+\newblock Contrastive learning for cold-start recommendation.
+\newblock In {\em Proceedings of the 29th ACM International Conference on
+  Multimedia\/} (2021), pp.~5382--5390.
+
+\bibitem{weston2011wsabie}
+{\sc Weston, J., Bengio, S., and Usunier, N.}
+\newblock Wsabie: Scaling up to large vocabulary image annotation.
+\newblock In {\em Proceedings of the 22nd international joint conference on
+  Artificial Intelligence\/} (2011), pp.~2764--2770.
+
+\bibitem{wu2021self}
+{\sc Wu, J., Wang, X., Feng, F., He, X., Chen, L., Lian, J., and Xie, X.}
+\newblock Self-supervised graph learning for recommendation.
+\newblock In {\em Proceedings of the 44th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval\/} (2021), pp.~726--735.
+
+\bibitem{xie2022contrastive}
+{\sc Xie, X., Chen, F., Liu, X., Zhang, Z., Wang, Y., and Zhang, C.}
+\newblock Contrastive learning for sequential recommendation.
+\newblock In {\em 2022 IEEE 38th International Conference on Data Engineering
+  (ICDE)\/} (2022), IEEE, pp.~1251--1264.
+
+\bibitem{zhang2023conversational}
+{\sc Zhang, Y., Wang, X.~C., and Zhang, Y.}
+\newblock Conversational recommendation: A grand ai challenge.
+\newblock In {\em ACM Transactions on Information Systems\/} (2023), vol.~41,
+  ACM, pp.~1--32.
+
+\bibitem{zhao2015improving}
+{\sc Zhao, T., McAuley, J., and King, I.}
+\newblock Improving top-k recommendation via joint collaborative autoencoders.
+\newblock In {\em Proceedings of the 24th International Conference on World
+  Wide Web\/} (2015), pp.~384--394.
+
+\bibitem{zhao2018recommendations}
+{\sc Zhao, X., Zhang, L., Ding, Z., Xia, D., Tang, J., and Yin, D.}
+\newblock Recommendations with negative feedback via pairwise deep
+  reinforcement learning.
+\newblock In {\em Proceedings of the 24th ACM SIGKDD International Conference
+  on Knowledge Discovery \& Data Mining\/} (2018), pp.~1040--1048.
+
+\bibitem{zhou2020s3}
+{\sc Zhou, K., Wang, H., Zhao, W.~X., Zhu, Y., Wang, S., Zhang, F., Zhuang, F.,
+  and Wen, J.-R.}
+\newblock S3-rec: Self-supervised learning for sequential recommendation with
+  mutual information maximization.
+\newblock In {\em Proceedings of the 29th ACM International Conference on
+  Information and Knowledge Management\/} (2020), pp.~1893--1902.
+
+\bibitem{zhuang2017representation}
+{\sc Zhuang, F., Luo, Z., Zhang, X., He, Q., Shi, Z., Shi, H., and Lian, J.}
+\newblock Representation learning via dual-autoencoder for recommendation.
+\newblock In {\em Advances in Neural Information Processing Systems\/} (2017),
+  vol.~30.
+
+\end{thebibliography}
