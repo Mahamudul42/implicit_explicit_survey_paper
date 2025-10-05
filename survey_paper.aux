@@ -16,92 +16,281 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{ricci2015recommender,adomavicius2005toward}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Historical Evolution of Feedback in Recommender Systems}{2}{subsection.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}Early Era (1990s--2000s): Explicit Feedback Dominance}{2}{subsubsection.1.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}Mid Era (2010s): Implicit Feedback Revolution}{2}{subsubsection.1.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}Current Era (2020s): Hybrid and Multimodal Approaches}{2}{subsubsection.1.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}The Feedback Spectrum: Beyond Binary Classification}{2}{subsection.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}Quasi-Explicit Feedback}{2}{subsubsection.1.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}Behavioral Implicit Feedback}{3}{subsubsection.1.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}Multimodal Feedback Integration}{3}{subsubsection.1.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Why Feedback Types Matter: Theoretical Foundations}{3}{subsection.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.1}Information Theory Perspective}{3}{subsubsection.1.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}Cognitive Psychology Perspective}{3}{subsubsection.1.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.3}Economic Perspective}{3}{subsubsection.1.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Current Research Landscape and Gaps}{3}{subsection.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}Unified Theoretical Framework}{3}{subsubsection.1.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}Cross-Domain Feedback Transfer}{3}{subsubsection.1.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}Longitudinal Feedback Dynamics}{3}{subsubsection.1.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.4}Fairness and Bias in Feedback Collection}{3}{subsubsection.1.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.5}Privacy-Efficiency Trade-offs}{3}{subsubsection.1.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Key Research Questions}{4}{subsection.1.5}\protected@file@percent }
-\newlabel{subsec:research_questions}{{1.5}{4}{Key Research Questions}{subsection.1.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.6}Scope and Contributions}{4}{subsection.1.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.7}Paper Organization}{4}{subsection.1.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.8}Methodology and Literature Review Approach}{5}{subsection.1.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Taxonomy of Feedback Types}{5}{section.2}\protected@file@percent }
-\newlabel{sec:taxonomy}{{2}{5}{Taxonomy of Feedback Types}{section.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Feedback Sources and Granularity Levels}{5}{subsection.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Implicit Feedback Sources}{5}{subsubsection.2.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Micro-level Implicit Signals}{5}{section*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Meso-level Implicit Signals}{5}{section*.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Macro-level Implicit Signals}{5}{section*.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Explicit Feedback Sources}{5}{subsubsection.2.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Quantitative Explicit Feedback}{5}{section*.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Qualitative Explicit Feedback}{6}{section*.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Interactive Explicit Feedback}{6}{section*.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Feedback Properties and Characteristics}{6}{subsection.2.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparative Analysis of Feedback Properties\relax }}{6}{table.caption.8}\protected@file@percent }
+\citation{hu2008collaborative,herlocker2004evaluating}
+\citation{hu2008collaborative,pan2008one}
+\citation{herlocker2004evaluating,adomavicius2005toward}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Conceptual Framework: Feedback Types in Recommender Systems\relax }}{2}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:feedback_properties_detailed}{{1}{6}{Comparative Analysis of Feedback Properties\relax }{table.caption.8}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Data Abundance and Collection Dynamics}{6}{table.caption.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Noise Characteristics and Signal Quality}{6}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Temporal and Contextual Dimensions}{7}{subsubsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Advanced Feedback Categorization}{7}{subsection.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Feedback Granularity Spectrum\relax }}{7}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:granularity_spectrum}{{1}{7}{Feedback Granularity Spectrum\relax }{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Feedback Granularity Spectrum}{7}{figure.caption.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Multimodal Feedback Integration}{7}{subsubsection.2.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Feedback Reliability Metrics}{7}{subsubsection.2.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Data Collection Mechanisms and Infrastructure}{7}{subsection.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}Implicit Feedback Collection}{7}{subsubsection.2.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}Explicit Feedback Collection}{7}{subsubsection.2.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3}Hybrid Collection Strategies}{8}{subsubsection.2.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Privacy and Ethical Considerations}{8}{subsection.2.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Privacy and Ethical Dimensions of Feedback Types\relax }}{8}{table.caption.10}\protected@file@percent }
-\newlabel{tab:privacy_ethics}{{2}{8}{Privacy and Ethical Dimensions of Feedback Types\relax }{table.caption.10}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Privacy Implications by Feedback Type}{8}{table.caption.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Ethical Challenges}{8}{subsubsection.2.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Visual Taxonomy and Conceptual Framework}{8}{subsection.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Domain-Specific Feedback Characteristics}{8}{subsection.2.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}E-commerce Feedback Patterns}{8}{subsubsection.2.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}Entertainment Feedback Dynamics}{8}{subsubsection.2.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.3}Social Media Feedback Ecology}{8}{subsubsection.2.7.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comprehensive taxonomy of implicit and explicit feedback types with hierarchical organization and key properties.\relax }}{9}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:comprehensive_taxonomy}{{2}{9}{Comprehensive taxonomy of implicit and explicit feedback types with hierarchical organization and key properties.\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Learning Paradigms and Modeling Approaches}{9}{section.3}\protected@file@percent }
-\newlabel{sec:learning}{{3}{9}{Learning Paradigms and Modeling Approaches}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Classical Approaches}{9}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Matrix Factorization Fundamentals}{9}{subsubsection.3.1.1}\protected@file@percent }
-\newlabel{eq:explicit_mf}{{1}{9}{Matrix Factorization Fundamentals}{equation.3.1}{}}
-\newlabel{eq:implicit_mf}{{2}{10}{Matrix Factorization Fundamentals}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Weighted Matrix Factorization (WMF)}{10}{subsubsection.3.1.2}\protected@file@percent }
-\newlabel{eq:wmf}{{3}{10}{Weighted Matrix Factorization (WMF)}{equation.3.3}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Bayesian Personalized Ranking (BPR)}{10}{subsubsection.3.1.3}\protected@file@percent }
-\newlabel{eq:bpr}{{4}{10}{Bayesian Personalized Ranking (BPR)}{equation.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Deep Learning Architectures}{10}{subsection.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Neural Collaborative Filtering (NCF)}{10}{subsubsection.3.2.1}\protected@file@percent }
-\newlabel{eq:ncf}{{5}{10}{Neural Collaborative Filtering (NCF)}{equation.3.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Autoencoders for Implicit Feedback}{10}{subsubsection.3.2.2}\protected@file@percent }
-\newlabel{eq:autoencoder}{{6}{10}{Autoencoders for Implicit Feedback}{equation.3.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Graph Neural Networks (GNNs)}{10}{subsubsection.3.2.3}\protected@file@percent }
-\newlabel{eq:gnn}{{7}{10}{Graph Neural Networks (GNNs)}{equation.3.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Reinforcement Learning Approaches}{10}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Markov Decision Processes for Recommendations}{10}{subsubsection.3.3.1}\protected@file@percent }
-\newlabel{eq:rl_mdp}{{8}{10}{Markov Decision Processes for Recommendations}{equation.3.8}{}}
+\newlabel{fig:feedback_framework}{{1}{2}{Conceptual Framework: Feedback Types in Recommender Systems\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}The Feedback Dichotomy: A Fundamental Design Choice}{2}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Research Motivation: Critical Gaps and Challenges}{2}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}Lack of Unified Theoretical Framework}{2}{subsubsection.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}Inadequate Evaluation Methodologies}{3}{subsubsection.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}Limited Understanding of Hybrid Integration}{3}{subsubsection.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.4}Emerging Privacy and Fairness Concerns}{3}{subsubsection.1.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Research Objectives and Contributions}{3}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Survey Contributions}{3}{subsection.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.1}Unified Taxonomy and Analysis Framework}{3}{subsubsection.1.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.2}Comprehensive Algorithmic Review}{3}{subsubsection.1.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3}Evaluation Framework Analysis}{3}{subsubsection.1.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.4}Empirical Domain Analysis}{3}{subsubsection.1.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.5}Research Roadmap}{4}{subsubsection.1.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Scope and Methodology}{4}{subsection.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6}Paper Organization}{4}{subsection.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7}Target Audience and Impact}{4}{subsection.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Survey Methodology}{4}{section.2}\protected@file@percent }
+\newlabel{sec:survey_methodology}{{2}{4}{Survey Methodology}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Systematic Literature Review Methodology and Paper Selection Process\relax }}{5}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:methodology_flow}{{2}{5}{Systematic Literature Review Methodology and Paper Selection Process\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Literature Search Strategy}{5}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Database and Venue Selection}{5}{subsubsection.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Search Terms and Query Construction}{5}{subsubsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Inclusion and Exclusion Criteria}{6}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Inclusion Criteria}{6}{subsubsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Exclusion Criteria}{6}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Paper Selection and Review Process}{6}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Multi-Stage Screening}{6}{subsubsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Data Extraction and Classification Framework}{6}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}Bibliometric Data}{6}{subsubsection.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}Technical Content Analysis}{7}{subsubsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3}Survey Corpus Overview}{7}{subsubsection.2.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Survey Corpus Overview: Distribution of 147 Selected Papers\relax }}{7}{table.caption.4}\protected@file@percent }
+\newlabel{tab:survey_corpus}{{1}{7}{Survey Corpus Overview: Distribution of 147 Selected Papers\relax }{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.4}Systematic Data Extraction}{7}{subsubsection.2.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.5}Quality Assessment Criteria}{8}{subsubsection.2.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Synthesis and Analysis Methodology}{8}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Thematic Analysis}{8}{subsubsection.2.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Quantitative Analysis}{8}{subsubsection.2.5.2}\protected@file@percent }
+\citation{resnick1994grouplens,shardanand1995social}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Limitations and Threats to Validity}{9}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Selection Bias}{9}{subsubsection.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Evaluation Challenges}{9}{subsubsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Rapidly Evolving Field}{9}{subsubsection.2.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Reproducibility and Transparency}{9}{subsection.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Background and Related Work}{9}{section.3}\protected@file@percent }
+\newlabel{sec:related}{{3}{9}{Background and Related Work}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Evolution Timeline of Recommender Systems and Feedback Mechanisms\relax }}{9}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:evolution_timeline}{{3}{9}{Evolution Timeline of Recommender Systems and Feedback Mechanisms\relax }{figure.caption.5}{}}
+\citation{resnick1994grouplens}
+\citation{herlocker1999algorithmic,sarwar2001item}
+\citation{bennett2007netflix}
+\citation{koren2009matrix,lee1999learning}
+\citation{pazzani2007content}
+\citation{burke2002hybrid,adomavicius2005toward}
+\citation{hu2008collaborative}
+\citation{pan2008one}
+\citation{rendle2009bpr}
+\citation{koren2009collaborative}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Foundations of Recommender Systems}{10}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Collaborative Filtering Paradigms}{10}{subsubsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Content-Based and Hybrid Approaches}{10}{subsubsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The Implicit Feedback Revolution}{10}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Foundational Implicit Feedback Work}{10}{subsubsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Ranking-Based Approaches}{10}{subsubsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Algorithmic Evolution and Deep Learning}{10}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Matrix Factorization Extensions}{10}{subsubsection.3.3.1}\protected@file@percent }
+\citation{rendle2012factorization}
+\citation{he2017neural}
+\citation{sedhain2015autorec}
+\citation{hidasi2015session}
+\citation{chen2017attentive}
+\citation{he2020lightgcn}
+\citation{wang2019kgat}
+\citation{ma2011learning}
+\citation{burke2002hybrid}
+\citation{ma2018modeling}
+\citation{chen2017attentive}
+\citation{zhu2019transfer}
+\citation{zheng2018joint}
+\citation{wei2021contrastive}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Deep Learning Transformation}{11}{subsubsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Graph-Based Approaches}{11}{subsubsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Hybrid and Multi-Modal Systems}{11}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Early Hybrid Systems}{11}{subsubsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Modern Hybrid Approaches}{11}{subsubsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Multi-Modal Integration}{11}{subsubsection.3.4.3}\protected@file@percent }
+\citation{van2013deep}
+\citation{adomavicius2011context}
+\citation{herlocker2004evaluating}
+\citation{dacrema2019we}
+\citation{marlin2007collaborative}
+\citation{abdollahpouri2019unfairness}
+\citation{ekstrand2022fairness}
+\citation{joachims2017accurately}
+\citation{chai2020secure}
+\citation{mcsherry2009differentially}
+\citation{erkin2012privacy}
+\citation{bonner2018causal}
+\citation{schnabel2016recommendations}
+\citation{chen2020bias}
+\citation{gao2021advances}
+\citation{hou2023large}
+\citation{zhang2020explainable}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Evaluation and Bias Considerations}{12}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Evaluation Challenges}{12}{subsubsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}Bias and Fairness}{12}{subsubsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Emerging Trends and Future Directions}{12}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}Privacy-Preserving Recommendations}{12}{subsubsection.3.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}Causal Inference and Debias}{12}{subsubsection.3.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.3}Large Language Models and Foundation Models}{12}{subsubsection.3.6.3}\protected@file@percent }
+\citation{chai2020secure}
+\citation{jia2021privacy}
+\citation{sarwar2001item,breese1998empirical}
+\citation{koren2009matrix}
+\citation{koren2010collaborative}
+\citation{he2017neural}
+\citation{cheng2016wide}
+\citation{sedhain2015autorec}
+\citation{hidasi2015session}
+\citation{kang2018self,sun2019bert4rec}
+\citation{kang2018self}
+\citation{wang2019neural}
+\citation{he2020lightgcn}
+\citation{hypergcn}
+\citation{yao2021self,xie2022contrastive}
+\citation{hou2022towards}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Research Gaps and Motivations}{13}{subsection.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1}Lack of Unified Framework}{13}{subsubsection.3.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.2}Inadequate Evaluation for Hybrid Systems}{13}{subsubsection.3.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3}Limited Real-World Analysis}{13}{subsubsection.3.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4}Insufficient Bias Analysis}{13}{subsubsection.3.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Privacy and Federated Learning}{13}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Key Research Themes and Methodological Developments}{13}{subsection.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.1}Feedback Modeling Paradigms}{13}{subsubsection.3.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Classical Collaborative Filtering}{13}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Neural and Deep Learning Approaches}{13}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sequential and Temporal Modeling}{13}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Graph-Based and Relational Methods}{13}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Self-Supervised and Contrastive Learning}{13}{section*.11}\protected@file@percent }
+\citation{ma2011learning,zhao2015improving}
+\citation{chen2017attentive,liu2018stamp}
+\citation{zhang2020knowledge}
+\citation{liu2022multimodal}
+\citation{wei2021contrastive}
+\citation{castells2011novelty}
+\citation{ge2020understanding}
+\citation{abdollahpouri2019unfairness}
+\citation{wang2021user}
+\citation{schnabel2016recommendations}
+\citation{wang2021user}
+\citation{zehlike2020reducing}
+\citation{knijnenburg2012explaining}
+\citation{pu2011user}
+\citation{linden2003amazon}
+\citation{covington2016deep}
+\citation{gomez2015netflix}
+\citation{van2013deep}
+\citation{wu2020mind}
+\citation{tang2019towards}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.2}Hybrid Feedback Integration Strategies}{14}{subsubsection.3.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multi-Task Learning Frameworks}{14}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Knowledge Distillation and Transfer}{14}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multimodal Fusion Techniques}{14}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.3}Evaluation Methodologies and Bias Analysis}{14}{subsubsection.3.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Metrics Development and Standardization}{14}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bias Detection and Mitigation}{14}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{User-Centric Evaluation}{14}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.4}Domain-Specific Applications and Case Studies}{14}{subsubsection.3.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{E-commerce and Retail}{14}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Entertainment and Streaming}{14}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Social Media and News}{14}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Education and Learning}{14}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Research Gaps, Open Challenges, and Emerging Directions}{14}{subsection.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.1}Theoretical Foundations and Fundamental Limits}{15}{subsubsection.3.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.2}Practical Challenges and Scalability Issues}{15}{subsubsection.3.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.3}Emerging Research Directions}{15}{subsubsection.3.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Survey Contributions and Positioning}{15}{subsection.3.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Unified Framework for Feedback Analysis}{16}{section.4}\protected@file@percent }
+\newlabel{sec:methodology}{{4}{16}{Unified Framework for Feedback Analysis}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Multi-Dimensional Feedback Taxonomy}{16}{subsection.4.1}\protected@file@percent }
+\newlabel{subsec:taxonomy}{{4.1}{16}{Multi-Dimensional Feedback Taxonomy}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Dimension 1: Collection Mechanism}{16}{subsubsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Dimension 2: Signal Quality and Noise Characteristics}{16}{subsubsection.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Dimension 3: Temporal Characteristics}{16}{subsubsection.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Dimension 4: Cognitive Load and User Effort}{17}{subsubsection.4.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}Dimension 5: Privacy and Sensitivity}{17}{subsubsection.4.1.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Unified System Architecture for Feedback-Aware Recommender Systems\relax }}{17}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:system_architecture}{{4}{17}{Unified System Architecture for Feedback-Aware Recommender Systems\relax }{figure.caption.22}{}}
+\citation{hu2008collaborative}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Algorithmic Framework Analysis}{18}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Explicit Feedback Algorithms}{18}{subsubsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Implicit Feedback Algorithms}{18}{subsubsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Deep Learning Approaches}{18}{subsubsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}Hybrid Integration Strategies}{19}{subsubsection.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Comparative Analysis Framework}{19}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Feedback Type Characteristics}{19}{subsubsection.4.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comprehensive Comparison of Feedback Types\relax }}{19}{table.caption.23}\protected@file@percent }
+\newlabel{tab:feedback_comparison}{{2}{19}{Comprehensive Comparison of Feedback Types\relax }{table.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Algorithmic Approach Comparison}{20}{subsubsection.4.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Algorithmic Approaches by Feedback Type\relax }}{20}{table.caption.24}\protected@file@percent }
+\newlabel{tab:algorithm_comparison}{{3}{20}{Algorithmic Approaches by Feedback Type\relax }{table.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Algorithmic Performance Comparison Across Multiple Dimensions\relax }}{20}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:algorithm_performance}{{5}{20}{Algorithmic Performance Comparison Across Multiple Dimensions\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Complexity Analysis and Trade-offs}{20}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Computational Complexity}{20}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Feedback-Specific Considerations}{21}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Theoretical Analysis and Guarantees}{21}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Convergence Properties}{21}{subsubsection.4.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Generalization Bounds}{21}{subsubsection.4.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Practical Implementation Considerations}{21}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1}Scalability Strategies}{21}{subsubsection.4.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.2}System Architecture Patterns}{21}{subsubsection.4.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Qualitative Explicit Feedback}{21}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interactive Explicit Feedback}{22}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Feedback Properties and Characteristics}{22}{subsection.4.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Comparative Analysis of Feedback Properties\relax }}{22}{table.caption.28}\protected@file@percent }
+\newlabel{tab:feedback_properties_detailed}{{4}{22}{Comparative Analysis of Feedback Properties\relax }{table.caption.28}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1}Data Abundance and Collection Dynamics}{22}{table.caption.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.2}Noise Characteristics and Signal Quality}{22}{subsubsection.4.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.3}Temporal and Contextual Dimensions}{22}{subsubsection.4.7.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Feedback Granularity Spectrum\relax }}{23}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:granularity_spectrum}{{6}{23}{Feedback Granularity Spectrum\relax }{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Advanced Feedback Categorization}{23}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.1}Feedback Granularity Spectrum}{23}{figure.caption.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.2}Multimodal Feedback Integration}{23}{subsubsection.4.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.3}Feedback Reliability Metrics}{23}{subsubsection.4.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Data Collection Mechanisms and Infrastructure}{23}{subsection.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Implicit Feedback Collection}{23}{subsubsection.4.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}Explicit Feedback Collection}{23}{subsubsection.4.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.3}Hybrid Collection Strategies}{23}{subsubsection.4.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Privacy and Ethical Considerations}{24}{subsection.4.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Privacy and Ethical Dimensions of Feedback Types\relax }}{24}{table.caption.30}\protected@file@percent }
+\newlabel{tab:privacy_ethics}{{5}{24}{Privacy and Ethical Dimensions of Feedback Types\relax }{table.caption.30}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.10.1}Privacy Implications by Feedback Type}{24}{table.caption.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.10.2}Ethical Challenges}{24}{subsubsection.4.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Visual Taxonomy and Conceptual Framework}{24}{subsection.4.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.12}Domain-Specific Feedback Characteristics}{24}{subsection.4.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.12.1}E-commerce Feedback Patterns}{24}{subsubsection.4.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.12.2}Entertainment Feedback Dynamics}{24}{subsubsection.4.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.12.3}Social Media Feedback Ecology}{24}{subsubsection.4.12.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Comprehensive taxonomy of implicit and explicit feedback types with hierarchical organization and key properties.\relax }}{25}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:comprehensive_taxonomy}{{7}{25}{Comprehensive taxonomy of implicit and explicit feedback types with hierarchical organization and key properties.\relax }{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.13}Modeling Approaches}{25}{subsection.4.13}\protected@file@percent }
+\newlabel{subsec:modeling}{{4.13}{25}{Modeling Approaches}{subsection.4.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.14}Classical Approaches}{25}{subsection.4.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.14.1}Matrix Factorization Fundamentals}{25}{subsubsection.4.14.1}\protected@file@percent }
+\newlabel{eq:explicit_mf}{{11}{25}{Matrix Factorization Fundamentals}{equation.4.11}{}}
+\newlabel{eq:implicit_mf}{{12}{25}{Matrix Factorization Fundamentals}{equation.4.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.14.2}Weighted Matrix Factorization (WMF)}{25}{subsubsection.4.14.2}\protected@file@percent }
+\newlabel{eq:wmf}{{13}{26}{Weighted Matrix Factorization (WMF)}{equation.4.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.14.3}Bayesian Personalized Ranking (BPR)}{26}{subsubsection.4.14.3}\protected@file@percent }
+\newlabel{eq:bpr}{{14}{26}{Bayesian Personalized Ranking (BPR)}{equation.4.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.15}Deep Learning Architectures}{26}{subsection.4.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.15.1}Neural Collaborative Filtering (NCF)}{26}{subsubsection.4.15.1}\protected@file@percent }
+\newlabel{eq:ncf}{{15}{26}{Neural Collaborative Filtering (NCF)}{equation.4.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.15.2}Autoencoders for Implicit Feedback}{26}{subsubsection.4.15.2}\protected@file@percent }
+\newlabel{eq:autoencoder}{{16}{26}{Autoencoders for Implicit Feedback}{equation.4.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.15.3}Graph Neural Networks (GNNs)}{26}{subsubsection.4.15.3}\protected@file@percent }
+\newlabel{eq:gnn}{{17}{26}{Graph Neural Networks (GNNs)}{equation.4.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.16}Reinforcement Learning Approaches}{26}{subsection.4.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.16.1}Markov Decision Processes for Recommendations}{26}{subsubsection.4.16.1}\protected@file@percent }
+\newlabel{eq:rl_mdp}{{18}{26}{Markov Decision Processes for Recommendations}{equation.4.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.16.2}Contextual Bandits}{26}{subsubsection.4.16.2}\protected@file@percent }
+\newlabel{eq:bandit_update}{{19}{26}{Contextual Bandits}{equation.4.19}{}}
 \citation{sedhain2015autorec}
 \citation{tang2018personalized}
 \citation{wang2019neural}
@@ -117,255 +306,402 @@
 \citation{chen2017attentive}
 \citation{he2017neural}
 \citation{sun2019bert4rec}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Contextual Bandits}{11}{subsubsection.3.3.2}\protected@file@percent }
-\newlabel{eq:bandit_update}{{9}{11}{Contextual Bandits}{equation.3.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Contrastive Learning Paradigms}{11}{subsection.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}SimCLR for Recommendations}{11}{subsubsection.3.4.1}\protected@file@percent }
-\newlabel{eq:contrastive}{{10}{11}{SimCLR for Recommendations}{equation.3.10}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Hybrid Contrastive Objectives}{11}{subsubsection.3.4.2}\protected@file@percent }
-\newlabel{eq:hybrid_contrastive}{{11}{11}{Hybrid Contrastive Objectives}{equation.3.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Modern Approaches}{11}{subsection.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Deep Learning Models}{11}{subsubsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.2}Reinforcement Learning}{11}{subsubsection.3.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}Contrastive Learning}{11}{subsubsection.3.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Implicit-to-Explicit Conversions}{11}{subsection.3.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Hybrid Models}{11}{subsection.3.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Detailed Modeling Techniques}{11}{subsection.3.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.1}Neural Matrix Factorization}{11}{subsubsection.3.8.1}\protected@file@percent }
 \citation{he2020lightgcn}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.2}Sequence Modeling}{12}{subsubsection.3.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.3}Graph-Based Approaches}{12}{subsubsection.3.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.8.4}Generative Models}{12}{subsubsection.3.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Hybrid Integration Strategies}{12}{subsection.3.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.1}Attention-Based Fusion}{12}{subsubsection.3.9.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.2}Multi-Modal Learning}{12}{subsubsection.3.9.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.3}Cross-Feedback Translation}{12}{subsubsection.3.9.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Computational Complexity and Scalability}{12}{subsection.3.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.11}Evaluation of Modeling Approaches}{12}{subsection.3.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.12}Case Studies}{12}{subsection.3.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.12.1}YouTube Recommendations}{12}{subsubsection.3.12.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.12.2}Amazon Product Recommendations}{12}{subsubsection.3.12.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.13}Advanced Implementation Considerations}{12}{subsection.3.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.13.1}Hyperparameter Optimization Strategies}{12}{subsubsection.3.13.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.13.2}Model Interpretability and Explainability}{12}{subsubsection.3.13.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.13.3}Online Learning and Adaptation}{13}{subsubsection.3.13.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.13.4}Computational Resource Management}{13}{subsubsection.3.13.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.14}Emerging Algorithmic Paradigms}{13}{subsection.3.14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.14.1}Multimodal Recommender Systems}{13}{subsubsection.3.14.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.14.2}Causal Inference in Recommendations}{13}{subsubsection.3.14.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.14.3}Federated and Privacy-Preserving Learning}{13}{subsubsection.3.14.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.14.4}Continual and Lifelong Learning}{13}{subsubsection.3.14.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.15}Open Challenges in Modeling}{14}{subsection.3.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation Methodologies}{14}{section.4}\protected@file@percent }
-\newlabel{sec:evaluation}{{4}{14}{Evaluation Methodologies}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Standard Metrics}{14}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Ranking Metrics}{14}{subsubsection.4.1.1}\protected@file@percent }
-\newlabel{eq:precision_k}{{12}{14}{Ranking Metrics}{equation.4.12}{}}
-\newlabel{eq:ndcg_k}{{13}{14}{Ranking Metrics}{equation.4.13}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Rating Prediction Metrics}{14}{subsubsection.4.1.2}\protected@file@percent }
-\newlabel{eq:rmse}{{14}{14}{Rating Prediction Metrics}{equation.4.14}{}}
-\newlabel{eq:mae}{{15}{14}{Rating Prediction Metrics}{equation.4.15}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Area Under the Curve (AUC) Metrics}{14}{subsubsection.4.1.3}\protected@file@percent }
-\newlabel{eq:auc}{{16}{14}{Area Under the Curve (AUC) Metrics}{equation.4.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Evaluation Biases and Challenges}{15}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Dataset Biases}{15}{subsubsection.4.2.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Evaluation Biases in Different Feedback Types\relax }}{15}{table.caption.12}\protected@file@percent }
-\newlabel{tab:evaluation_biases}{{3}{15}{Evaluation Biases in Different Feedback Types\relax }{table.caption.12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}User Behavior Interpretations}{15}{subsubsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Advanced Evaluation Frameworks}{15}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Novelty and Diversity Metrics}{15}{subsubsection.4.3.1}\protected@file@percent }
-\newlabel{eq:novelty}{{17}{15}{Novelty and Diversity Metrics}{equation.4.17}{}}
-\newlabel{eq:diversity}{{18}{15}{Novelty and Diversity Metrics}{equation.4.18}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Serendipity Metrics}{15}{subsubsection.4.3.2}\protected@file@percent }
-\newlabel{eq:serendipity}{{19}{15}{Serendipity Metrics}{equation.4.19}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Coverage Metrics}{16}{subsubsection.4.3.3}\protected@file@percent }
-\newlabel{eq:coverage}{{20}{16}{Coverage Metrics}{equation.4.20}{}}
-\newlabel{eq:user_coverage}{{21}{16}{Coverage Metrics}{equation.4.21}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}User-Centric Evaluation Methods}{16}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}A/B Testing and Online Evaluation}{16}{subsubsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}User Studies and Surveys}{16}{subsubsection.4.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Eye-Tracking and Physiological Measures}{16}{subsubsection.4.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Bias Mitigation in Evaluation}{16}{subsection.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Debiasing Techniques}{16}{subsubsection.4.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Fairness-Aware Evaluation}{16}{subsubsection.4.5.2}\protected@file@percent }
-\newlabel{eq:demographic_parity}{{22}{16}{Fairness-Aware Evaluation}{equation.4.22}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Dataset Construction and Benchmarking}{16}{subsection.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.1}Synthetic Dataset Generation}{16}{subsubsection.4.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.6.2}Cross-Domain Evaluation}{16}{subsubsection.4.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Statistical Rigor and Reproducibility}{17}{subsection.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1}Confidence Intervals and Significance Testing}{17}{subsubsection.4.7.1}\protected@file@percent }
-\newlabel{eq:confidence_interval}{{23}{17}{Confidence Intervals and Significance Testing}{equation.4.23}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.2}Reproducibility Challenges}{17}{subsubsection.4.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Domain-Specific Evaluation Considerations}{17}{subsection.4.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.1}E-commerce Evaluation}{17}{subsubsection.4.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.2}Content Streaming Evaluation}{17}{subsubsection.4.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.3}Social Media Evaluation}{17}{subsubsection.4.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Temporal and Dynamic Evaluation}{17}{subsection.4.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.1}Concept Drift Detection}{17}{subsubsection.4.9.1}\protected@file@percent }
-\newlabel{eq:drift_score}{{24}{17}{Concept Drift Detection}{equation.4.24}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.9.2}Adaptive Evaluation Protocols}{17}{subsubsection.4.9.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Future Evaluation Directions}{17}{subsection.4.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Applications and Domains}{18}{section.5}\protected@file@percent }
-\newlabel{sec:applications}{{5}{18}{Applications and Domains}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}E-commerce and Retail}{18}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Product Recommendation Systems}{18}{subsubsection.5.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Case Studies}{18}{subsubsection.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Performance Metrics}{18}{subsubsection.5.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Content Streaming and Entertainment}{19}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Video Streaming Platforms}{19}{subsubsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Music Streaming Services}{19}{subsubsection.5.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}Case Study: Netflix Recommendation System}{19}{subsubsection.5.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}News and Content Platforms}{19}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}News Recommendation Challenges}{19}{subsubsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Social News Platforms}{19}{subsubsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Social Media and Networking}{20}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Content Ranking Algorithms}{20}{subsubsection.5.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Case Study: Twitter's Algorithm}{20}{subsubsection.5.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Emerging Domains and Applications}{20}{subsection.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}Educational Platforms}{20}{subsubsection.5.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}Health and Fitness Applications}{20}{subsubsection.5.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.3}Professional Networking}{20}{subsubsection.5.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.4}Gaming and Interactive Entertainment}{20}{subsubsection.5.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Domain-Specific Feedback Characteristics}{20}{subsection.5.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1}Feedback Abundance and Quality}{20}{subsubsection.5.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2}Cross-Domain Feedback Transfer}{20}{subsubsection.5.6.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Feedback Characteristics Across Domains\relax }}{21}{table.caption.13}\protected@file@percent }
-\newlabel{tab:domain_feedback}{{4}{21}{Feedback Characteristics Across Domains\relax }{table.caption.13}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Industry Best Practices and Implementation}{21}{subsection.5.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.7.1}Data Pipeline Architecture}{21}{subsubsection.5.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.7.2}Model Deployment and Monitoring}{21}{subsubsection.5.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.7.3}User Experience Optimization}{21}{subsubsection.5.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Impact on Business Outcomes}{21}{subsection.5.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.8.1}Quantitative Benefits}{21}{subsubsection.5.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.8.2}Qualitative Benefits}{21}{subsubsection.5.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.9}Future Domain Evolution}{22}{subsection.5.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Challenges and Future Directions}{22}{section.6}\protected@file@percent }
-\newlabel{sec:challenges}{{6}{22}{Challenges and Future Directions}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Technical Challenges}{22}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Data Quality and Noise Issues}{22}{subsubsection.6.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Sparsity and Cold-Start Problems}{22}{subsubsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.3}Scalability and Real-Time Processing}{22}{subsubsection.6.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ethical and Societal Challenges}{23}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Privacy and Data Protection}{23}{subsubsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Fairness and Bias Mitigation}{23}{subsubsection.6.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Filter Bubbles and Echo Chambers}{23}{subsubsection.6.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Explainability and Trust}{23}{subsection.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}Black-Box Model Transparency}{23}{subsubsection.6.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}User Trust and Adoption}{24}{subsubsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Research Gaps and Opportunities}{24}{subsection.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Theoretical Foundations}{24}{subsubsection.6.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.2}Methodological Advances}{24}{subsubsection.6.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.3}Evaluation Frameworks}{24}{subsubsection.6.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Future Research Directions}{24}{subsection.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1}Emerging Technologies and Paradigms}{24}{subsubsection.6.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2}Interdisciplinary Integration}{24}{subsubsection.6.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.3}Sustainable and Responsible AI}{24}{subsubsection.6.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Implementation Challenges}{25}{subsection.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1}System Architecture Evolution}{25}{subsubsection.6.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2}Data Infrastructure Requirements}{25}{subsubsection.6.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.3}Operational Excellence}{25}{subsubsection.6.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Open Problems and Grand Challenges}{25}{subsection.6.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.1}Fundamental Research Questions}{25}{subsubsection.6.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.2}Grand Challenge Problems}{25}{subsubsection.6.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.3}Measurement and Benchmarking}{25}{subsubsection.6.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Comparative Summary and Future Outlook}{25}{section.7}\protected@file@percent }
-\newlabel{sec:summary}{{7}{25}{Comparative Summary and Future Outlook}{section.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Comprehensive Comparative Analysis}{25}{subsection.7.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Comprehensive Performance Comparison Across Feedback Types and Domains\relax }}{26}{table.caption.14}\protected@file@percent }
-\newlabel{tab:comprehensive_performance}{{5}{26}{Comprehensive Performance Comparison Across Feedback Types and Domains\relax }{table.caption.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}Feedback Type Performance Matrix}{26}{table.caption.14}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Evolution of Recommendation Methods by Era\relax }}{26}{table.caption.15}\protected@file@percent }
-\newlabel{tab:method_evolution}{{6}{26}{Evolution of Recommendation Methods by Era\relax }{table.caption.15}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Methodological Evolution Timeline}{26}{table.caption.15}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Domain-Specific Insights and Best Practices}{26}{subsection.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}E-commerce Optimization Strategies}{26}{subsubsection.7.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Content Streaming Personalization}{27}{subsubsection.7.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Social Media Engagement Optimization}{27}{subsubsection.7.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Technical Implementation Guidelines}{27}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.1}Architecture Patterns for Production Systems}{27}{subsubsection.7.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.2}Data Pipeline Best Practices}{27}{subsubsection.7.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.3}Model Deployment and Monitoring}{27}{subsubsection.7.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Economic and Business Impact Analysis}{27}{subsection.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.4.1}Return on Investment Metrics}{27}{subsubsection.7.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.4.2}Cost-Benefit Analysis by Feedback Type}{27}{table.caption.16}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Cost-Benefit Analysis of Feedback Integration Strategies\relax }}{28}{table.caption.16}\protected@file@percent }
-\newlabel{tab:cost_benefit}{{7}{28}{Cost-Benefit Analysis of Feedback Integration Strategies\relax }{table.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Industry Adoption Trends and Market Analysis}{28}{subsection.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.1}Current Market Landscape}{28}{subsubsection.7.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.2}Emerging Market Opportunities}{28}{subsubsection.7.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Future Research Agenda and Roadmap}{28}{subsection.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.6.1}Short-term Priorities (1-3 years)}{28}{subsubsection.7.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.6.2}Medium-term Goals (3-7 years)}{28}{subsubsection.7.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.6.3}Long-term Vision (7-15 years)}{28}{subsubsection.7.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.7}Visionary Scenarios for 2035}{29}{subsection.7.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.7.1}Scenario 1: The Empathetic Assistant}{29}{subsubsection.7.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.7.2}Scenario 2: The Collective Intelligence}{29}{subsubsection.7.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.7.3}Scenario 3: The Sustainable Ecosystem}{29}{subsubsection.7.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.8}Implementation Roadmap for Practitioners}{29}{subsection.7.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.1}Phase 1: Foundation Building (0-6 months)}{29}{subsubsection.7.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.2}Phase 2: Hybrid Integration (6-18 months)}{29}{subsubsection.7.8.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.3}Phase 3: Advanced Optimization (18-36 months)}{29}{subsubsection.7.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.4}Phase 4: Future-Proofing (36+ months)}{29}{subsubsection.7.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.17}Contrastive Learning Paradigms}{27}{subsection.4.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.17.1}SimCLR for Recommendations}{27}{subsubsection.4.17.1}\protected@file@percent }
+\newlabel{eq:contrastive}{{20}{27}{SimCLR for Recommendations}{equation.4.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.17.2}Hybrid Contrastive Objectives}{27}{subsubsection.4.17.2}\protected@file@percent }
+\newlabel{eq:hybrid_contrastive}{{21}{27}{Hybrid Contrastive Objectives}{equation.4.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.18}Modern Approaches}{27}{subsection.4.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.18.1}Deep Learning Models}{27}{subsubsection.4.18.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.18.2}Reinforcement Learning}{27}{subsubsection.4.18.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.18.3}Contrastive Learning}{27}{subsubsection.4.18.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.19}Implicit-to-Explicit Conversions}{27}{subsection.4.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.20}Hybrid Models}{27}{subsection.4.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.21}Detailed Modeling Techniques}{27}{subsection.4.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.21.1}Neural Matrix Factorization}{27}{subsubsection.4.21.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.21.2}Sequence Modeling}{27}{subsubsection.4.21.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.21.3}Graph-Based Approaches}{28}{subsubsection.4.21.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.21.4}Generative Models}{28}{subsubsection.4.21.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.22}Hybrid Integration Strategies}{28}{subsection.4.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.22.1}Attention-Based Fusion}{28}{subsubsection.4.22.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.22.2}Multi-Modal Learning}{28}{subsubsection.4.22.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.22.3}Cross-Feedback Translation}{28}{subsubsection.4.22.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.23}Computational Complexity and Scalability}{28}{subsection.4.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.24}Evaluation of Modeling Approaches}{28}{subsection.4.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.25}Case Studies}{28}{subsection.4.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.25.1}YouTube Recommendations}{28}{subsubsection.4.25.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.25.2}Amazon Product Recommendations}{28}{subsubsection.4.25.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.26}Advanced Implementation Considerations}{28}{subsection.4.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.26.1}Hyperparameter Optimization Strategies}{28}{subsubsection.4.26.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.26.2}Model Interpretability and Explainability}{28}{subsubsection.4.26.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.26.3}Online Learning and Adaptation}{29}{subsubsection.4.26.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.26.4}Computational Resource Management}{29}{subsubsection.4.26.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.27}Emerging Algorithmic Paradigms}{29}{subsection.4.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.27.1}Multimodal Recommender Systems}{29}{subsubsection.4.27.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.27.2}Causal Inference in Recommendations}{29}{subsubsection.4.27.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.27.3}Federated and Privacy-Preserving Learning}{29}{subsubsection.4.27.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.27.4}Continual and Lifelong Learning}{29}{subsubsection.4.27.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.28}Open Challenges in Modeling}{29}{subsection.4.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Evaluation Frameworks and Bias Analysis}{30}{section.5}\protected@file@percent }
+\newlabel{sec:evaluation}{{5}{30}{Evaluation Frameworks and Bias Analysis}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comprehensive Evaluation Framework for Feedback-Aware Recommender Systems\relax }}{30}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:evaluation_framework}{{8}{30}{Comprehensive Evaluation Framework for Feedback-Aware Recommender Systems\relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Feedback-Specific Evaluation Challenges}{30}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}The Evaluation Gap Problem}{30}{subsubsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Comprehensive Evaluation Framework}{31}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Core Evaluation Dimensions}{31}{subsubsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Feedback-Aware Evaluation Protocols}{31}{subsubsection.5.2.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Feedback-Stratified Evaluation\relax }}{31}{algorithm.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Bias Detection and Analysis Framework}{32}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comprehensive Bias Analysis Framework for Feedback-Aware Systems\relax }}{32}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:bias_analysis}{{9}{32}{Comprehensive Bias Analysis Framework for Feedback-Aware Systems\relax }{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Taxonomy of Biases in Feedback-Based Systems}{32}{figure.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Bias Mitigation Strategies}{33}{subsubsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Experimental Design Considerations}{33}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Dataset Requirements and Characteristics}{33}{subsubsection.5.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Key Datasets for Feedback-Aware Evaluation\relax }}{33}{table.caption.34}\protected@file@percent }
+\newlabel{tab:datasets}{{6}{33}{Key Datasets for Feedback-Aware Evaluation\relax }{table.caption.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Statistical Testing and Significance}{33}{subsubsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Advanced Evaluation Methodologies}{34}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}Counterfactual Evaluation}{34}{subsubsection.5.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}Multi-Stakeholder Evaluation}{34}{subsubsection.5.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Reproducibility and Standardization}{34}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.1}Evaluation Framework Implementation}{34}{subsubsection.5.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.2}Best Practices for Reporting Results}{34}{subsubsection.5.6.2}\protected@file@percent }
+\newlabel{eq:precision_k}{{29}{35}{Best Practices for Reporting Results}{equation.5.29}{}}
+\newlabel{eq:ndcg_k}{{30}{35}{Best Practices for Reporting Results}{equation.5.30}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.3}Rating Prediction Metrics}{35}{subsubsection.5.6.3}\protected@file@percent }
+\newlabel{eq:rmse}{{31}{35}{Rating Prediction Metrics}{equation.5.31}{}}
+\newlabel{eq:mae}{{32}{35}{Rating Prediction Metrics}{equation.5.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.6.4}Area Under the Curve (AUC) Metrics}{35}{subsubsection.5.6.4}\protected@file@percent }
+\newlabel{eq:auc}{{33}{35}{Area Under the Curve (AUC) Metrics}{equation.5.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Evaluation Biases and Challenges}{35}{subsection.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.7.1}Dataset Biases}{35}{subsubsection.5.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.7.2}User Behavior Interpretations}{35}{subsubsection.5.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Evaluation Biases in Different Feedback Types\relax }}{36}{table.caption.35}\protected@file@percent }
+\newlabel{tab:evaluation_biases}{{7}{36}{Evaluation Biases in Different Feedback Types\relax }{table.caption.35}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Advanced Evaluation Frameworks}{36}{subsection.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.8.1}Novelty and Diversity Metrics}{36}{subsubsection.5.8.1}\protected@file@percent }
+\newlabel{eq:novelty}{{34}{36}{Novelty and Diversity Metrics}{equation.5.34}{}}
+\newlabel{eq:diversity}{{35}{36}{Novelty and Diversity Metrics}{equation.5.35}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.8.2}Serendipity Metrics}{36}{subsubsection.5.8.2}\protected@file@percent }
+\newlabel{eq:serendipity}{{36}{36}{Serendipity Metrics}{equation.5.36}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.8.3}Coverage Metrics}{36}{subsubsection.5.8.3}\protected@file@percent }
+\newlabel{eq:coverage}{{37}{36}{Coverage Metrics}{equation.5.37}{}}
+\newlabel{eq:user_coverage}{{38}{36}{Coverage Metrics}{equation.5.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.9}User-Centric Evaluation Methods}{36}{subsection.5.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.1}A/B Testing and Online Evaluation}{36}{subsubsection.5.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.2}User Studies and Surveys}{37}{subsubsection.5.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.3}Eye-Tracking and Physiological Measures}{37}{subsubsection.5.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.10}Bias Mitigation in Evaluation}{37}{subsection.5.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.1}Debiasing Techniques}{37}{subsubsection.5.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.10.2}Fairness-Aware Evaluation}{37}{subsubsection.5.10.2}\protected@file@percent }
+\newlabel{eq:demographic_parity}{{39}{37}{Fairness-Aware Evaluation}{equation.5.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.11}Dataset Construction and Benchmarking}{37}{subsection.5.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.1}Synthetic Dataset Generation}{37}{subsubsection.5.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.11.2}Cross-Domain Evaluation}{37}{subsubsection.5.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.12}Statistical Rigor and Reproducibility}{37}{subsection.5.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.12.1}Confidence Intervals and Significance Testing}{37}{subsubsection.5.12.1}\protected@file@percent }
+\newlabel{eq:confidence_interval}{{40}{37}{Confidence Intervals and Significance Testing}{equation.5.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.12.2}Reproducibility Challenges}{37}{subsubsection.5.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.13}Domain-Specific Evaluation Considerations}{37}{subsection.5.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.13.1}E-commerce Evaluation}{37}{subsubsection.5.13.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.13.2}Content Streaming Evaluation}{38}{subsubsection.5.13.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.13.3}Social Media Evaluation}{38}{subsubsection.5.13.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.14}Temporal and Dynamic Evaluation}{38}{subsection.5.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.14.1}Concept Drift Detection}{38}{subsubsection.5.14.1}\protected@file@percent }
+\newlabel{eq:drift_score}{{41}{38}{Concept Drift Detection}{equation.5.41}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.14.2}Adaptive Evaluation Protocols}{38}{subsubsection.5.14.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.15}Future Evaluation Directions}{38}{subsection.5.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Applications and Domains}{38}{section.6}\protected@file@percent }
+\newlabel{sec:applications}{{6}{38}{Applications and Domains}{section.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Domain Application Matrix: Feedback Characteristics Across Industries\relax }}{39}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:domain_matrix}{{10}{39}{Domain Application Matrix: Feedback Characteristics Across Industries\relax }{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}E-commerce and Retail}{39}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Product Recommendation Systems}{39}{subsubsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Case Studies}{39}{subsubsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.3}Performance Metrics}{40}{subsubsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Content Streaming and Entertainment}{40}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Video Streaming Platforms}{40}{subsubsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Music Streaming Services}{40}{subsubsection.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Case Study: Netflix Recommendation System}{40}{subsubsection.6.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}News and Content Platforms}{40}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}News Recommendation Challenges}{40}{subsubsection.6.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}Social News Platforms}{41}{subsubsection.6.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Social Media and Networking}{41}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Content Ranking Algorithms}{41}{subsubsection.6.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.2}Case Study: Twitter's Algorithm}{41}{subsubsection.6.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Emerging Domains and Applications}{41}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1}Educational Platforms}{41}{subsubsection.6.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.2}Health and Fitness Applications}{41}{subsubsection.6.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.3}Professional Networking}{41}{subsubsection.6.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.4}Gaming and Interactive Entertainment}{41}{subsubsection.6.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Domain-Specific Feedback Characteristics}{41}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1}Feedback Abundance and Quality}{41}{subsubsection.6.6.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Feedback Characteristics Across Domains\relax }}{42}{table.caption.37}\protected@file@percent }
+\newlabel{tab:domain_feedback}{{8}{42}{Feedback Characteristics Across Domains\relax }{table.caption.37}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.2}Cross-Domain Feedback Transfer}{42}{subsubsection.6.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Industry Best Practices and Implementation}{42}{subsection.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.1}Data Pipeline Architecture}{42}{subsubsection.6.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.2}Model Deployment and Monitoring}{42}{subsubsection.6.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.7.3}User Experience Optimization}{42}{subsubsection.6.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}Impact on Business Outcomes}{42}{subsection.6.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.8.1}Quantitative Benefits}{42}{subsubsection.6.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.8.2}Qualitative Benefits}{43}{subsubsection.6.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.9}Future Domain Evolution}{43}{subsection.6.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Challenges and Future Directions}{43}{section.7}\protected@file@percent }
+\newlabel{sec:challenges}{{7}{43}{Challenges and Future Directions}{section.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Research Roadmap: Future Directions for Feedback-Aware Recommender Systems\relax }}{43}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:research_roadmap}{{11}{43}{Research Roadmap: Future Directions for Feedback-Aware Recommender Systems\relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Technical Challenges}{43}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}Data Quality and Noise Issues}{43}{subsubsection.7.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Hybrid Integration Complexity}{44}{subsubsection.7.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.3}Computational and Scalability Issues}{44}{subsubsection.7.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Ethical and Societal Challenges}{44}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Privacy and Data Protection}{44}{subsubsection.7.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Bias and Fairness Considerations}{44}{subsubsection.7.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}User Agency and Autonomy}{44}{subsubsection.7.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Evaluation and Benchmarking Challenges}{44}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.1}Metrics and Validation}{44}{subsubsection.7.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.3.2}Benchmark Datasets and Protocols}{45}{subsubsection.7.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Future Research Directions}{45}{subsection.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.4.1}Advanced Modeling Approaches}{45}{subsubsection.7.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.4.2}Human-Centered Design}{45}{subsubsection.7.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.4.3}Cross-Domain and Interdisciplinary Research}{45}{subsubsection.7.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.4.4}Emerging Technologies and Applications}{45}{subsubsection.7.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Implementation Considerations}{45}{subsection.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.1}System Architecture}{45}{subsubsection.7.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.2}Development Best Practices}{46}{subsubsection.7.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.3}Deployment Strategies}{46}{subsubsection.7.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.4}Sparsity and Cold-Start Problems}{46}{subsubsection.7.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.5.5}Scalability and Real-Time Processing}{47}{subsubsection.7.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Ethical and Societal Challenges}{47}{subsection.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.6.1}Privacy and Data Protection}{47}{subsubsection.7.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.6.2}Fairness and Bias Mitigation}{47}{subsubsection.7.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.6.3}Filter Bubbles and Echo Chambers}{47}{subsubsection.7.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7}Explainability and Trust}{48}{subsection.7.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.7.1}Black-Box Model Transparency}{48}{subsubsection.7.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.7.2}User Trust and Adoption}{48}{subsubsection.7.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.8}Research Gaps and Opportunities}{48}{subsection.7.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.1}Theoretical Foundations}{48}{subsubsection.7.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.2}Methodological Advances}{48}{subsubsection.7.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.8.3}Evaluation Frameworks}{48}{subsubsection.7.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.9}Future Research Directions}{48}{subsection.7.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.9.1}Emerging Technologies and Paradigms}{48}{subsubsection.7.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.9.2}Interdisciplinary Integration}{48}{subsubsection.7.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.9.3}Sustainable and Responsible AI}{49}{subsubsection.7.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.10}Implementation Challenges}{49}{subsection.7.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.10.1}System Architecture Evolution}{49}{subsubsection.7.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.10.2}Data Infrastructure Requirements}{49}{subsubsection.7.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.10.3}Operational Excellence}{49}{subsubsection.7.10.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.11}Open Problems and Grand Challenges}{49}{subsection.7.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.11.1}Fundamental Research Questions}{49}{subsubsection.7.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.11.2}Grand Challenge Problems}{49}{subsubsection.7.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.11.3}Measurement and Benchmarking}{49}{subsubsection.7.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Synthesis and Future Directions}{50}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{50}{Synthesis and Future Directions}{section.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Comprehensive Survey Framework: Key Contributions and Interconnections\relax }}{50}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:survey_summary}{{12}{50}{Comprehensive Survey Framework: Key Contributions and Interconnections\relax }{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Key Findings and Insights}{50}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.1}The Feedback Complementarity Principle}{50}{subsubsection.8.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.2}The Bias-Performance Trade-off}{50}{subsubsection.8.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.3}The Temporal Adaptation Advantage}{51}{subsubsection.8.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.4}The Domain Dependency Principle}{51}{subsubsection.8.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Unified Theoretical Framework}{51}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.1}The Five-Dimensional Feedback Space}{51}{subsubsection.8.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.2}The Feedback Optimization Principle}{51}{subsubsection.8.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Practical Recommendations}{51}{subsection.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.1}For Researchers}{52}{subsubsection.8.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.2}For System Architects and Engineers}{52}{subsubsection.8.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.3.3}For Product Managers and Business Leaders}{52}{subsubsection.8.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Critical Research Directions}{53}{subsection.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.4.1}Direction 1: Bias-Aware Evaluation and Fairness}{53}{subsubsection.8.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.4.2}Direction 2: Privacy-Preserving Feedback Systems}{53}{subsubsection.8.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.4.3}Direction 3: Real-Time Hybrid Integration}{53}{subsubsection.8.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.4.4}Direction 4: Large Language Model Integration}{53}{subsubsection.8.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Long-Term Vision}{54}{subsection.8.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.5.1}Adaptive Feedback Intelligence}{54}{subsubsection.8.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.5.2}Transparent and Controllable}{54}{subsubsection.8.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.5.3}Universally Fair and Inclusive}{54}{subsubsection.8.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.5.4}Seamlessly Integrated}{54}{subsubsection.8.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Conclusion}{54}{subsection.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.6.1}E-commerce Optimization Strategies}{54}{subsubsection.8.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.6.2}Content Streaming Personalization}{54}{subsubsection.8.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.6.3}Social Media Engagement Optimization}{55}{subsubsection.8.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Technical Implementation Guidelines}{55}{subsection.8.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.7.1}Architecture Patterns for Production Systems}{55}{subsubsection.8.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.7.2}Data Pipeline Best Practices}{55}{subsubsection.8.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.7.3}Model Deployment and Monitoring}{55}{subsubsection.8.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.8}Economic and Business Impact Analysis}{55}{subsection.8.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.8.1}Return on Investment Metrics}{55}{subsubsection.8.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.8.2}Cost-Benefit Analysis by Feedback Type}{55}{table.caption.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.9}Industry Adoption Trends and Market Analysis}{55}{subsection.8.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.9.1}Current Market Landscape}{55}{subsubsection.8.9.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Cost-Benefit Analysis of Feedback Integration Strategies\relax }}{56}{table.caption.40}\protected@file@percent }
+\newlabel{tab:cost_benefit}{{9}{56}{Cost-Benefit Analysis of Feedback Integration Strategies\relax }{table.caption.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.9.2}Emerging Market Opportunities}{56}{subsubsection.8.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.10}Future Research Agenda and Roadmap}{56}{subsection.8.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.10.1}Short-term Priorities (1-3 years)}{56}{subsubsection.8.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.10.2}Medium-term Goals (3-7 years)}{56}{subsubsection.8.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.10.3}Long-term Vision (7-15 years)}{56}{subsubsection.8.10.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.11}Visionary Scenarios for 2035}{56}{subsection.8.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.11.1}Scenario 1: The Empathetic Assistant}{56}{subsubsection.8.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.11.2}Scenario 2: The Collective Intelligence}{57}{subsubsection.8.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.11.3}Scenario 3: The Sustainable Ecosystem}{57}{subsubsection.8.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.12}Implementation Roadmap for Practitioners}{57}{subsection.8.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.12.1}Phase 1: Foundation Building (0-6 months)}{57}{subsubsection.8.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.12.2}Phase 2: Hybrid Integration (6-18 months)}{57}{subsubsection.8.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.12.3}Phase 3: Advanced Optimization (18-36 months)}{57}{subsubsection.8.12.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.12.4}Phase 4: Future-Proofing (36+ months)}{57}{subsubsection.8.12.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.13}Conclusion and Final Reflections}{58}{subsection.8.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Mathematical Foundations and Derivations}{58}{appendix.A}\protected@file@percent }
+\newlabel{appendix:math}{{A}{58}{Mathematical Foundations and Derivations}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Matrix Factorization Fundamentals}{58}{subsection.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.1}Basic Matrix Factorization Model}{58}{subsubsection.A.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.2}Implicit Feedback Matrix Factorization}{58}{subsubsection.A.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Bayesian Personalized Ranking (BPR)}{59}{subsection.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Neural Collaborative Filtering}{59}{subsection.A.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Graph Neural Networks for Recommendations}{59}{subsection.A.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Transformer-based Sequential Recommendations}{59}{subsection.A.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6}Contrastive Learning Objectives}{59}{subsection.A.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7}Evaluation Metrics}{60}{subsection.A.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.7.1}Ranking Metrics}{60}{subsubsection.A.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.7.2}Beyond-Accuracy Metrics}{60}{subsubsection.A.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Extended Experimental Results}{60}{appendix.B}\protected@file@percent }
+\newlabel{appendix:experiments}{{B}{60}{Extended Experimental Results}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Dataset Statistics and Characteristics}{60}{subsection.B.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Comprehensive Dataset Comparison\relax }}{60}{table.caption.41}\protected@file@percent }
+\newlabel{tab:dataset_comparison}{{10}{60}{Comprehensive Dataset Comparison\relax }{table.caption.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}Algorithm Performance Benchmarks}{60}{subsection.B.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.2.1}Matrix Factorization Methods}{60}{table.caption.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.2.2}Neural Methods Performance}{60}{table.caption.43}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Matrix Factorization Performance Comparison\relax }}{61}{table.caption.42}\protected@file@percent }
+\newlabel{tab:mf_benchmark}{{11}{61}{Matrix Factorization Performance Comparison\relax }{table.caption.42}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Neural Recommendation Methods Benchmark\relax }}{61}{table.caption.43}\protected@file@percent }
+\newlabel{tab:neural_benchmark}{{12}{61}{Neural Recommendation Methods Benchmark\relax }{table.caption.43}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Sequential Recommendation Methods Benchmark\relax }}{61}{table.caption.44}\protected@file@percent }
+\newlabel{tab:sequential_benchmark}{{13}{61}{Sequential Recommendation Methods Benchmark\relax }{table.caption.44}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.2.3}Sequential Methods Performance}{61}{table.caption.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}Ablation Studies and Sensitivity Analysis}{62}{subsection.B.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Impact of Feedback Type on Performance\relax }}{62}{table.caption.45}\protected@file@percent }
+\newlabel{tab:feedback_impact}{{14}{62}{Impact of Feedback Type on Performance\relax }{table.caption.45}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.3.1}Feedback Type Impact Analysis}{62}{table.caption.45}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Hyperparameter Impact on NeuMF Performance\relax }}{62}{table.caption.46}\protected@file@percent }
+\newlabel{tab:hyperparameter_sensitivity}{{15}{62}{Hyperparameter Impact on NeuMF Performance\relax }{table.caption.46}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.3.2}Hyperparameter Sensitivity}{62}{table.caption.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {C}Recent Advances and Emerging Trends}{62}{appendix.C}\protected@file@percent }
+\newlabel{appendix:advances}{{C}{62}{Recent Advances and Emerging Trends}{appendix.C}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.1}Large Language Models for Recommendations}{62}{subsection.C.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.1.1}GPT-based Recommendation Systems}{62}{subsubsection.C.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.1.2}LLM-enhanced Feedback Processing}{62}{subsubsection.C.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.2}Multimodal Recommendation Systems}{62}{subsection.C.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.2.1}Vision-Language Models}{62}{subsubsection.C.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.2.2}Multimodal Fusion Techniques}{63}{subsubsection.C.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3}Federated and Privacy-Preserving Methods}{63}{subsection.C.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.3.1}Federated Recommendation}{63}{subsubsection.C.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.3.2}Differential Privacy in RS}{63}{subsubsection.C.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.4}Graph-based and GNN Approaches}{63}{subsection.C.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.4.1}Advanced Graph Neural Networks}{63}{subsubsection.C.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.4.2}Graph Contrastive Learning}{63}{subsubsection.C.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.5}Sequential and Session-based Recommendations}{63}{subsection.C.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.5.1}Advanced Sequential Models}{63}{subsubsection.C.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.5.2}Context-aware Sequential RS}{63}{subsubsection.C.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.6}Causal Inference in Recommendations}{63}{subsection.C.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.6.1}Causal Discovery}{63}{subsubsection.C.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.6.2}Debiasing through Causality}{63}{subsubsection.C.6.2}\protected@file@percent }
 \bibstyle{acm}
 \bibdata{references}
 \bibcite{abdollahpouri2019unfairness}{{1}{}{{}}{{}}}
-\bibcite{adomavicius2011context}{{2}{}{{}}{{}}}
-\bibcite{bennett2007netflix}{{3}{}{{}}{{}}}
-\bibcite{bonner2018causal}{{4}{}{{}}{{}}}
-\bibcite{breese1998empirical}{{5}{}{{}}{{}}}
-\bibcite{chai2020secure}{{6}{}{{}}{{}}}
-\bibcite{chen2017attentive}{{7}{}{{}}{{}}}
-\bibcite{chen2019large}{{8}{}{{}}{{}}}
-\bibcite{dacrema2019we}{{9}{}{{}}{{}}}
-\bibcite{dwork2014algorithmic}{{10}{}{{}}{{}}}
-\bibcite{ekstrand2022fairness}{{11}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.9}Conclusion and Final Reflections}{30}{subsection.7.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{30}{section*.18}\protected@file@percent }
-\bibcite{gao2019neural}{{12}{}{{}}{{}}}
-\bibcite{geyik2019fairness}{{13}{}{{}}{{}}}
-\bibcite{harper2015movielens}{{14}{}{{}}{{}}}
-\bibcite{he2020lightgcn}{{15}{}{{}}{{}}}
-\bibcite{he2016ups}{{16}{}{{}}{{}}}
-\bibcite{he2017neural}{{17}{}{{}}{{}}}
-\bibcite{he2016fast}{{18}{}{{}}{{}}}
-\bibcite{herlocker2004evaluating}{{19}{}{{}}{{}}}
-\bibcite{hidasi2015session}{{20}{}{{}}{{}}}
-\bibcite{hou2023large}{{21}{}{{}}{{}}}
-\bibcite{hu2008collaborative}{{22}{}{{}}{{}}}
-\bibcite{huang2012you}{{23}{}{{}}{{}}}
-\bibcite{joachims2017accurately}{{24}{}{{}}{{}}}
-\bibcite{koren2009matrix}{{25}{}{{}}{{}}}
-\bibcite{lian2017cccfnet}{{26}{}{{}}{{}}}
-\bibcite{linden2003amazon}{{27}{}{{}}{{}}}
-\bibcite{liu2010personalized}{{28}{}{{}}{{}}}
-\bibcite{ma2011recommender}{{29}{}{{}}{{}}}
-\bibcite{ma2011learning}{{30}{}{{}}{{}}}
-\bibcite{mcmahan2017communication}{{31}{}{{}}{{}}}
-\bibcite{pan2008one}{{32}{}{{}}{{}}}
-\bibcite{rendle2009bpr}{{33}{}{{}}{{}}}
-\bibcite{schein2002methods}{{34}{}{{}}{{}}}
-\bibcite{sedhain2015autorec}{{35}{}{{}}{{}}}
-\bibcite{solove2006taxonomy}{{36}{}{{}}{{}}}
-\bibcite{steck2011item}{{37}{}{{}}{{}}}
-\bibcite{sun2019bert4rec}{{38}{}{{}}{{}}}
-\bibcite{tang2018personalized}{{39}{}{{}}{{}}}
-\bibcite{van2013deep}{{40}{}{{}}{{}}}
-\bibcite{wang2017irgan}{{41}{}{{}}{{}}}
-\bibcite{wang2019neural}{{42}{}{{}}{{}}}
-\bibcite{wei2021contrastive}{{43}{}{{}}{{}}}
-\bibcite{weston2011wsabie}{{44}{}{{}}{{}}}
-\bibcite{wu2021self}{{45}{}{{}}{{}}}
-\bibcite{xie2022contrastive}{{46}{}{{}}{{}}}
-\bibcite{zhang2023conversational}{{47}{}{{}}{{}}}
-\bibcite{zhao2015improving}{{48}{}{{}}{{}}}
-\bibcite{zhao2018recommendations}{{49}{}{{}}{{}}}
-\bibcite{zhou2020s3}{{50}{}{{}}{{}}}
-\bibcite{zhuang2017representation}{{51}{}{{}}{{}}}
+\bibcite{adomavicius2005toward}{{2}{}{{}}{{}}}
+\bibcite{adomavicius2011context}{{3}{}{{}}{{}}}
+\bibcite{bennett2007netflix}{{4}{}{{}}{{}}}
+\bibcite{bonner2018causal}{{5}{}{{}}{{}}}
+\bibcite{breese1998empirical}{{6}{}{{}}{{}}}
+\bibcite{burke2002hybrid}{{7}{}{{}}{{}}}
+\bibcite{castells2011novelty}{{8}{}{{}}{{}}}
+\bibcite{chai2020secure}{{9}{}{{}}{{}}}
+\bibcite{chen2020bias}{{10}{}{{}}{{}}}
+\bibcite{chen2017attentive}{{11}{}{{}}{{}}}
+\bibcite{chen2019large}{{12}{}{{}}{{}}}
+\bibcite{cheng2016wide}{{13}{}{{}}{{}}}
+\bibcite{covington2016deep}{{14}{}{{}}{{}}}
+\bibcite{dacrema2019we}{{15}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.7}Sustainable and Green AI}{64}{subsection.C.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.7.1}Energy-efficient Recommendations}{64}{subsubsection.C.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.7.2}Carbon-aware Recommendations}{64}{subsubsection.C.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.8}Human-Centric Design}{64}{subsection.C.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.8.1}Explainable Recommendations}{64}{subsubsection.C.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {C.8.2}Fairness-aware Recommendations}{64}{subsubsection.C.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{64}{section*.48}\protected@file@percent }
+\bibcite{ekstrand2022fairness}{{16}{}{{}}{{}}}
+\bibcite{erkin2012privacy}{{17}{}{{}}{{}}}
+\bibcite{gao2021advances}{{18}{}{{}}{{}}}
+\bibcite{ge2020understanding}{{19}{}{{}}{{}}}
+\bibcite{gomez2015netflix}{{20}{}{{}}{{}}}
+\bibcite{he2020lightgcn}{{21}{}{{}}{{}}}
+\bibcite{he2017neural}{{22}{}{{}}{{}}}
+\bibcite{he2016fast}{{23}{}{{}}{{}}}
+\bibcite{herlocker1999algorithmic}{{24}{}{{}}{{}}}
+\bibcite{herlocker2004evaluating}{{25}{}{{}}{{}}}
+\bibcite{hidasi2015session}{{26}{}{{}}{{}}}
+\bibcite{hou2022towards}{{27}{}{{}}{{}}}
+\bibcite{hou2023large}{{28}{}{{}}{{}}}
+\bibcite{hu2008collaborative}{{29}{}{{}}{{}}}
+\bibcite{jia2021privacy}{{30}{}{{}}{{}}}
+\bibcite{joachims2017accurately}{{31}{}{{}}{{}}}
+\bibcite{kang2018self}{{32}{}{{}}{{}}}
+\bibcite{knijnenburg2012explaining}{{33}{}{{}}{{}}}
+\bibcite{koren2009collaborative}{{34}{}{{}}{{}}}
+\bibcite{koren2010collaborative}{{35}{}{{}}{{}}}
+\bibcite{koren2009matrix}{{36}{}{{}}{{}}}
+\bibcite{lee1999learning}{{37}{}{{}}{{}}}
+\bibcite{wu2020mind}{{38}{}{{}}{{}}}
+\bibcite{lian2017cccfnet}{{39}{}{{}}{{}}}
+\bibcite{linden2003amazon}{{40}{}{{}}{{}}}
+\bibcite{liu2022multimodal}{{41}{}{{}}{{}}}
+\bibcite{liu2018stamp}{{42}{}{{}}{{}}}
+\bibcite{ma2011learning}{{43}{}{{}}{{}}}
+\bibcite{ma2018modeling}{{44}{}{{}}{{}}}
+\bibcite{marlin2007collaborative}{{45}{}{{}}{{}}}
+\bibcite{mcsherry2009differentially}{{46}{}{{}}{{}}}
+\bibcite{pan2008one}{{47}{}{{}}{{}}}
+\bibcite{pazzani2007content}{{48}{}{{}}{{}}}
+\bibcite{pu2011user}{{49}{}{{}}{{}}}
+\bibcite{rendle2012factorization}{{50}{}{{}}{{}}}
+\bibcite{rendle2009bpr}{{51}{}{{}}{{}}}
+\bibcite{resnick1994grouplens}{{52}{}{{}}{{}}}
+\bibcite{ricci2015recommender}{{53}{}{{}}{{}}}
+\bibcite{sarwar2001item}{{54}{}{{}}{{}}}
+\bibcite{schnabel2016recommendations}{{55}{}{{}}{{}}}
+\bibcite{sedhain2015autorec}{{56}{}{{}}{{}}}
+\bibcite{shardanand1995social}{{57}{}{{}}{{}}}
+\bibcite{sun2019bert4rec}{{58}{}{{}}{{}}}
+\bibcite{tang2018personalized}{{59}{}{{}}{{}}}
+\bibcite{tang2019towards}{{60}{}{{}}{{}}}
+\bibcite{van2013deep}{{61}{}{{}}{{}}}
+\bibcite{wang2017irgan}{{62}{}{{}}{{}}}
+\bibcite{wang2019kgat}{{63}{}{{}}{{}}}
+\bibcite{wang2019neural}{{64}{}{{}}{{}}}
+\bibcite{wang2021user}{{65}{}{{}}{{}}}
+\bibcite{wei2021contrastive}{{66}{}{{}}{{}}}
+\bibcite{weston2011wsabie}{{67}{}{{}}{{}}}
+\bibcite{wu2021self}{{68}{}{{}}{{}}}
+\bibcite{xie2022contrastive}{{69}{}{{}}{{}}}
+\bibcite{hypergcn}{{70}{}{{}}{{}}}
+\bibcite{yao2021self}{{71}{}{{}}{{}}}
+\bibcite{zehlike2020reducing}{{72}{}{{}}{{}}}
+\bibcite{zhang2020knowledge}{{73}{}{{}}{{}}}
+\bibcite{zhang2020explainable}{{74}{}{{}}{{}}}
+\bibcite{zhao2018recommendations}{{75}{}{{}}{{}}}
+\bibcite{zhao2015improving}{{76}{}{{}}{{}}}
+\bibcite{zheng2018joint}{{77}{}{{}}{{}}}
+\bibcite{zhu2019transfer}{{78}{}{{}}{{}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
-\newlabel{tocindent1}{4.65pt}
+\newlabel{tocindent1}{6.95pt}
 \newlabel{tocindent2}{16.14998pt}
 \newlabel{tocindent3}{24.66pt}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\newlabel{TotPages}{{32}{32}{}{page.32}{}}
-\gdef \@abspage@last{32}
+\newlabel{TotPages}{{67}{67}{}{page.67}{}}
+\gdef \@abspage@last{67}

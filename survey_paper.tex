@@ -1,0 +1,79 @@
+\documentclass[acmsmall,screen]{acmart}
+
+% Package imports
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{balance}
+\usetikzlibrary{shapes.geometric,arrows,positioning}
+\pgfplotsset{compat=1.18}
+
+% ACM-specific formatting
+\acmVolume{1}
+\acmNumber{1}
+\acmArticle{1}
+\acmYear{2025}
+\acmMonth{10}
+\acmDOI{10.1145/3648406}
+
+% Authors
+\acmBooktitle{ACM Transactions on Recommender Systems}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/25/10}
+
+\title{Implicit vs. Explicit Feedback in Recommender Systems: A Comprehensive Survey and Unified Framework}
+
+\author{Mahamudul Hasan}
+\affiliation{%
+  \institution{University of Minnesota Twin Cities}
+  \city{Minneapolis}
+  \state{Minnesota}
+  \country{USA}}
+\email{hasan181@umn.edu}
+
+% CCS Concepts
+\ccsdesc[500]{Information systems~Recommender systems}
+\ccsdesc[500]{Information systems~Personalization}
+\ccsdesc[300]{Computing methodologies~Machine learning}
+\ccsdesc[300]{Information systems~Collaborative filtering}
+\ccsdesc[100]{Computing methodologies~Neural networks}
+
+\keywords{Recommender Systems, Implicit Feedback, Explicit Feedback, Collaborative Filtering, Machine Learning, Hybrid Models, Evaluation Metrics, User Behavior}
+
+\begin{document}
+
+\begin{abstract}
+Recommender systems have evolved into critical infrastructure for modern digital platforms, with user feedback serving as the fundamental data source driving personalization algorithms. This survey provides the first comprehensive analysis comparing implicit and explicit feedback mechanisms in recommender systems, establishing a unified theoretical framework and systematic evaluation methodology.
+
+We present a comprehensive taxonomy that categorizes feedback along multiple dimensions: collection mechanism, signal quality, temporal characteristics, and user cognitive load. Through systematic analysis of 150+ research papers spanning 2010-2025, we identify key algorithmic paradigms, evaluation challenges, and emerging research directions. Our framework reveals fundamental trade-offs between feedback types: implicit feedback provides abundant but noisy signals enabling real-time adaptation, while explicit feedback offers precise but sparse data requiring sophisticated bias handling.
+
+Key contributions include: (1) A comprehensive taxonomy unifying implicit and explicit feedback characteristics; (2) Systematic analysis of algorithmic approaches across feedback types; (3) Evaluation framework addressing feedback-specific biases; (4) Empirical analysis of real-world deployment patterns across domains; (5) Identification of open challenges and future research directions.
+
+Our analysis reveals that optimal recommender systems increasingly rely on hybrid approaches that strategically combine feedback types. We identify four critical research directions: bias-aware evaluation methodologies, privacy-preserving feedback collection, real-time hybrid integration, and fair representation across user populations. This work provides both theoretical foundations and practical guidance for developing next-generation recommender systems.
+
+The survey establishes implicit vs. explicit feedback as a fundamental design dimension affecting system architecture, user experience, and business outcomes. Our unified framework enables principled comparison of approaches and guides future research toward more effective, fair, and interpretable recommender systems.
+\end{abstract}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/survey_methodology}
+\input{sections/related_work}
+\input{sections/methodology}
+\input{sections/evaluation}
+\input{sections/applications}
+\input{sections/challenges_future}
+\input{sections/conclusion}
+\input{sections/appendices}
+
+\bibliographystyle{acm}
+\bibliography{references}
+
+\end{document}
