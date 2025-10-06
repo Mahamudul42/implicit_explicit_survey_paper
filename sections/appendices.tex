@@ -1,470 +1,133 @@
 
 \appendix
 
-\section{Mathematical Foundations and Derivations}
+\section{Mathematical Foundations}
 \label{appendix:math}
 
-This appendix provides detailed mathematical formulations for key concepts discussed in the main text.
+This appendix provides essential mathematical formulations.
 
-\subsection{Matrix Factorization Fundamentals}
+\subsection{Matrix Factorization}
 
-\subsubsection{Basic Matrix Factorization Model}
+\textbf{Basic Model}: $\mathbf{R} \approx \mathbf{P} \mathbf{Q}^T$ where $\mathbf{P} \in \mathbb{R}^{m \times k}$ (user factors) and $\mathbf{Q} \in \mathbb{R}^{n \times k}$ (item factors). Predicted rating: $\hat{r}_{ui} = \mu + b_u + b_i + \mathbf{p}_u^T \mathbf{q}_i$.
 
-The fundamental matrix factorization approach decomposes the user-item interaction matrix $\mathbf{R} \in \mathbb{R}^{m \times n}$ into user and item latent factor matrices:
+\textbf{Implicit Feedback (wALS)}: Confidence-weighted with $C_{ui} = 1 + \alpha r_{ui}$:
+$$\mathcal{L} = \sum_{u,i} c_{ui} (p_{ui} - \mathbf{p}_u^T \mathbf{q}_i)^2 + \lambda \left( \sum_u \|\mathbf{p}_u\|^2 + \sum_i \|\mathbf{q}_i\|^2 \right)$$
 
-\begin{equation}
-\mathbf{R} \approx \mathbf{P} \mathbf{Q}^T
-\end{equation}
+\subsection{Bayesian Personalized Ranking}
 
-where $\mathbf{P} \in \mathbb{R}^{m \times k}$ represents user latent factors and $\mathbf{Q} \in \mathbb{R}^{n \times k}$ represents item latent factors. The predicted rating for user $u$ and item $i$ is:
-
-\begin{equation}
-\hat{r}_{ui} = \mu + b_u + b_i + \mathbf{p}_u^T \mathbf{q}_i
-\end{equation}
-
-\subsubsection{Implicit Feedback Matrix Factorization}
-
-For implicit feedback, we use confidence-weighted matrix factorization:
-
-\begin{equation}
-C_{ui} = 1 + \alpha r_{ui}
-\end{equation}
-
-The loss function becomes:
-
-\begin{equation}
-\mathcal{L} = \sum_{u,i} c_{ui} (p_{ui} - \mathbf{p}_u^T \mathbf{q}_i)^2 + \lambda \left( \sum_u \|\mathbf{p}_u\|^2 + \sum_i \|\mathbf{q}_i\|^2 \right)
-\end{equation}
-
-\subsection{Bayesian Personalized Ranking (BPR)}
-
-BPR optimizes for ranking by comparing observed and unobserved interactions:
-
-\begin{equation}
-\mathcal{L}_{BPR} = -\sum_{(u,i,j) \in D} \ln \sigma(\hat{r}_{ui} - \hat{r}_{uj})
-\end{equation}
-
-where $D$ is the set of triples $(u,i,j)$ indicating user $u$ prefers item $i$ over item $j$.
+Optimizes ranking: $\mathcal{L}_{BPR} = -\sum_{(u,i,j) \in D} \ln \sigma(\hat{r}_{ui} - \hat{r}_{uj})$
 
 \subsection{Neural Collaborative Filtering}
 
-The NeuMF model combines generalized matrix factorization and multi-layer perceptron:
+Generalizes MF using neural networks: $\hat{r}_{ui} = f(\mathbf{p}_u, \mathbf{q}_i | \Theta)$ where $f$ is a multi-layer perceptron.
 
-\begin{equation}
-\hat{r}_{ui} = \mathbf{a}^T \begin{pmatrix} \mathbf{p}_u \\ \mathbf{q}_i \\ \mathbf{p}_u \odot \mathbf{q}_i \end{pmatrix}
-\end{equation}
+\section{Additional Resources}
+\label{appendix:resources}
 
-where $\mathbf{a}$ is learned from a neural network with layers:
+\subsection{Reproducibility and Datasets}
 
-\begin{equation}
-\mathbf{z}_1 = \begin{pmatrix} \mathbf{p}_u \\ \mathbf{q}_i \end{pmatrix}, \quad \mathbf{z}_K = \phi(\mathbf{W}_K^T \mathbf{z}_{K-1} + \mathbf{b}_K)
-\end{equation}
-
-\subsection{Graph Neural Networks for Recommendations}
-
-LightGCN aggregates embeddings through graph convolution:
-
-\begin{equation}
-\mathbf{e}_u^{(k+1)} = \sum_{i \in \mathcal{N}_u} \frac{1}{\sqrt{|\mathcal{N}_u|} \sqrt{|\mathcal{N}_i|}} \mathbf{e}_i^{(k)}
-\end{equation}
-
-The final embedding is a weighted sum of all layers:
-
-\begin{equation}
-\mathbf{e}_u = \sum_{k=0}^K \alpha_k \mathbf{e}_u^{(k)}
-\end{equation}
-
-\subsection{Transformer-based Sequential Recommendations}
-
-SASRec uses self-attention for sequential modeling:
-
-\begin{equation}
-\mathbf{s}_i = \mathbf{W}_1 \mathbf{e}_i + \mathbf{W}_2 \mathbf{e}_{i+1} + \cdots + \mathbf{W}_L \mathbf{e}_{i+L-1}
-\end{equation}
-
-\begin{equation}
-\text{Attention}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) = \mathrm{softmax}\left(\frac{\mathbf{Q}\mathbf{K}^T}{\sqrt{d_k}}\right) \mathbf{V}
-\end{equation}
-
-\subsection{Contrastive Learning Objectives}
-
-NT-Xent loss for contrastive learning:
-
-\begin{equation}
-\ell_{i,j} = -\log \frac{\exp(\text{sim}(\mathbf{z}_i, \mathbf{z}_j)/\tau)}{\sum_{k=1}^{2N} \mathbb{I}_{[k \neq i]} \exp(\text{sim}(\mathbf{z}_i, \mathbf{z}_k)/\tau)}
-\end{equation}
-
-\subsection{Evaluation Metrics}
-
-\subsubsection{Ranking Metrics}
-
-Precision@K and Recall@K:
-
-\begin{equation}
-\text{Precision@K} = \frac{|\{ \text{relevant items in top K} \}|}{K}
-\end{equation}
-
-\begin{equation}
-\text{Recall@K} = \frac{|\{ \text{relevant items in top K} \}|}{|\{ \text{all relevant items} \}|}
-\end{equation}
-
-Normalized Discounted Cumulative Gain (NDCG@K):
-
-\begin{equation}
-\text{NDCG@K} = \frac{\text{DCG@K}}{\text{IDCG@K}}, \quad \text{DCG@K} = \sum_{i=1}^K \frac{2^{rel_i} - 1}{\log_2(i+1)}
-\end{equation}
-
-\subsubsection{Beyond-Accuracy Metrics}
-
-Coverage and Diversity:
-
-\begin{equation}
-\text{Coverage} = \frac{|\{ \text{unique items recommended} \}|}{|\{ \text{all items} \}|}
-\end{equation}
-
-\begin{equation}
-\text{Diversity} = 1 - \frac{\sum_{u} \sum_{i,j \in \text{topK}_u} s_{ij}}{|\mathcal{U}| \cdot \binom{K}{2}}
-\end{equation}
-
-\section{Extended Experimental Results}
-\label{appendix:experiments}
-
-\subsection{Dataset Statistics and Characteristics}
+To facilitate reproducibility and further research, this section provides comprehensive information about benchmark datasets, their characteristics, and appropriate usage for different feedback types.
 
 \begin{table}[h]
 \centering
-\caption{Comprehensive Dataset Comparison}
-\label{tab:dataset_comparison}
-\small
-\begin{tabular}{@{}lccccc@{}}
+\tiny
+\caption{Benchmark Datasets: Characteristics and Feedback Types}
+\label{tab:datasets}
+\begin{tabular}{@{}lccccl@{}}
 \toprule
-Dataset & Users & Items & Interactions & Sparsity & Feedback Type \\
+Dataset & Users & Items & Interactions & Feedback & Domain \\
 \midrule
-MovieLens 100K & 943 & 1,682 & 100,000 & 93.7\% & Explicit \\
-MovieLens 1M & 6,040 & 3,706 & 1,000,209 & 95.5\% & Explicit \\
-MovieLens 10M & 69,878 & 10,677 & 10,000,054 & 98.6\% & Explicit \\
-Netflix Prize & 480,189 & 17,770 & 100,480,507 & 98.8\% & Explicit \\
-Amazon Reviews & 2,441,053 & 1,048,576 & 7,811,684 & 99.7\% & Explicit \\
-Last.fm & 1,892 & 17,632 & 92,834 & 99.7\% & Implicit \\
-Goodreads & 876,145 & 2,360,650 & 228,648,342 & 99.9\% & Explicit \\
-Yelp & 1,968,703 & 209,393 & 8,021,122 & 99.8\% & Explicit \\
-Douban & 2,847 & 39,586 & 1,068,278 & 99.1\% & Explicit \\
-CiteULike & 5,551 & 16,980 & 204,986 & 99.8\% & Implicit \\
-Foursquare & 2,193 & 38,376 & 114,324 & 99.9\% & Implicit \\
+\multicolumn{6}{l}{\textit{\textbf{Explicit Feedback Datasets}}} \\
+\midrule
+MovieLens-100K & 943 & 1.7K & 100K & Ratings (1-5) & Movies \\
+MovieLens-1M & 6K & 3.9K & 1M & Ratings (1-5) & Movies \\
+MovieLens-25M & 162K & 59K & 25M & Ratings (0.5-5) & Movies \\
+Netflix Prize & 480K & 18K & 100M & Ratings (1-5) & Movies \\
+Book-Crossing & 278K & 271K & 1.1M & Ratings (1-10) & Books \\
+Jester & 73K & 100 & 4.1M & Ratings (-10 to 10) & Jokes \\
+\midrule
+\multicolumn{6}{l}{\textit{\textbf{Implicit Feedback Datasets}}} \\
+\midrule
+Last.fm-360K & 360K & 290K & 17.5M & Listening count & Music \\
+Last.fm-1K & 992 & 176K & 19.1M & Plays & Music \\
+Spotify-1M & 1M & 160K & 1B+ & Streams & Music \\
+Amazon (multi) & Varies & Varies & 233M & Purchases/views & E-commerce \\
+Taobao & 987K & 4.1M & 100M & Clicks/purch. & E-commerce \\
+Tmall & 425K & 1.1M & 54M & Actions & E-commerce \\
+Pinterest & 55K & 9.9K & 1.5M & Pins & Social \\
+Yelp & 1.9M & 192K & 8M & Check-ins & Local biz \\
+\midrule
+\multicolumn{6}{l}{\textit{\textbf{Hybrid (Explicit + Implicit) Datasets}}} \\
+\midrule
+Yelp Challenge & 1.9M & 192K & 8M ratings + & Both & Reviews \\
+ & & & 1.2M reviews & & \\
+Amazon Reviews & Varies & Varies & 233M ratings + & Both & E-commerce \\
+ & & & text reviews & & \\
+Epinions & 49K & 139K & 664K + trust & Both & Products \\
+Douban & 129K & 58K & 17M + reviews & Both & Movies/Books \\
+\midrule
+\multicolumn{6}{l}{\textit{\textbf{Sequential/Temporal Datasets}}} \\
+\midrule
+YOOCHOOSE & -- & 53K & 34M & Clicks/purch. & E-commerce \\
+RetailRocket & -- & 235K & 2.7M & Events & E-commerce \\
+Diginetica & -- & 43K & 1M & Sessions & E-commerce \\
 \bottomrule
+\multicolumn{6}{l}{\scriptsize \textit{Note: Sizes approximate; some datasets have multiple versions.}} \\
 \end{tabular}
 \end{table}
 
-\subsection{Algorithm Performance Benchmarks}
-
-\subsubsection{Matrix Factorization Methods}
-
-\begin{table}[h]
-\centering
-\caption{Matrix Factorization Performance Comparison}
-\label{tab:mf_benchmark}
-\small
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-Method & Dataset & Precision@10 & Recall@10 & NDCG@10 & Training Time \\
-\midrule
-SVD & ML-100K & 0.742 & 0.324 & 0.819 & 2.3s \\
-PMF & ML-100K & 0.756 & 0.338 & 0.831 & 4.1s \\
-ALS & ML-100K & 0.763 & 0.342 & 0.838 & 3.8s \\
-BPR & ML-100K & 0.721 & 0.298 & 0.795 & 5.2s \\
-WARP & ML-100K & 0.738 & 0.315 & 0.812 & 6.8s \\
-\midrule
-SVD & Netflix & 0.856 & 0.412 & 0.892 & 45.2s \\
-PMF & Netflix & 0.871 & 0.428 & 0.905 & 78.3s \\
-ALS & Netflix & 0.878 & 0.435 & 0.912 & 65.7s \\
-BPR & Netflix & 0.843 & 0.398 & 0.881 & 92.1s \\
-WARP & Netflix & 0.862 & 0.415 & 0.895 & 108.4s \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\footnotesize \textbf{Statistical Validation:} All performance metrics are reported from peer-reviewed literature with statistical significance established through paired t-tests ($p < 0.05$). Confidence intervals for these metrics typically range from $\pm 0.01$ to $\pm 0.02$. Results represent mean values across 5-fold cross-validation unless otherwise specified in the original studies.
-
-\subsubsection{Neural Methods Performance}
-
-\begin{table}[h]
-\centering
-\caption{Neural Recommendation Methods Benchmark}
-\label{tab:neural_benchmark}
-\small
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-Method & Dataset & Precision@10 & Recall@10 & NDCG@10 & Training Time \\
-\midrule
-NeuMF & ML-100K & 0.789 & 0.356 & 0.852 & 12.4s \\
-AutoRec & ML-100K & 0.745 & 0.318 & 0.821 & 8.7s \\
-CDAE & ML-100K & 0.758 & 0.332 & 0.835 & 9.3s \\
-Multi-DAE & ML-100K & 0.772 & 0.345 & 0.845 & 11.2s \\
-Multi-VAE & ML-100K & 0.781 & 0.352 & 0.851 & 10.8s \\
-\midrule
-NeuMF & Amazon & 0.823 & 0.387 & 0.875 & 156.2s \\
-AutoRec & Amazon & 0.798 & 0.365 & 0.858 & 98.4s \\
-CDAE & Amazon & 0.812 & 0.378 & 0.867 & 112.7s \\
-Multi-DAE & Amazon & 0.818 & 0.382 & 0.871 & 134.5s \\
-Multi-VAE & Amazon & 0.825 & 0.389 & 0.877 & 128.9s \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\footnotesize \textbf{Statistical Validation:} All performance metrics are reported from peer-reviewed literature with statistical significance established through paired t-tests ($p < 0.05$). Confidence intervals for these metrics typically range from $\pm 0.01$ to $\pm 0.02$. Results represent mean values across 5-fold cross-validation unless otherwise specified in the original studies.
-
-\subsubsection{Sequential Methods Performance}
-
-\begin{table}[h]
-\centering
-\caption{Sequential Recommendation Methods Benchmark}
-\label{tab:sequential_benchmark}
-\small
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-Method & Dataset & Precision@10 & Recall@10 & NDCG@10 & Training Time \\
-\midrule
-GRU4Rec & RetailRocket & 0.312 & 0.156 & 0.289 & 45.2s \\
-GRU4Rec+ & RetailRocket & 0.328 & 0.168 & 0.305 & 52.1s \\
-Caser & RetailRocket & 0.335 & 0.172 & 0.312 & 38.7s \\
-SASRec & RetailRocket & 0.356 & 0.185 & 0.331 & 67.3s \\
-BERT4Rec & RetailRocket & 0.368 & 0.192 & 0.345 & 89.4s \\
-\midrule
-GRU4Rec & ML-1M & 0.412 & 0.198 & 0.385 & 78.9s \\
-GRU4Rec+ & ML-1M & 0.428 & 0.212 & 0.402 & 85.6s \\
-Caser & ML-1M & 0.435 & 0.218 & 0.409 & 72.3s \\
-SASRec & ML-1M & 0.451 & 0.228 & 0.425 & 98.7s \\
-BERT4Rec & ML-1M & 0.467 & 0.238 & 0.441 & 124.5s \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\footnotesize \textbf{Statistical Validation:} All performance metrics are reported from peer-reviewed literature with statistical significance established through paired t-tests ($p < 0.05$). Confidence intervals for these metrics typically range from $\pm 0.01$ to $\pm 0.02$. Results represent mean values across 5-fold cross-validation unless otherwise specified in the original studies.
-
-\subsection{Ablation Studies and Sensitivity Analysis}
-
-\subsubsection{Feedback Type Impact Analysis}
-
-\begin{table}[h]
-\centering
-\caption{Impact of Feedback Type on Performance}
-\label{tab:feedback_impact}
-\small
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-Feedback Configuration & Precision@10 & Recall@10 & NDCG@10 & Coverage & Diversity \\
-\midrule
-Implicit Only & 0.312 & 0.156 & 0.289 & 0.234 & 0.678 \\
-Explicit Only & 0.298 & 0.142 & 0.275 & 0.198 & 0.712 \\
-Hybrid (Early Fusion) & 0.345 & 0.178 & 0.318 & 0.256 & 0.645 \\
-Hybrid (Late Fusion) & 0.358 & 0.185 & 0.331 & 0.268 & 0.632 \\
-Hybrid (Attention) & 0.372 & 0.192 & 0.345 & 0.278 & 0.618 \\
-Multimodal & 0.389 & 0.201 & 0.358 & 0.291 & 0.598 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsubsection{Hyperparameter Sensitivity}
-
-\begin{table}[h]
-\centering
-\caption{Hyperparameter Impact on NeuMF Performance}
-\label{tab:hyperparameter_sensitivity}
-\small
-\begin{tabular}{@{}lccccc@{}}
-\toprule
-Embedding Dim & Learning Rate & Precision@10 & Recall@10 & NDCG@10 & Training Time \\
-\midrule
-32 & 0.001 & 0.756 & 0.328 & 0.821 & 45s \\
-64 & 0.001 & 0.789 & 0.356 & 0.852 & 52s \\
-128 & 0.001 & 0.812 & 0.378 & 0.867 & 68s \\
-256 & 0.001 & 0.823 & 0.387 & 0.875 & 89s \\
-\midrule
-128 & 0.0001 & 0.798 & 0.365 & 0.858 & 156s \\
-128 & 0.001 & 0.812 & 0.378 & 0.867 & 68s \\
-128 & 0.01 & 0.785 & 0.352 & 0.851 & 34s \\
-128 & 0.1 & 0.723 & 0.298 & 0.795 & 18s \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Recent Advances and Emerging Trends}
-\label{appendix:advances}
-
-\subsection{Large Language Models for Recommendations}
-
-\subsubsection{GPT-based Recommendation Systems}
-
-Recent work has explored using large language models (LLMs) for recommendation tasks:
-
+\textbf{Dataset Selection Guidelines:}
 \begin{itemize}
-    \item \textbf{Prompt Engineering}: Crafting prompts to elicit recommendation knowledge from LLMs
-    \item \textbf{Fine-tuning}: Adapting LLMs to recommendation datasets and tasks
-    \item \textbf{Knowledge Integration}: Combining parametric knowledge with recommendation signals
-    \item \textbf{Conversational RS}: Using LLMs for natural language interaction in recommendation
+    \item \textbf{For Explicit Feedback Research}: MovieLens (all sizes), Netflix Prize, Book-Crossing
+    \item \textbf{For Implicit Feedback Research}: Last.fm, Taobao, Pinterest, Spotify
+    \item \textbf{For Hybrid Systems}: Yelp Challenge, Amazon Reviews (include text and ratings)
+    \item \textbf{For Temporal/Sequential}: YOOCHOOSE, RetailRocket, Diginetica
+    \item \textbf{For Cold-Start Studies}: MovieLens-25M, Amazon (high sparsity versions)
+    \item \textbf{For Scalability Testing}: Netflix Prize, Spotify-1M, Amazon-full
 \end{itemize}
 
-\subsubsection{LLM-enhanced Feedback Processing}
-
-LLMs can improve feedback understanding:
+\textbf{Data Access and Citation:}
 \begin{itemize}
-    \item \textbf{Review Analysis}: Extracting structured information from textual reviews
-    \item \textbf{Aspect Mining}: Identifying specific aspects mentioned in feedback
-    \item \textbf{Sentiment Analysis}: Understanding nuanced emotional responses
-    \item \textbf{Context Understanding}: Interpreting feedback in broader conversational context
+    \item MovieLens: \url{https://grouplens.org/datasets/movielens/}
+    \item Amazon Reviews: \url{https://cseweb.ucsd.edu/~jmcauley/datasets.html}
+    \item Last.fm: \url{https://www.last.fm/api}
+    \item Yelp Challenge: \url{https://www.yelp.com/dataset}
+    \item RecSysDatasets: \url{https://github.com/caserec/Datasets-for-Recommender-Systems}
 \end{itemize}
 
-\subsection{Multimodal Recommendation Systems}
-
-\subsubsection{Vision-Language Models}
-
-Recent advances combine visual and textual information:
+\textbf{Preprocessing Recommendations:}
 \begin{itemize}
-    \item \textbf{CLIP-based RS}: Using contrastive vision-language models for item understanding
-    \item \textbf{Image-text Matching}: Aligning user preferences with multimodal item representations
-    \item \textbf{Visual Feedback}: Processing image uploads and visual reactions
-    \item \textbf{Cross-modal Retrieval}: Finding items based on multimodal queries
+    \item \textbf{Minimum Interactions}: Filter users/items with $<$5 interactions for explicit, $<$20 for implicit
+    \item \textbf{Temporal Splits}: Use time-based train/test splits (80/20) rather than random
+    \item \textbf{Cold-Start Simulation}: Reserve 10-20\% of users/items with limited data for cold-start evaluation
+    \item \textbf{Negative Sampling}: For implicit feedback, sample negatives from unobserved items (typical ratio 1:4 or 1:10)
 \end{itemize}
 
-\subsubsection{Multimodal Fusion Techniques}
-
-Advanced fusion methods include:
+\subsection{Open-Source Implementations}
 \begin{itemize}
-    \item \textbf{Cross-attention}: Attending to relevant modalities dynamically
-    \item \textbf{Multimodal Transformers}: Joint modeling of multiple input types
-    \item \textbf{Contrastive Learning}: Aligning representations across modalities
-    \item \textbf{Adaptive Fusion}: Learning optimal combinations of modalities
+    \item \textbf{Surprise}: Python scikit for recommender systems
+    \item \textbf{LightFM}: Hybrid recommendation algorithms
+    \item \textbf{RecBole}: Comprehensive recommendation library
+    \item \textbf{TensorFlow Recommenders}: Production-scale implementations
 \end{itemize}
 
-\subsection{Federated and Privacy-Preserving Methods}
-
-\subsubsection{Federated Recommendation}
-
-Distributed learning approaches:
+\subsection{Benchmark Datasets}
 \begin{itemize}
-    \item \textbf{Federated Averaging}: Aggregating model updates from multiple clients
-    \item \textbf{Personalized FL}: Adapting global models to individual user preferences
-    \item \textbf{Secure Aggregation}: Protecting user privacy during model updates
-    \item \textbf{Heterogeneous FL}: Handling varying data distributions across clients
+    \item \textbf{MovieLens}: Multiple scales (100K, 1M, 10M, 25M ratings)
+    \item \textbf{Amazon Product Reviews}: Multi-category e-commerce data
+    \item \textbf{Netflix Prize}: Historical movie ratings dataset
+    \item \textbf{Last.fm}: Music listening data with implicit feedback
+    \item \textbf{Yelp Challenge}: Business reviews and check-ins
 \end{itemize}
 
-\subsubsection{Differential Privacy in RS}
+\subsection{Research Venues}
+\textbf{Top Conferences}: ACM RecSys, KDD, WWW, SIGIR, WSDM, CIKM
 
-Privacy-preserving techniques:
+\textbf{Key Journals}: ACM TOIS, IEEE TKDE, ACM TIST, User Modeling and User-Adapted Interaction
+
+\subsection{Online Resources}
 \begin{itemize}
-    \item \textbf{DP-SGD}: Adding noise to gradients during training
-    \item \textbf{Private Embeddings}: Protecting user and item representations
-    \item \textbf{Output Perturbation}: Adding noise to recommendation scores
-    \item \textbf{Privacy-Utility Trade-offs}: Balancing privacy guarantees with recommendation quality
+    \item RecSys Wiki: \texttt{wiki.recsyschallenge.com}
+    \item Papers with Code: \texttt{paperswithcode.com/task/recommendation-systems}
+    \item Awesome Recommender Systems: \texttt{github.com/grahamjenson/list\_of\_recommender\_systems}
 \end{itemize}
-
-\subsection{Graph-based and GNN Approaches}
-
-\subsubsection{Advanced Graph Neural Networks}
-
-Beyond LightGCN, recent developments include:
-\begin{itemize}
-    \item \textbf{Heterogeneous GNNs}: Modeling different types of relationships
-    \item \textbf{Dynamic Graphs}: Capturing temporal evolution of user-item interactions
-    \item \textbf{Hypergraph Networks}: Modeling complex higher-order relationships
-    \item \textbf{Spatial-temporal GNNs}: Incorporating geographical and temporal information
-\end{itemize}
-
-\subsubsection{Graph Contrastive Learning}
-
-Self-supervised learning on graphs:
-\begin{itemize}
-    \item \textbf{Graph Augmentation}: Creating positive and negative samples through graph modifications
-    \item \textbf{Contrastive Objectives}: Maximizing agreement between augmented views
-    \item \textbf{Node-level CL}: Learning node representations through contrastive tasks
-    \item \textbf{Graph-level CL}: Learning graph-level representations for recommendation
-\end{itemize}
-
-\subsection{Sequential and Session-based Recommendations}
-
-\subsubsection{Advanced Sequential Models}
-
-Recent advances in sequential modeling:
-\begin{itemize}
-    \item \textbf{Transformer Variants}: BERT4Rec, SASRec, and their improvements
-    \item \textbf{Graph-based Sequences}: Modeling transitions as graphs
-    \item \textbf{Hierarchical Modeling}: Capturing both short-term and long-term preferences
-    \item \textbf{Multi-behavior Sequences}: Modeling different types of user actions
-\end{itemize}
-
-\subsubsection{Context-aware Sequential RS}
-
-Incorporating contextual information:
-\begin{itemize}
-    \item \textbf{Temporal Context}: Time-aware sequential modeling
-    \item \textbf{Spatial Context}: Location-based sequential patterns
-    \item \textbf{Social Context}: Incorporating social network information
-    \item \textbf{Device Context}: Adapting to different access devices and contexts
-\end{itemize}
-
-\subsection{Causal Inference in Recommendations}
-
-\subsubsection{Causal Discovery}
-
-Understanding causal relationships in RS:
-\begin{itemize}
-    \item \textbf{Causal Graphs}: Modeling causal relationships between variables
-    \item \textbf{Intervention Analysis}: Understanding effects of system changes
-    \item \textbf{Counterfactual Reasoning}: Estimating what-if scenarios
-    \item \textbf{Causal Regularization}: Incorporating causal constraints in learning
-\end{itemize}
-
-\subsubsection{Debiasing through Causality}
-
-Causal approaches to debiasing:
-\begin{itemize}
-    \item \textbf{Confounder Identification}: Finding variables that bias recommendations
-    \item \textbf{Front-door Criterion}: Estimating causal effects in the presence of confounders
-    \item \textbf{Instrumental Variables}: Using exogenous variables for unbiased estimation
-    \item \textbf{Causal Effect Estimation}: Measuring true causal impacts of recommendations
-\end{itemize}
-
-\subsection{Sustainable and Green AI}
-
-\subsubsection{Energy-efficient Recommendations}
-
-Reducing computational costs:
-\begin{itemize}
-    \item \textbf{Model Compression}: Smaller, more efficient models
-    \item \textbf{Knowledge Distillation}: Transferring knowledge to compact models
-    \item \textbf{Early Exit}: Stopping computation early for easy predictions
-    \item \textbf{Adaptive Computation}: Allocating compute based on prediction difficulty
-\end{itemize}
-
-\subsubsection{Carbon-aware Recommendations}
-
-Environmentally conscious systems:
-\begin{itemize}
-    \item \textbf{Carbon Footprint Tracking}: Measuring environmental impact of recommendations
-    \item \textbf{Green Inference}: Energy-efficient model serving
-    \item \textbf{Sustainable Content}: Promoting environmentally friendly options
-    \item \textbf{Lifecycle Analysis}: Considering full lifecycle impact of recommended items
-\end{itemize}
-
-\subsection{Human-Centric Design}
-
-\subsubsection{Explainable Recommendations}
-
-Advances in explainability:
-\begin{itemize}
-    \item \textbf{Feature Attribution}: Understanding which features influence predictions
-    \item \textbf{Counterfactual Explanations}: Explaining through what-if scenarios
-    \item \textbf{Natural Language Explanations}: Generating human-readable explanations
-    \item \textbf{Interactive Explanations}: Allowing users to explore and modify explanations
-\end{itemize}
-
-\subsubsection{Fairness-aware Recommendations}
-
-Ensuring equitable outcomes:
-\begin{itemize}
-    \item \textbf{Group Fairness}: Ensuring fair treatment across demographic groups
-    \item \textbf{Individual Fairness}: Treating similar users similarly
-    \item \textbf{Merit-based Fairness}: Ensuring recommendations reflect true merit
-    \item \textbf{Diversity Promotion}: Ensuring representation of underrepresented groups
-\end{itemize}
-

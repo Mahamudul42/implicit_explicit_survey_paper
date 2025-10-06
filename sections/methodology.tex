@@ -9,95 +9,176 @@ This section presents our comprehensive framework for understanding, categorizin
 
 We propose a comprehensive five-dimensional taxonomy that characterizes feedback along orthogonal axes, enabling principled analysis and optimal system design. This framework extends beyond simple implicit/explicit categorization to capture the full spectrum of feedback characteristics.
 
+\begin{figure*}[ht]
+\centering
+\begin{tikzpicture}[
+    scale=0.60,
+    transform shape,
+    level 1/.style={sibling distance=8cm, level distance=2cm},
+    level 2/.style={sibling distance=3.5cm, level distance=2cm},
+    level 3/.style={sibling distance=1.8cm, level distance=1.8cm},
+    every node/.style={draw, rectangle, rounded corners, minimum width=2.5cm, minimum height=0.7cm, align=center, font=\small},
+    root/.style={fill=blue!30, font=\bfseries, minimum width=3.5cm},
+    main/.style={fill=green!25},
+    sub/.style={fill=yellow!20, minimum width=2.2cm, minimum height=0.6cm, font=\footnotesize},
+    leaf/.style={fill=orange!15, minimum width=1.8cm, minimum height=0.5cm, font=\scriptsize}
+]
+
+% Root
+\node[root] (root) at (0,0) {Feedback\\Taxonomy};
+
+% Level 1 - Main Categories
+\node[main] (implicit) at (-6,-2.5) {Implicit\\Feedback};
+\node[main] (explicit) at (0,-2.5) {Explicit\\Feedback};
+\node[main] (hybrid) at (6,-2.5) {Hybrid\\Feedback};
+
+% Level 2 - Implicit subcategories
+\node[sub] (behavioral) at (-9,-5) {Behavioral\\Signals};
+\node[sub] (physiological) at (-6,-5) {Physiological\\Signals};
+\node[sub] (contextual) at (-3,-5) {Contextual\\Data};
+
+% Level 2 - Explicit subcategories
+\node[sub] (ratings) at (-1.5,-5) {Direct\\Ratings};
+\node[sub] (reviews) at (1.5,-5) {Textual\\Reviews};
+
+% Level 2 - Hybrid subcategories
+\node[sub] (binary) at (4,-5) {Binary\\Indicators};
+\node[sub] (comparison) at (6.5,-5) {Comparative\\Judgments};
+\node[sub] (micro) at (9,-5) {Micro-\\Feedback};
+
+% Level 3 - Behavioral leaves
+\node[leaf] (clicks) at (-10.5,-7) {Clicks\\(CTR)};
+\node[leaf] (views) at (-9,-7) {Page\\Views};
+\node[leaf] (purchases) at (-7.5,-7) {Purchase\\History};
+
+% Level 3 - Physiological leaves
+\node[leaf] (eye) at (-6.5,-7) {Eye\\Tracking};
+\node[leaf] (biometric) at (-5,-7) {Biometric\\Sensors};
+
+% Level 3 - Contextual leaves
+\node[leaf] (temporal) at (-3.5,-7) {Temporal\\Patterns};
+\node[leaf] (location) at (-2,-7) {Location\\Data};
+
+% Level 3 - Ratings leaves
+\node[leaf] (numeric) at (-2.5,-7) {Numeric\\Scales};
+\node[leaf] (stars) at (-0.5,-7) {Star\\Ratings};
+
+% Level 3 - Reviews leaves
+\node[leaf] (text) at (1,-7) {Written\\Reviews};
+\node[leaf] (tags) at (2.5,-7) {Tags/\\Keywords};
+
+% Level 3 - Binary leaves
+\node[leaf] (like) at (3.5,-7) {Like/\\Dislike};
+\node[leaf] (thumbs) at (5,-7) {Thumbs\\Up/Down};
+
+% Level 3 - Comparison leaves
+\node[leaf] (pairwise) at (6,-7) {Pairwise\\Preference};
+\node[leaf] (ranking) at (7.5,-7) {Complete\\Rankings};
+
+% Level 3 - Micro leaves
+\node[leaf] (emoji) at (8.5,-7) {Emoji\\Reactions};
+\node[leaf] (quick) at (10,-7) {Quick\\Polls};
+
+% Edges Level 1
+\draw[thick] (root) -- (implicit);
+\draw[thick] (root) -- (explicit);
+\draw[thick] (root) -- (hybrid);
+
+% Edges Level 2 - Implicit
+\draw (implicit) -- (behavioral);
+\draw (implicit) -- (physiological);
+\draw (implicit) -- (contextual);
+
+% Edges Level 2 - Explicit
+\draw (explicit) -- (ratings);
+\draw (explicit) -- (reviews);
+
+% Edges Level 2 - Hybrid
+\draw (hybrid) -- (binary);
+\draw (hybrid) -- (comparison);
+\draw (hybrid) -- (micro);
+
+% Edges Level 3 - Behavioral
+\draw (behavioral) -- (clicks);
+\draw (behavioral) -- (views);
+\draw (behavioral) -- (purchases);
+
+% Edges Level 3 - Physiological
+\draw (physiological) -- (eye);
+\draw (physiological) -- (biometric);
+
+% Edges Level 3 - Contextual
+\draw (contextual) -- (temporal);
+\draw (contextual) -- (location);
+
+% Edges Level 3 - Ratings
+\draw (ratings) -- (numeric);
+\draw (ratings) -- (stars);
+
+% Edges Level 3 - Reviews
+\draw (reviews) -- (text);
+\draw (reviews) -- (tags);
+
+% Edges Level 3 - Binary
+\draw (binary) -- (like);
+\draw (binary) -- (thumbs);
+
+% Edges Level 3 - Comparison
+\draw (comparison) -- (pairwise);
+\draw (comparison) -- (ranking);
+
+% Edges Level 3 - Micro
+\draw (micro) -- (emoji);
+\draw (micro) -- (quick);
+
+% Dimension annotations
+\node[draw=none, fill=none, font=\footnotesize\bfseries, text=blue!70!black] at (-9,-8.5) {Passive Collection};
+\node[draw=none, fill=none, font=\footnotesize\bfseries, text=orange!70!black] at (0,-8.5) {Active Collection};
+\node[draw=none, fill=none, font=\footnotesize\bfseries, text=purple!70!black] at (7.5,-8.5) {Semi-Active Collection};
+
+% Quality indicators
+\node[draw=none, fill=none, font=\tiny, text=red!70!black] at (-9,-9) {Low SNR};
+\node[draw=none, fill=none, font=\tiny, text=green!70!black] at (0,-9) {High SNR};
+\node[draw=none, fill=none, font=\tiny, text=orange!70!black] at (7.5,-9) {Medium SNR};
+
+\end{tikzpicture}
+\caption{Comprehensive hierarchical taxonomy of feedback types in recommender systems. The tree illustrates three primary feedback categories (Implicit, Explicit, Hybrid), their subcategories organized by collection mechanism, and specific instantiations at the leaf level. Color coding indicates collection mechanism: passive (blue), active (orange), and semi-active (purple). Signal-to-noise ratio (SNR) annotations indicate typical reliability levels for each category. This taxonomy enables systematic categorization and comparison of feedback across diverse recommendation domains and application contexts.}
+\Description{A hierarchical tree diagram showing feedback taxonomy with three levels. The root node splits into Implicit, Explicit, and Hybrid feedback. Implicit branches into Behavioral Signals, Physiological Signals, and Contextual Data with specific examples like clicks, eye tracking, and temporal patterns. Explicit branches into Direct Ratings and Textual Reviews with examples like star ratings and written reviews. Hybrid branches into Binary Indicators, Comparative Judgments, and Micro-Feedback with examples like thumbs up/down and emoji reactions.}
+\label{fig:feedback_taxonomy_tree}
+\end{figure*}
+
 \subsubsection{Dimension 1: Collection Mechanism}
-This dimension characterizes how feedback is obtained from users:
+This dimension characterizes how feedback is obtained from users, spanning three primary categories along a continuum from fully automated to explicitly intentional.
 
-\textbf{Passive Collection}: Feedback automatically captured without user intention
-\begin{itemize}
-    \item \textit{Behavioral tracking}: Clicks, views, navigation patterns
-    \item \textit{Physiological signals}: Eye tracking, biometric responses
-    \item \textit{Environmental context}: Location, time, device characteristics
-\end{itemize}
+\textbf{Passive Collection} encompasses feedback automatically captured without requiring user intention or awareness. Behavioral tracking captures user interactions including clicks, page views, and navigation patterns that naturally occur during system use. Physiological signals leverage biometric sensors to measure eye tracking patterns, galvanic skin responses, heart rate variations, and other involuntary responses that reveal affective states and attention. Environmental context data encompasses location information, temporal patterns, device characteristics, and ambient conditions that provide situational awareness without explicit user input.
 
-\textbf{Active Collection}: Feedback requiring deliberate user action
-\begin{itemize}
-    \item \textit{Direct ratings}: Numerical or categorical preference expressions
-    \item \textit{Comparative judgments}: Pairwise preferences, rankings
-    \item \textit{Textual feedback}: Reviews, comments, explanations
-\end{itemize}
+\textbf{Active Collection} requires deliberate user action to provide feedback, typically involving conscious evaluation and expression of preferences. Direct ratings ask users to provide numerical scores or categorical assessments that explicitly quantify their preferences for items. Comparative judgments elicit pairwise preferences or complete rankings that reveal relative preferences through structured comparisons. Textual feedback includes written reviews, comments, and explanations that provide rich, nuanced preference information along with supporting rationale and context.
 
-\textbf{Semi-Active Collection}: Feedback with minimal user effort
-\begin{itemize}
-    \item \textit{Binary indicators}: Like/dislike, thumbs up/down
-    \item \textit{Implicit confirmations}: Accepting/rejecting recommendations
-    \item \textit{Micro-feedback}: Quick satisfaction indicators
-\end{itemize}
+\textbf{Semi-Active Collection} occupies the middle ground, requiring minimal user effort while still involving intentional feedback provision. Binary indicators like thumbs up/down or like/dislike buttons provide simple approval signals with minimal cognitive burden. Implicit confirmations capture decisions to accept or reject system recommendations, revealing preferences through choice behavior. Micro-feedback mechanisms solicit quick satisfaction indicators through lightweight interactions that interrupt user flow minimally.
 
 \subsubsection{Dimension 2: Signal Quality and Noise Characteristics}
 
-\textbf{Signal-to-Noise Ratio}: Quantifies the reliability of preference inference
-\begin{itemize}
-    \item \textit{High SNR}: Direct ratings with clear semantic meaning
-    \item \textit{Medium SNR}: Purchase behavior with some ambiguity
-    \item \textit{Low SNR}: Click-through data with high noise levels
-\end{itemize}
+\textbf{Signal-to-Noise Ratio} quantifies the reliability with which preferences can be inferred from feedback signals. High SNR feedback like direct ratings provides clear semantic meaning with minimal ambiguity about user preferences. Medium SNR signals such as purchase behavior contain some ambiguity, as purchases may reflect factors beyond preference including necessity, price sensitivity, or gift-giving. Low SNR data like click-through behavior exhibits high noise levels, as clicks may result from curiosity, accidental interaction, or interface design rather than genuine interest.
 
-\textbf{Confidence Indicators}: Measures of feedback reliability
-\begin{itemize}
-    \item \textit{User-provided confidence}: Self-assessed certainty ratings
-    \item \textit{Behavioral confidence}: Inferred from action characteristics
-    \item \textit{Statistical confidence}: Derived from pattern consistency
-\end{itemize}
+\textbf{Confidence Indicators} provide measures of feedback reliability across multiple assessment approaches. User-provided confidence captures self-assessed certainty ratings that users supply alongside their primary feedback. Behavioral confidence is inferred from action characteristics such as dwell time, repeat interactions, or interaction intensity that suggest stronger or weaker preference signals. Statistical confidence derives from pattern consistency across multiple observations, identifying reliable signals through temporal stability and cross-contextual agreement.
 
 \subsubsection{Dimension 3: Temporal Characteristics}
 
-\textbf{Feedback Latency}: Time delay between experience and feedback
-\begin{itemize}
-    \item \textit{Real-time}: Immediate behavioral responses
-    \item \textit{Short-term}: Feedback within hours or days
-    \item \textit{Long-term}: Delayed evaluations after extended use
-\end{itemize}
+\textbf{Feedback Latency} describes the time delay between item experience and feedback provision, with significant implications for signal quality. Real-time feedback captures immediate behavioral responses that occur during or immediately following item consumption. Short-term feedback arrives within hours or days of the experience, reflecting deliberate but relatively prompt evaluation. Long-term feedback involves delayed evaluations provided after extended use or reflection, potentially offering deeper insight but risking memory decay and context loss.
 
-\textbf{Temporal Persistence}: Stability of feedback over time
-\begin{itemize}
-    \item \textit{Stable}: Consistent preferences across time
-    \item \textit{Evolving}: Gradually changing preferences
-    \item \textit{Volatile}: Rapidly fluctuating preferences
-\end{itemize}
+\textbf{Temporal Persistence} characterizes the stability of feedback signals over time, revealing the nature of underlying preferences. Stable feedback exhibits consistent preferences across extended periods, simplifying long-term modeling and prediction. Evolving feedback demonstrates gradually changing preferences driven by learning, life stage transitions, or shifting interests that require adaptive models. Volatile feedback shows rapidly fluctuating preferences influenced by contextual factors, mood variations, or exploratory behavior that challenges prediction algorithms.
 
 \subsubsection{Dimension 4: Cognitive Load and User Effort}
 
-\textbf{Effort Requirements}: Cognitive and physical cost to users
-\begin{itemize}
-    \item \textit{Zero effort}: Automatic behavioral tracking
-    \item \textit{Minimal effort}: Single-click interactions
-    \item \textit{Moderate effort}: Rating scales, binary choices
-    \item \textit{High effort}: Detailed reviews, explanations
-\end{itemize}
+\textbf{Effort Requirements} quantify the cognitive and physical costs users must bear to provide feedback. Zero-effort feedback relies on automatic behavioral tracking that imposes no burden beyond normal system use. Minimal-effort interactions like single-click buttons require simple motor actions with negligible cognitive processing. Moderate-effort mechanisms including rating scales and binary choices demand some conscious evaluation and decision-making. High-effort feedback such as detailed reviews and explanations requires substantial cognitive investment in articulation and composition.
 
-\textbf{User Awareness}: Extent of user consciousness about feedback provision
-\begin{itemize}
-    \item \textit{Unconscious}: Automatic behavioral capture
-    \item \textit{Semi-conscious}: Aware but not primary focus
-    \item \textit{Conscious}: Deliberate feedback provision
-\end{itemize}
+\textbf{User Awareness} captures the extent to which users consciously recognize they are providing feedback. Unconscious feedback arises from automatic behavioral capture that users may not realize is being collected or analyzed. Semi-conscious feedback occurs when users are aware of data collection but it is not their primary focus during interaction. Conscious feedback involves deliberate, intentional feedback provision where users explicitly aim to communicate their preferences to the system.
 
 \subsubsection{Dimension 5: Privacy and Sensitivity}
 
-\textbf{Privacy Implications}: Sensitivity of feedback data
-\begin{itemize}
-    \item \textit{Public}: Shareable feedback (public ratings)
-    \item \textit{Semi-private}: Platform-specific data (purchase history)
-    \item \textit{Private}: Sensitive behavioral patterns (browsing history)
-    \item \textit{Highly sensitive}: Personal/health-related preferences
-\end{itemize}
+\textbf{Privacy Implications} assess the sensitivity of feedback data and associated sharing comfort levels. Public feedback like product ratings can be openly shared without privacy concerns, often intentionally made visible to other users. Semi-private data such as platform-specific purchase histories remain within organizational boundaries but are not publicly disclosed. Private feedback including detailed browsing histories contains sensitive behavioral patterns that users expect will be protected from disclosure. Highly sensitive data involving personal health, financial, or intimate preference information demands the strongest privacy protections and consent practices.
 
-\textbf{Consent Requirements}: Level of user agreement needed
-\begin{itemize}
-    \item \textit{Implicit consent}: Assumed through platform use
-    \item \textit{Explicit consent}: Clear agreement for data collection
-    \item \textit{Granular consent}: Fine-grained control over data types
-\end{itemize}
+\textbf{Consent Requirements} specify the level of user agreement necessary for ethical feedback collection. Implicit consent assumes agreement through general platform use, typically documented in terms of service agreements. Explicit consent requires clear, specific agreement for particular data collection practices, often mandated by privacy regulations. Granular consent provides fine-grained user control over different data types and uses, empowering users to make nuanced privacy decisions that reflect their individual comfort levels and trust in the platform.
 
 \begin{figure}[ht]
 \centering
@@ -150,10 +231,145 @@ This dimension characterizes how feedback is obtained from users:
     
 \end{tikzpicture}
 \caption{Unified System Architecture for Feedback-Aware Recommender Systems}
+\Description{A system architecture diagram showing the flow from user-item interactions through implicit and explicit feedback collection, then through preprocessing layers (implicit features and explicit features), into modeling algorithms (Matrix Factorization, BPR Ranking, Deep Learning, and Graph Neural Networks), combined through a Hybrid Fusion Layer using early, late, or attention-based integration, and finally producing recommendations with ranking, rating prediction, and explanations.}
 \label{fig:system_architecture}
 \end{figure}
 
 Figure~\ref{fig:system_architecture} presents our unified architecture that systematically processes both implicit and explicit feedback through specialized preprocessing, algorithmic modeling, and fusion components.
+
+\begin{figure*}[ht]
+\centering
+\begin{tikzpicture}[
+    scale=0.58,
+    transform shape,
+    box/.style={rectangle, draw, thick, minimum width=2.5cm, minimum height=0.8cm, align=center, font=\footnotesize},
+    data/.style={box, fill=blue!20},
+    process/.style={box, fill=green!20},
+    model/.style={box, fill=purple!20},
+    output/.style={box, fill=orange!20},
+    storage/.style={cylinder, draw, thick, minimum width=2cm, minimum height=1cm, shape border rotate=90, fill=yellow!20, font=\footnotesize}
+]
+
+% Top: Data Sources
+\node[data] (web) at (0,10) {Web Logs};
+\node[data] (mobile) at (3,10) {Mobile Events};
+\node[data] (ratings) at (6,10) {Rating Database};
+\node[data] (reviews) at (9,10) {Review System};
+\node[data] (social) at (12,10) {Social Signals};
+
+% Data Collection Layer
+\node[process] (collector) at (6,8.5) {Data Collection Pipeline};
+\draw[thick, ->] (web) -- (collector);
+\draw[thick, ->] (mobile) -- (collector);
+\draw[thick, ->] (ratings) -- (collector);
+\draw[thick, ->] (reviews) -- (collector);
+\draw[thick, ->] (social) -- (collector);
+
+% Stream Processing
+\node[process] (stream) at (2,7) {Stream Processor};
+\node[process] (batch) at (10,7) {Batch Processor};
+\draw[thick, ->] (collector) -- (stream);
+\draw[thick, ->] (collector) -- (batch);
+
+% Feature Engineering
+\node[process] (implicit_fe) at (0,5.5) {Implicit Features};
+\node[process] (explicit_fe) at (4,5.5) {Explicit Features};
+\node[process] (context_fe) at (8,5.5) {Context Features};
+\node[process] (fusion_fe) at (12,5.5) {Feature Fusion};
+
+\draw[thick, ->] (stream) -- (implicit_fe);
+\draw[thick, ->] (stream) -- (explicit_fe);
+\draw[thick, ->] (batch) -- (context_fe);
+\draw[thick, ->] (batch) -- (fusion_fe);
+
+% Storage Layer
+\node[storage] (feature_store) at (6,3.8) {Feature Store};
+\draw[thick, ->] (implicit_fe) -- (feature_store);
+\draw[thick, ->] (explicit_fe) -- (feature_store);
+\draw[thick, ->] (context_fe) -- (feature_store);
+\draw[thick, ->] (fusion_fe) -- (feature_store);
+
+% Model Training Pipeline
+\node[model] (mf_train) at (0,2) {MF Training};
+\node[model] (dl_train) at (3,2) {DL Training};
+\node[model] (gnn_train) at (6,2) {GNN Training};
+\node[model] (ensemble) at (9,2) {Ensemble Training};
+\node[model] (online_learn) at (12,2) {Online Learning};
+
+\draw[thick, ->] (feature_store) -- (mf_train);
+\draw[thick, ->] (feature_store) -- (dl_train);
+\draw[thick, ->] (feature_store) -- (gnn_train);
+\draw[thick, ->] (feature_store) -- (ensemble);
+\draw[thick, ->] (feature_store) -- (online_learn);
+
+% Model Registry
+\node[storage] (model_registry) at (6,0.5) {Model Registry};
+\draw[thick, ->] (mf_train) -- (model_registry);
+\draw[thick, ->] (dl_train) -- (model_registry);
+\draw[thick, ->] (gnn_train) -- (model_registry);
+\draw[thick, ->] (ensemble) -- (model_registry);
+\draw[thick, ->] (online_learn) -- (model_registry);
+
+% Serving Layer
+\node[output] (serving) at (6,-1) {Model Serving (Low Latency)};
+\draw[thick, ->] (model_registry) -- (serving);
+
+% Prediction & Ranking
+\node[output] (prediction) at (2,-2.5) {Prediction Engine};
+\node[output] (ranking) at (6,-2.5) {Ranking Engine};
+\node[output] (explanation) at (10,-2.5) {Explanation Generator};
+
+\draw[thick, ->] (serving) -- (prediction);
+\draw[thick, ->] (serving) -- (ranking);
+\draw[thick, ->] (serving) -- (explanation);
+
+% API Layer
+\node[output] (api) at (6,-4) {Recommendation API};
+\draw[thick, ->] (prediction) -- (api);
+\draw[thick, ->] (ranking) -- (api);
+\draw[thick, ->] (explanation) -- (api);
+
+% User Interface
+\node[output] (ui) at (6,-5.5) {User Interface (Web/Mobile/API)};
+\draw[thick, ->] (api) -- (ui);
+
+% Feedback Loop
+\draw[thick, ->, dashed, red] (ui.east) -- ++(2,0) -- ++(0,16.5) -- (collector.east);
+\node[draw=none, fill=none, font=\tiny, text=red, rotate=90] at (9.5,2) {Feedback Loop};
+
+% Monitoring & Evaluation
+\node[process, fill=cyan!20] (monitoring) at (15,5) {Monitoring and Logging};
+\node[process, fill=cyan!20] (ab_test) at (15,3) {A/B Testing};
+\node[process, fill=cyan!20] (metrics) at (15,1) {Metrics Dashboard};
+
+\draw[thick, ->, dashed] (serving) -- (monitoring);
+\draw[thick, ->, dashed] (api) -- (ab_test);
+\draw[thick, ->, dashed] (ui) -- (metrics);
+
+% Annotations
+\node[draw=none, fill=none, font=\tiny\bfseries, text=blue!70!black] at (-2,10) {Data Sources};
+\node[draw=none, fill=none, font=\tiny\bfseries, text=green!70!black] at (-2,7) {Processing};
+\node[draw=none, fill=none, font=\tiny\bfseries, text=purple!70!black] at (-2,2) {Training};
+\node[draw=none, fill=none, font=\tiny\bfseries, text=orange!70!black] at (-2,-2.5) {Serving};
+
+% Key Components Box
+\node[draw, rectangle, fill=yellow!10, align=left, font=\scriptsize, anchor=north west, text width=3.5cm] at (15,9) {
+    \textbf{Key Components:}\\
+    \textcolor{blue}{$\blacksquare$} Data ingestion\\
+    \textcolor{green}{$\blacksquare$} Feature engineering\\
+    \textcolor{yellow!70!black}{$\blacksquare$} Storage \& registry\\
+    \textcolor{purple}{$\blacksquare$} Model training\\
+    \textcolor{orange}{$\blacksquare$} Serving \& API\\
+    \textcolor{cyan}{$\blacksquare$} Monitoring\\
+    \textcolor{red}{$\blacksquare$} Feedback loop
+};
+
+\end{tikzpicture}
+\caption{Complete end-to-end production architecture for implicit-explicit hybrid recommender systems. The diagram illustrates the full data flow from multiple sources (web logs, mobile events, ratings, reviews, social signals) through real-time stream and batch processing pipelines, feature engineering and storage, distributed model training (matrix factorization, deep learning, graph neural networks, ensemble methods, online learning), model registry and serving infrastructure, prediction and ranking engines, API layer, and user interface. The red dashed line shows the critical feedback loop that captures new user interactions to continuously improve the system. Cyan components represent monitoring, A/B testing, and metrics infrastructure for production system health and performance evaluation.}
+\label{fig:end_to_end_architecture}
+\end{figure*}
+
+Figure~\ref{fig:end_to_end_architecture} presents the complete production system architecture, illustrating how modern recommendation platforms integrate diverse feedback sources through sophisticated data engineering, distributed training, and low-latency serving infrastructure.
 
 \subsection{Algorithmic Framework Analysis}
 
@@ -486,22 +702,23 @@ Feedback types exhibit distinct properties that influence their utility, reliabi
 
 \begin{table}[h]
 \centering
+\tiny
 \caption{Comparative Analysis of Feedback Properties}
 \label{tab:feedback_properties_detailed}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-Property & Implicit Feedback & Explicit Feedback & Hybrid Approaches & Key Implications \\
+Property & Implicit & Explicit & Hybrid & Key Implications \\
 \midrule
-Data Volume & Very High & Low-Moderate & High & Scalability trade-offs \\
-Collection Cost & Near Zero & High (User Effort) & Variable & Economic considerations \\
-Temporal Resolution & Real-time & Delayed & Mixed & Adaptation speed \\
-Semantic Clarity & Low & High & Moderate & Interpretation complexity \\
-Noise Level & High & Low-Moderate & Moderate & Signal processing needs \\
-Sparsity Pattern & Extreme (Many zeros) & Variable & Reduced & Matrix completion challenges \\
-Bias Types & Behavioral & Self-selection & Compound & Fairness requirements \\
-Privacy Sensitivity & Moderate & High & High & Regulatory compliance \\
-User Burden & None & High & Moderate & Engagement strategies \\
-Contextual Richness & High & Low-Moderate & High & Personalization depth \\
+Data Volume & VHigh & Low-Mod & High & Scalability trade-offs \\
+Collection Cost & $\sim$0 & High & Variable & Economic consider. \\
+Temporal Res. & Real-time & Delayed & Mixed & Adaptation speed \\
+Semantic Clarity & Low & High & Moderate & Interp. complexity \\
+Noise Level & High & Low-Mod & Moderate & Signal proc. needs \\
+Sparsity & Extreme & Variable & Reduced & Matrix completion \\
+Bias Types & Behavior & Self-sel. & Compound & Fairness needs \\
+Privacy & Moderate & High & High & Regulatory compl. \\
+User Burden & None & High & Moderate & Engagement strat. \\
+Context Rich. & High & Low-Mod & High & Personalization \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -536,9 +753,121 @@ Feedback evolves over time and varies by context:
 
 \subsection{Advanced Feedback Categorization}
 
+\subsection{Practitioner Decision Framework}
+
+To guide system designers in selecting appropriate feedback strategies, we present a comprehensive decision framework that considers application requirements, user characteristics, and business constraints.
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[
+    scale=0.72,
+    transform shape,
+    decision/.style={diamond, draw, thick, fill=yellow!20, text width=2cm, align=center, inner sep=2pt},
+    action/.style={rectangle, draw, thick, fill=blue!20, text width=2.5cm, align=center, minimum height=0.8cm},
+    result/.style={rectangle, draw, thick, fill=green!20, text width=2.8cm, align=center, minimum height=1cm}
+]
+
+% Start
+\node[action] (start) at (0,10) {System Requirements};
+
+% First decision
+\node[decision] (d1) at (0,8.5) {User effort tolerable?};
+
+% Second level
+\node[decision] (d2a) at (-4,6.5) {Data volume high?};
+\node[decision] (d2b) at (4,6.5) {High quality needed?};
+
+% Third level
+\node[decision] (d3a) at (-6,4.5) {Real-time adapt?};
+\node[decision] (d3b) at (-2,4.5) {Cold-start issue?};
+\node[decision] (d3c) at (2,4.5) {Budget limited?};
+\node[decision] (d3d) at (6,4.5) {Explainability?};
+
+% Results
+\node[result] (r1) at (-7,2) {\textbf{Pure Implicit}\\High volume\\Low effort\\Real-time};
+\node[result] (r2) at (-4,2) {\textbf{Implicit+Cold}\\Add survey\\Init explicit};
+\node[result] (r3) at (-1,2) {\textbf{Light Hybrid}\\Implicit+likes\\Low cost};
+\node[result] (r4) at (2,2) {\textbf{Active Learning}\\Query users\\Minimize effort};
+\node[result] (r5) at (5,2) {\textbf{Rich Explicit}\\Reviews\\Ratings\\High quality};
+\node[result] (r6) at (8,2) {\textbf{Full Hybrid}\\All signals\\Max quality};
+
+% Arrows
+\draw[thick, ->] (start) -- (d1);
+\draw[->] (d1) -- node[left] {Low} (-2,7.7) -- (d2a);
+\draw[->] (d1) -- node[right] {High} (2,7.7) -- (d2b);
+
+\draw[->] (d2a) -- node[left] {Yes} (-5,5.7) -- (d3a);
+\draw[->] (d2a) -- node[right] {No} (-3,5.7) -- (d3b);
+\draw[->] (d2b) -- node[left] {No} (3,5.7) -- (d3c);
+\draw[->] (d2b) -- node[right] {Yes} (5,5.7) -- (d3d);
+
+\draw[->] (d3a) -- node[left] {Yes} (r1);
+\draw[->] (d3a) -- node[right] {No} (-5.5,2.8) -- (r2);
+\draw[->] (d3b) -- (r2);
+\draw[->] (d3b) -- node[right] {No} (-1.5,2.8) -- (r3);
+\draw[->] (d3c) -- node[left] {Yes} (r3);
+\draw[->] (d3c) -- node[right] {No} (r4);
+\draw[->] (d3d) -- node[left] {No} (4,2.8) -- (r4);
+\draw[->] (d3d) -- node[right] {Low} (r5);
+\draw[->] (d3d) -- node[right] {High} (6.5,2.8) -- (r6);
+
+\end{tikzpicture}
+\caption{Decision Flowchart for Feedback Strategy Selection}
+\Description{A decision tree flowchart starting with system requirements and branching through decision nodes for user effort tolerance, data volume, real-time adaptation needs, cold-start issues, budget constraints, and explainability requirements. Each path leads to one of six recommended strategies: Pure Implicit, Implicit with Cold-start support, Lightweight Hybrid, Active Learning, Rich Explicit, or Full Hybrid approach.}
+\label{fig:decision_flowchart}
+\end{figure}
+
+\textbf{Decision Framework Guidelines:}
+
+\begin{enumerate}
+    \item \textbf{User Effort Assessment}: 
+    \begin{itemize}
+        \item Low tolerance: Mobile apps, gaming, short sessions $\rightarrow$ Favor implicit
+        \item High tolerance: Professional tools, high-value purchases $\rightarrow$ Consider explicit
+    \end{itemize}
+    
+    \item \textbf{Data Volume Expectations}:
+    \begin{itemize}
+        \item High volume guaranteed: E-commerce, streaming $\rightarrow$ Implicit sufficient
+        \item Limited interactions: Niche products, cold-start $\rightarrow$ Need explicit/hybrid
+    \end{itemize}
+    
+    \item \textbf{Real-time Adaptation Requirements}:
+    \begin{itemize}
+        \item Essential: News, social feeds, live events $\rightarrow$ Implicit feedback
+        \item Less critical: Periodic recommendations $\rightarrow$ Flexible on feedback type
+    \end{itemize}
+    
+    \item \textbf{Quality vs. Cost Trade-offs}:
+    \begin{itemize}
+        \item Budget constrained: Implicit-only (no collection costs)
+        \item Quality critical: Invest in hybrid with active learning
+    \end{itemize}
+    
+    \item \textbf{Explainability Requirements}:
+    \begin{itemize}
+        \item High need: Healthcare, finance, education $\rightarrow$ Explicit + hybrid
+        \item Low need: Entertainment, browsing $\rightarrow$ Implicit acceptable
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Implementation Checklist:}
+\begin{itemize}
+    \item[$\square$] Assess user base characteristics (tech-savvy, demographics, behavior patterns)
+    \item[$\square$] Estimate expected interaction volume and frequency
+    \item[$\square$] Define primary success metrics (accuracy, engagement, revenue, satisfaction)
+    \item[$\square$] Evaluate budget for feedback collection and processing infrastructure
+    \item[$\square$] Consider regulatory requirements (GDPR, CCPA, consent management)
+    \item[$\square$] Plan for cold-start and new user scenarios
+    \item[$\square$] Design bias detection and mitigation strategies
+    \item[$\square$] Establish A/B testing framework for strategy validation
+\end{itemize}
+
+\subsection{Advanced Feedback Categorization}
+
 \subsubsection{Feedback Granularity Spectrum}
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
 \begin{tikzpicture}[scale=0.8]
     \draw[->] (0,0) -- (10,0) node[right] {Granularity};
@@ -564,6 +893,7 @@ Feedback evolves over time and varies by context:
     \fill[black] (9,3.7) circle (2pt) node[above right] {Review};
 \end{tikzpicture}
 \caption{Feedback Granularity Spectrum}
+\Description{A two-dimensional plot showing the feedback granularity spectrum with Granularity on the x-axis and Explicitness on the y-axis. The plot is divided into three colored regions: Implicit (blue, low explicitness), Quasi-explicit (green, medium), and Explicit (red, high). Example feedback types are plotted as points: Click (low), Purchase (low-medium), Thumbs up (medium), Star rating (medium-high), and Review (high).}
 \label{fig:granularity_spectrum}
 \end{figure}
 
@@ -656,7 +986,7 @@ Feedback collection raises several ethical concerns:
 
 Figure~\ref{fig:comprehensive_taxonomy} presents our comprehensive taxonomy of feedback types.
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
 \fbox{
 \begin{minipage}{0.9\textwidth}

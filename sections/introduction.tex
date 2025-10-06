@@ -39,12 +39,13 @@ The effectiveness of any recommender system fundamentally depends on its ability
     \draw[->] (reviews) -- (explicit);
     \draw[->] (tags) -- (explicit);
     
-    % Characteristics labels
-    \node[align=left, font=\small] at (-6,0.5) {\textbf{Characteristics:}\\• High volume\\• Low effort\\• Noisy signals\\• Real-time};
-    \node[align=left, font=\small] at (6,0.5) {\textbf{Characteristics:}\\• High quality\\• High effort\\• Sparse data\\• Clear semantics};
+    % Characteristics labels (NO BULLETS - world-class style)
+    \node[align=left, font=\small] at (-6,0.5) {\textbf{Characteristics:}\\High volume\\Low effort\\Noisy signals\\Real-time};
+    \node[align=left, font=\small] at (6,0.5) {\textbf{Characteristics:}\\High quality\\High effort\\Sparse data\\Clear semantics};
     
 \end{tikzpicture}
 \caption{Conceptual Framework: Feedback Types in Recommender Systems}
+\Description{A diagram showing the feedback framework with implicit feedback (clicks, purchases, dwell time) and explicit feedback (ratings, reviews, tags) flowing into a central recommender system, which then produces hybrid approaches. The diagram includes characteristics for each feedback type.}
 \label{fig:feedback_framework}
 \end{figure}
 
@@ -121,8 +122,7 @@ This survey synthesizes research spanning 2010-2025, focusing on the period when
 This survey is structured to provide comprehensive coverage of feedback mechanisms:
 
 \begin{itemize}
-    \item \textbf{Section~\ref{sec:survey_methodology}} outlines our systematic survey methodology and literature review approach
-    \item \textbf{Section~\ref{sec:related}} provides comprehensive background and positions our work within the broader literature
+    \item \textbf{Section~\ref{sec:related}} provides comprehensive background, historical evolution, and positions our work within the broader literature
     \item \textbf{Section~\ref{sec:methodology}} presents our unified taxonomy and systematic analysis of algorithmic approaches
     \item \textbf{Section~\ref{sec:evaluation}} examines evaluation frameworks and bias analysis methodologies
     \item \textbf{Section~\ref{sec:applications}} explores real-world deployments across diverse application domains
