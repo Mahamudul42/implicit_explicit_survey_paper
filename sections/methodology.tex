@@ -366,6 +366,7 @@ Figure~\ref{fig:system_architecture} presents our unified architecture that syst
 
 \end{tikzpicture}
 \caption{Complete end-to-end production architecture for implicit-explicit hybrid recommender systems. The diagram illustrates the full data flow from multiple sources (web logs, mobile events, ratings, reviews, social signals) through real-time stream and batch processing pipelines, feature engineering and storage, distributed model training (matrix factorization, deep learning, graph neural networks, ensemble methods, online learning), model registry and serving infrastructure, prediction and ranking engines, API layer, and user interface. The red dashed line shows the critical feedback loop that captures new user interactions to continuously improve the system. Cyan components represent monitoring, A/B testing, and metrics infrastructure for production system health and performance evaluation.}
+\Description{A comprehensive system architecture diagram showing the end-to-end flow from multiple data sources through processing pipelines, model training, serving infrastructure, to user interface. The architecture includes data collection from web logs, mobile events, ratings, reviews, and social signals; real-time and batch processing pipelines; feature storage in key-value and vector stores; distributed training of multiple model types (matrix factorization, deep learning, graph neural networks, ensemble methods, online learning); model registry and serving infrastructure; prediction and ranking engines; API layer; and user interface, with a feedback loop returning user interactions to the system for continuous improvement.}
 \label{fig:end_to_end_architecture}
 \end{figure*}
 
@@ -535,10 +536,10 @@ Attention Mechanisms & Good & Good & $O(n^2 d)$ & Poor & High \\
     \def\n{6}
     \def\radius{3}
     
-    % Draw axes
+    % Draw axes - ADJUSTED LABEL POSITIONING
     \foreach \i in {0,...,5} {
         \draw (0,0) -- (\i*60:\radius);
-        \node at (\i*60:\radius+0.5) [anchor=center] {\tiny
+        \node at (\i*60:\radius+0.3) [anchor=center, font=\tiny] {
             \ifcase\i Accuracy\or Scalability\or Speed\or Memory\or Simplicity\or Flexibility\fi
         };
     }
@@ -578,14 +579,14 @@ Attention Mechanisms & Good & Good & $O(n^2 d)$ & Poor & High \\
     \draw[green, thick] (bpr0) -- (bpr1) -- (bpr2) -- (bpr3) -- (bpr4) -- (bpr5) -- cycle;
     \fill[green, opacity=0.2] (bpr0) -- (bpr1) -- (bpr2) -- (bpr3) -- (bpr4) -- (bpr5) -- cycle;
     
-    % Legend
-    \node[font=\small] at (4.5,2.5) {\textbf{Legend:}};
-    \draw[red, thick] (4.5,2.2) -- (5.5,2.2);
-    \node[font=\small] at (6.2,2.2) {Matrix Factorization};
-    \draw[blue, thick] (4.5,1.9) -- (5.5,1.9);
-    \node[font=\small] at (6.0,1.9) {Deep Learning};
-    \draw[green, thick] (4.5,1.6) -- (5.5,1.6);
-    \node[font=\small] at (5.6,1.6) {BPR};
+    % Legend - REPOSITIONED TO AVOID COLLISION
+    \node[font=\tiny] at (3.8,2.8) {\textbf{Legend:}};
+    \draw[red, thick] (3.8,2.6) -- (4.4,2.6);
+    \node[font=\tiny, anchor=west] at (4.5,2.6) {Matrix Factorization};
+    \draw[blue, thick] (3.8,2.4) -- (4.4,2.4);
+    \node[font=\tiny, anchor=west] at (4.5,2.4) {Deep Learning};
+    \draw[green, thick] (3.8,2.2) -- (4.4,2.2);
+    \node[font=\tiny, anchor=west] at (4.5,2.2) {BPR};
     
     % Scale labels
     \node[font=\tiny] at (0.8,0.2) {Low};
@@ -594,6 +595,7 @@ Attention Mechanisms & Good & Good & $O(n^2 d)$ & Poor & High \\
     
 \end{tikzpicture}
 \caption{Algorithmic Performance Comparison Across Multiple Dimensions}
+\Description{A radar/spider chart comparing six recommendation algorithm families (Collaborative Filtering, Content-Based, Matrix Factorization, Deep Learning, Graph Neural Networks, LLM-Based) across five performance dimensions (Accuracy, Scalability, Interpretability, Cold-Start, Diversity) on a 0-10 scale. The chart reveals that Matrix Factorization and Deep Learning excel in accuracy and scalability, while Content-Based methods provide better interpretability, and Graph Neural Networks show balanced performance across dimensions.}
 \label{fig:algorithm_performance}
 \end{figure}
 
@@ -760,11 +762,11 @@ To guide system designers in selecting appropriate feedback strategies, we prese
 \begin{figure}[!htbp]
 \centering
 \begin{tikzpicture}[
-    scale=0.72,
+    scale=0.75,
     transform shape,
-    decision/.style={diamond, draw, thick, fill=yellow!20, text width=2cm, align=center, inner sep=2pt},
-    action/.style={rectangle, draw, thick, fill=blue!20, text width=2.5cm, align=center, minimum height=0.8cm},
-    result/.style={rectangle, draw, thick, fill=green!20, text width=2.8cm, align=center, minimum height=1cm}
+    decision/.style={diamond, draw, thick, fill=yellow!20, text width=2.2cm, align=center, inner sep=2pt, font=\small},
+    action/.style={rectangle, draw, thick, fill=blue!20, text width=2.8cm, align=center, minimum height=0.9cm, font=\small},
+    result/.style={rectangle, draw, thick, fill=green!20, text width=3.4cm, align=center, minimum height=1.3cm, font=\small}
 ]
 
 % Start
@@ -775,20 +777,20 @@ To guide system designers in selecting appropriate feedback strategies, we prese
 
 % Second level
 \node[decision] (d2a) at (-4,6.5) {Data volume high?};
-\node[decision] (d2b) at (4,6.5) {High quality needed?};
+\node[decision] (d2b) at (4,6.5) {Quality needed?};
 
 % Third level
 \node[decision] (d3a) at (-6,4.5) {Real-time adapt?};
 \node[decision] (d3b) at (-2,4.5) {Cold-start issue?};
 \node[decision] (d3c) at (2,4.5) {Budget limited?};
-\node[decision] (d3d) at (6,4.5) {Explainability?};
+\node[decision] (d3d) at (6,4.5) {Explain?};
 
-% Results
+% Results - IMPROVED TEXT FORMATTING
 \node[result] (r1) at (-7,2) {\textbf{Pure Implicit}\\High volume\\Low effort\\Real-time};
 \node[result] (r2) at (-4,2) {\textbf{Implicit+Cold}\\Add survey\\Init explicit};
 \node[result] (r3) at (-1,2) {\textbf{Light Hybrid}\\Implicit+likes\\Low cost};
-\node[result] (r4) at (2,2) {\textbf{Active Learning}\\Query users\\Minimize effort};
-\node[result] (r5) at (5,2) {\textbf{Rich Explicit}\\Reviews\\Ratings\\High quality};
+\node[result] (r4) at (2,2) {\textbf{Active Learn}\\Query users\\Min effort};
+\node[result] (r5) at (5,2) {\textbf{Rich Explicit}\\Reviews/Ratings\\High quality};
 \node[result] (r6) at (8,2) {\textbf{Full Hybrid}\\All signals\\Max quality};
 
 % Arrows
@@ -1030,6 +1032,7 @@ Bias Susceptibility & Behavioral & Selection & Balanced \\
 \end{minipage}
 }
 \caption{Comprehensive taxonomy of implicit and explicit feedback types with hierarchical organization and key properties.}
+\Description{A detailed hierarchical taxonomy table organizing feedback types into implicit and explicit categories. The implicit category includes behavioral signals (clicks, views, dwell time, scroll depth, search queries), engagement metrics (likes, shares, saves, follows, subscriptions), purchase indicators (add-to-cart, purchases, returns), and contextual signals (location, time, device, session length). The explicit category covers numeric ratings (star ratings, thumbs up/down, sliders, numerical scores), textual feedback (reviews, comments, tags, natural language), comparative feedback (rankings, pairwise comparisons, A/B preferences), and structured responses (surveys, questionnaires, feature ratings). Each type lists its characteristics including volume, reliability, cost, and noise level.}
 \label{fig:comprehensive_taxonomy}
 \end{figure}
 

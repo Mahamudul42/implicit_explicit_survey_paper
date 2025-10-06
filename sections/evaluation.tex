@@ -285,6 +285,7 @@ Bias in recommender systems can significantly impact both system performance and
     
 \end{tikzpicture}
 \caption{Comprehensive Bias Analysis Framework for Feedback-Aware Systems}
+\Description{A flowchart depicting the bias analysis framework showing how different bias sources (Selection Bias, Popularity Bias, Position Bias, Conformity Bias, Exposure Bias) feed into Data Collection, which then flows through Modeling to Recommendations, with corresponding mitigation strategies (Propensity Scoring, Debiasing Loss, Position-Aware Models, Individual Modeling, Causal Inference) applied at each stage to reduce systematic errors.}
 \label{fig:bias_analysis}
 \end{figure}
 
@@ -496,6 +497,7 @@ Table~\ref{tab:algorithm_comparison} reveals key insights across five major algo
     \end{axis}
 \end{tikzpicture}
 \caption{Performance Comparison Across Algorithm Families. Scores represent relative performance on key dimensions (0-100 scale). Matrix factorization excels in scalability and speed; deep learning and graph neural networks achieve highest accuracy; LLM-based methods provide superior interpretability. This visualization helps practitioners select appropriate algorithms based on their prioritized performance dimensions.}
+\Description{A radar chart comparing five algorithm families (Collaborative Filtering, Content-Based, Matrix Factorization, Deep Learning, Graph Neural Networks) across four performance dimensions (Accuracy, Scalability, Speed, Interpretability) on a 0-100 scale. The chart shows that Matrix Factorization excels in scalability (95) and speed (90), Deep Learning achieves highest accuracy (95), while different approaches show varied trade-offs across interpretability.}
 \label{fig:performance_comparison}
 \end{figure*}
 
@@ -833,6 +835,54 @@ Emphasizing engagement and retention:
     \item \textbf{Completion Rate}: Percentage of content consumed to completion
     \item \textbf{Skip Rate}: Negative feedback through content abandonment
     \item \textbf{Return Visits}: Long-term user retention and loyalty
+\end{itemize}
+
+\subsubsection{News Recommendation Evaluation}
+
+News recommendation requires specialized evaluation approaches that balance multiple competing objectives:
+
+\textbf{Engagement Metrics with Quality Signals:}
+\begin{itemize}
+    \item \textbf{Click-Through Rate (CTR)}: Primary implicit feedback but susceptible to clickbait
+    \item \textbf{Dwell Time}: Reading duration as quality indicator, distinguishing genuine interest from curiosity clicks
+    \item \textbf{Scroll Depth}: Percentage of article consumed, indicating content relevance
+    \item \textbf{Return Rate}: Repeated visits signal high-quality recommendations
+    \item \textbf{Share Rate}: Social sharing indicates strong content resonance
+\end{itemize}
+
+\textbf{Diversity and Serendipity Requirements:}
+News recommendation evaluation must explicitly measure information diversity to prevent filter bubbles:
+\begin{itemize}
+    \item \textbf{Topic Diversity}: Variety of news categories in recommendations
+    \item \textbf{Viewpoint Diversity}: Representation of different perspectives on controversial topics
+    \item \textbf{Source Diversity}: Distribution across different news outlets and editorial voices
+    \item \textbf{Temporal Diversity}: Balance between trending and evergreen content
+\end{itemize}
+
+\textbf{Freshness and Timeliness:}
+Unlike other domains, news recommendation heavily weights recency:
+\begin{itemize}
+    \item \textbf{Content Age Distribution}: Measuring how quickly new articles enter recommendations
+    \item \textbf{Breaking News Response}: Speed of adapting to emerging stories
+    \item \textbf{Trend Following Rate}: Alignment with real-world news cycles
+\end{itemize}
+
+\textbf{Bias and Fairness Evaluation:}
+News domain requires careful bias monitoring:
+\begin{itemize}
+    \item \textbf{Position Bias Metrics}: Impact of article placement on engagement
+    \item \textbf{Popularity Bias}: Over-representation of mainstream sources
+    \item \textbf{Echo Chamber Metrics}: Quantifying filter bubble effects
+    \item \textbf{Editorial-Algorithm Alignment}: Consistency with journalistic standards
+\end{itemize}
+
+\textbf{MIND and Adressa Dataset Evaluation Protocols:}
+Standard benchmarks like MIND~\cite{wu2020mind_news} and Adressa~\cite{gulla2017adressa} enable reproducible evaluation:
+\begin{itemize}
+    \item \textbf{Impression-based Evaluation}: Ranking articles within user impression logs
+    \item \textbf{Cold-Start Performance}: Effectiveness for newly published articles with no engagement history
+    \item \textbf{Cross-Session Consistency}: Recommendation stability across reading sessions
+    \item \textbf{Temporal Holdout}: Time-based train-test splits respecting temporal ordering
 \end{itemize}
 
 \subsubsection{Social Media Evaluation}

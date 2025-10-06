@@ -55,6 +55,7 @@ Despite significant advances, implicit and explicit feedback integration present
     
 \end{tikzpicture}
 \caption{Research Roadmap: Future Directions for Feedback-Aware Recommender Systems}
+\Description{A timeline visualization depicting the evolution of research challenges across four dimensions (Technical, Methodological, Technological, Societal) from 2024 to 2035. Each dimension shows multiple research directions with increasing complexity over time, including data quality improvements, algorithm sophistication, technological advances, and societal considerations.}
 \label{fig:research_roadmap}
 \end{figure}
 
@@ -78,31 +79,195 @@ Large-scale feedback processing demands both efficient algorithms and robust inf
 
 \subsubsection{Privacy and Data Protection}
 
-Feedback collection raises significant privacy concerns:
+Feedback collection raises significant privacy concerns, with implicit and explicit feedback presenting distinct challenges:
 
 \begin{itemize}
-    \item \textbf{Behavioral Tracking}: Continuous monitoring of user actions and patterns
-    \item \textbf{Data Minimization}: Balancing feedback richness with privacy preservation
-    \item \textbf{Consent Management}: Obtaining meaningful consent for feedback collection
-    \item \textbf{Data Ownership}: Clarifying rights over feedback-derived insights
-    \item \textbf{Regulatory Compliance}: Adhering to evolving privacy regulations (GDPR, CCPA)
+    \item \textbf{Implicit Tracking Privacy Risks}: Continuous behavioral monitoring without explicit awareness
+    \begin{itemize}
+        \item Users often unaware their actions (clicks, dwell time, scrolling) are tracked
+        \item Aggregated patterns can reveal sensitive information (political views, health concerns)
+        \item Example: YouTube watch history revealing mental health status, financial situation
+    \end{itemize}
+    
+    \item \textbf{Informed Consent Challenges}: Meaningful consent is difficult to obtain
+    \begin{itemize}
+        \item Terms of service often buried, complex, and rarely read
+        \item Users cannot opt-in to recommendations while opting-out of tracking
+        \item Granular consent (per-action tracking) impractical for user experience
+    \end{itemize}
+    
+    \item \textbf{Data Minimization vs. Quality Trade-off}: More feedback improves recommendations but increases privacy risk
+    \begin{itemize}
+        \item Sparse explicit feedback preserves privacy but limits personalization quality
+        \item Rich implicit feedback enables better recommendations but exposes behavioral patterns
+        \item Need for privacy-utility frameworks balancing these competing objectives
+    \end{itemize}
+    
+    \item \textbf{Data Ownership and Portability}: Who owns feedback data and derived insights?
+    \begin{itemize}
+        \item Users create feedback but platforms claim ownership
+        \item GDPR mandates data portability, but feedback value diminishes outside original platform
+        \item Challenge: enabling cross-platform recommendation without centralizing sensitive data
+    \end{itemize}
+    
+    \item \textbf{Regulatory Compliance}: Navigating global privacy regulations
+    \begin{itemize}
+        \item GDPR (Europe): Right to explanation, data minimization, purpose limitation
+        \item CCPA (California): Opt-out rights, disclosure requirements
+        \item Emerging regulations: AI Act (EU), regional data localization laws
+        \item Compliance complexity increases with hybrid feedback approaches
+    \end{itemize}
 \end{itemize}
+
+\textbf{Practical Recommendations:}
+\begin{enumerate}
+    \item Implement differential privacy for aggregated implicit feedback analysis
+    \item Provide layered consent options with clear explanation of tracking scope
+    \item Offer "privacy-preserving modes" with degraded recommendations but no tracking
+    \item Regular privacy audits and impact assessments for feedback collection systems
+\end{enumerate}
 
 \subsubsection{Bias and Fairness Considerations}
 
-Feedback mechanisms can perpetuate or amplify societal biases:
+Feedback mechanisms can perpetuate or amplify societal biases, with implications for equitable access:
 
 \begin{itemize}
     \item \textbf{Selection Bias}: Non-random feedback collection leads to skewed training data
+    \begin{itemize}
+        \item Only engaged users provide explicit feedback, excluding passive majority
+        \item Implicit feedback over-represents frequent users, under-represents occasional users
+        \item Cold-start users never observed, leading to systematic exclusion
+    \end{itemize}
+    
     \item \textbf{Popularity Bias}: Over-representation of popular items in feedback data
+    \begin{itemize}
+        \item Popular items accumulate more feedback, get recommended more, create rich-get-richer effect
+        \item Niche items with small but dedicated audiences systematically disadvantaged
+        \item Cultural/linguistic minorities see less relevant recommendations
+    \end{itemize}
+    
     \item \textbf{Demographic Bias}: Under-representation of certain user groups
-    \item \textbf{Algorithmic Bias}: Feedback processing algorithms that disadvantage specific groups
+    \begin{itemize}
+        \item Age: Younger users more likely to provide feedback than older users
+        \item Gender: Rating patterns differ, leading to gender-specific blind spots
+        \item Socioeconomic: Lower-income users less likely to purchase, reducing implicit signals
+    \end{itemize}
+    
+    \item \textbf{Algorithmic Amplification}: Feedback processing algorithms that disadvantage specific groups
+    \begin{itemize}
+        \item Matrix factorization may learn stereotypical associations from biased feedback
+        \item Cold-start solutions often use demographic stereotypes as priors
+        \item Optimization for engagement may amplify addictive content, harming vulnerable users
+    \end{itemize}
+    
     \item \textbf{Exposure Bias}: Limited item exposure leading to incomplete feedback landscapes
+    \begin{itemize}
+        \item Users can only provide feedback on items they've seen
+        \item Recommendation system controls exposure, creating circular dependency
+        \item Geographic/cultural items invisible to users outside those contexts
+    \end{itemize}
+    
+    \item \textbf{Dark Patterns in Explicit Feedback}: Manipulative design choices
+    \begin{itemize}
+        \item Asymmetric effort: Easy to like, hard to unlike
+        \item Pre-selected ratings or biased rating scales
+        \item Emotional manipulation: "Help small creators" prompts for 5-star reviews
+        \item Gamification encouraging false positive feedback
+    \end{itemize}
 \end{itemize}
+
+\textbf{Mitigation Strategies:}
+\begin{enumerate}
+    \item Bias-aware evaluation metrics beyond accuracy (coverage, diversity, calibration)
+    \item Causal inference techniques to disentangle genuine preference from bias
+    \item Re-weighting or re-sampling feedback to balance demographic representation
+    \item Explicit diversity constraints in recommendation algorithms
+    \item Regular fairness audits across demographic groups
+    \item Transparent reporting of bias metrics to users and regulators
+\end{enumerate}
+
+\subsubsection{Manipulation and Strategic Behavior}
+
+Feedback systems are vulnerable to manipulation, undermining their integrity:
+
+\begin{itemize}
+    \item \textbf{Explicit Feedback Manipulation}:
+    \begin{itemize}
+        \item Review bombing: Coordinated fake negative reviews to harm competitors
+        \item Astroturfing: Fake positive reviews to boost products
+        \item Rating inflation: Sellers requesting 5-star reviews in exchange for benefits
+    \end{itemize}
+    
+    \item \textbf{Implicit Feedback Gaming}:
+    \begin{itemize}
+        \item Click farms: Automated or paid clicks to inflate engagement metrics
+        \item View time manipulation: Auto-play or background playback to boost dwell time
+        \item Bot networks: Simulating genuine user behavior at scale
+    \end{itemize}
+    
+    \item \textbf{User Strategic Behavior}:
+    \begin{itemize}
+        \item Privacy-conscious users giving false explicit feedback
+        \item Users "performing" for recommendation algorithms (e.g., not watching guilty pleasures)
+        \item Strategic rating to shape future recommendations
+    \end{itemize}
+\end{itemize}
+
+\textbf{Detection and Prevention:}
+\begin{itemize}
+    \item Anomaly detection for abnormal feedback patterns
+    \item Multi-modal verification (explicit + implicit consistency checks)
+    \item Reputation systems for feedback providers
+    \item Rate limiting and verification for explicit feedback
+\end{itemize}
+
+\subsubsection{Societal Impact and User Well-being}
+
+Recommendation systems powered by feedback data have broader societal implications:
+
+\begin{itemize}
+    \item \textbf{Filter Bubbles and Echo Chambers}: Feedback loops reinforce existing preferences
+    \begin{itemize}
+        \item Implicit feedback on content → more similar content → less exposure to diverse views
+        \item Political radicalization through content rabbit holes
+        \item Need for "diversity injection" mechanisms despite lower feedback scores
+    \end{itemize}
+    
+    \item \textbf{Addictive Design}: Optimizing for engagement feedback may harm users
+    \begin{itemize}
+        \item Maximizing watch time may encourage binge-watching, sleep deprivation
+        \item Emotional manipulation to increase likes/shares
+        \item Particularly harmful to vulnerable populations (children, addiction-prone)
+    \end{itemize}
+    
+    \item \textbf{Information Quality vs. Engagement}: Feedback may favor misinformation
+    \begin{itemize}
+        \item Sensational fake news generates more clicks (implicit feedback)
+        \item Emotional content gets more likes/shares (explicit feedback)
+        \item Truth and quality may have lower engagement metrics
+    \end{itemize}
+    
+    \item \textbf{Economic Implications}: Feedback-driven recommendations affect livelihoods
+    \begin{itemize}
+        \item Content creators dependent on algorithmic feedback loops
+        \item Small businesses disadvantaged by lack of feedback history
+        \item Winner-take-all dynamics from popularity bias
+    \end{itemize}
+\end{itemize}
+
+\textbf{Responsible Development Principles:}
+\begin{enumerate}
+    \item Multi-objective optimization: Balance engagement with user well-being metrics
+    \item Periodic "diversity interventions" to break filter bubbles
+    \item Explicit downranking of low-quality high-engagement content
+    \item Transparency reports on societal impact metrics
+    \item External audits by independent researchers
+    \item User controls over algorithmic parameters and feedback usage
+\end{enumerate}
 
 \begin{figure*}[ht]
 \centering
-\begin{tikzpicture}[scale=0.9]
+\begin{tikzpicture}[scale=0.55]
     % Define colors for heatmap (white to dark red)
     \definecolor{level0}{RGB}{255,255,255}
     \definecolor{level1}{RGB}{255,230,230}
@@ -196,21 +361,22 @@ Feedback mechanisms can perpetuate or amplify societal biases:
         \node[anchor=west, font=\footnotesize] at (15.8, -2-\level*0.8+0.3) {\label\ (\level)};
     }
     
-    % Key observations box
-    \node[draw, rectangle, fill=yellow!10, align=left, font=\tiny, anchor=north west, text width=5cm] at (15, -8.5) {
+    % Key observations box - ADJUSTED FOR SCALE 0.7
+    \node[draw, rectangle, fill=yellow!10, align=left, font=\tiny, anchor=north west, text width=3.5cm] at (11.8, -8.5) {
         \textbf{Key Observations:}\\
         $\bullet$ Cold-start most severe for CF/MF\\
         $\bullet$ Popularity bias affects all methods\\
         $\bullet$ LLMs show high algorithmic bias\\
-        $\bullet$ Hybrid methods reduce overall bias\\
-        $\bullet$ Sequential models handle temporal bias better
+        $\bullet$ Hybrid methods reduce bias\\
+        $\bullet$ Sequential handle temporal better
     };
     
-    % Title
-    \node[font=\bfseries] at (7, 2.5) {Bias Impact Matrix: Algorithm × Bias Type};
+    % Title - ADJUSTED POSITION
+    \node[font=\bfseries] at (7, 2.2) {Bias Impact Matrix: Algorithm × Bias Type};
     
 \end{tikzpicture}
-\caption{Comprehensive bias impact matrix showing the severity of different bias types across major algorithm families. The heatmap quantifies impact on a 0-5 scale (0=minimal, 5=severe) based on empirical literature review and theoretical analysis. Notable patterns include: (1) collaborative filtering's severe cold-start and popularity bias, (2) deep learning's algorithmic complexity leading to opacity-related biases, (3) LLM-based systems' high algorithmic bias from pre-training, (4) hybrid methods' generally reduced bias profile through diversity, and (5) sequential models' superior temporal bias handling. This analysis guides algorithm selection based on bias mitigation priorities and informs targeted debiasing strategies.}
+\caption{Bias impact matrix across algorithm families and bias types (0=minimal, 5=severe impact).}
+\Description{A heatmap matrix showing the severity of different bias types (Selection, Popularity, Position, Conformity, Exposure) across five algorithm families (Collaborative Filtering, Content-Based, Matrix Factorization, Deep Learning, Graph Neural Networks). Each cell is color-coded on a scale from 0 (minimal impact, light) to 5 (severe impact, dark), revealing that popularity bias affects all algorithms strongly while selection bias particularly impacts collaborative filtering approaches.}
 \label{fig:bias_impact_matrix}
 \end{figure*}
 
@@ -408,3 +574,109 @@ Ambitious aspirational goals define the field's long-term trajectory. Achieving 
 Establishing rigorous evaluation standards requires community coordination and methodological innovation. Developing standardized datasets that comprehensively represent different feedback types across diverse domains would enable reproducible research and fair algorithmic comparisons. Implementing reproducibility standards ensures that research results can be independently verified through detailed documentation of data preprocessing, experimental procedures, and hyperparameter settings. Creating fair comparison methodologies addresses the challenge of evaluating systems across different domains where performance metrics and baseline expectations vary substantially. Conducting longitudinal studies tracks recommendation system impact over extended periods, measuring how continued use affects user behavior, satisfaction, and broader life outcomes.
 
 This comprehensive analysis of challenges and future directions highlights the dynamic nature of recommendation systems research, where technical, ethical, and societal considerations must be addressed in concert to advance the field toward more effective, fair, and trustworthy personalization.
+
+\subsection{Survey Limitations and Methodological Constraints}
+
+As with any comprehensive survey, this work has inherent limitations that readers should consider when interpreting our findings and recommendations.
+
+\subsubsection{Paper Selection and Coverage Biases}
+
+\textbf{Temporal Bias:} Our survey emphasizes recent work (2015-2025), allocating disproportionate space to modern deep learning approaches compared to foundational methods from the 1990s-2000s. While this reflects current research priorities, it may underweight the historical context that shaped the field's evolution. Seminal early work on collaborative filtering, content-based methods, and matrix factorization receives less detailed treatment than contemporary neural architectures.
+
+\textbf{Venue Bias:} We predominantly covered papers from top-tier venues (RecSys, WWW, SIGIR, KDD, ICML, NeurIPS), potentially missing important contributions published in domain-specific conferences, regional venues, or industry technical reports. This academic focus may underrepresent practical deployment insights from companies like Netflix, Spotify, Amazon, and Alibaba that rarely publish operational details.
+
+\textbf{Language Bias:} Our literature search focused on English-language publications, excluding potentially valuable research published in Chinese, Japanese, Korean, and other languages. Given the substantial recommender systems research community in non-English-speaking countries, this represents a significant blind spot.
+
+\textbf{Domain Coverage Gaps:} While we cover major application domains (e-commerce, streaming, news), we provide limited coverage of emerging areas:
+\begin{itemize}
+    \item Healthcare recommendations (drug interactions, treatment plans)
+    \item Educational content personalization (adaptive learning systems)
+    \item IoT and smart home recommendations (context-aware device suggestions)
+    \item Financial product recommendations (investment advice, credit products)
+    \item Scientific literature recommendations (citation networks, paper discovery)
+\end{itemize}
+
+\subsubsection{Methodological Limitations}
+
+\textbf{Meta-Analysis Statistical Rigor:} Our quantitative synthesis in Table~\ref{tab:meta_analysis} aggregates results across studies with varying experimental protocols, datasets, and evaluation metrics. Key limitations include:
+\begin{itemize}
+    \item No formal confidence intervals reported due to heterogeneous study designs
+    \item Heterogeneity (I² statistic) not quantified across studies
+    \item Publication bias not systematically assessed (no funnel plot analysis)
+    \item Simple mean aggregation rather than weighted meta-analysis by study quality
+    \item Different baseline comparisons across studies make direct comparison challenging
+\end{itemize}
+
+\textbf{Systematic Review Protocol:} Unlike medical systematic reviews following PRISMA guidelines, our survey lacked:
+\begin{itemize}
+    \item Pre-registered protocol with explicit inclusion/exclusion criteria
+    \item Multiple independent reviewers for paper screening (reducing selection bias)
+    \item Formal quality assessment of included studies
+    \item PRISMA flow diagram documenting paper identification and screening process
+    \item Risk of bias assessment for individual studies
+\end{itemize}
+
+\textbf{Search Strategy Transparency:} While we describe our general approach, we did not document:
+\begin{itemize}
+    \item Exact search queries used for each database
+    \item Date ranges for initial vs. updated searches
+    \item Detailed inclusion/exclusion decision criteria with examples
+    \item Grey literature search procedures (technical reports, preprints)
+\end{itemize}
+
+\subsubsection{Conceptual and Framing Limitations}
+
+\textbf{Binary Feedback Taxonomy:} Our core framing around "implicit vs. explicit" feedback, while useful, oversimplifies a complex continuum. Real-world systems collect feedback at varying levels of effort, intention, and signal quality that don't neatly fit binary categories. For example, "liking" a post is more explicit than viewing but less explicit than writing a review. Our framework may inadequately capture these nuances.
+
+\textbf{Context Independence:} We present generalizable principles, but recommendation effectiveness is highly context-dependent. What works for music streaming (abundant implicit signals) may fail for enterprise software (sparse feedback, high stakes). Our domain analysis provides some contextualization, but cannot cover all contingencies.
+
+\textbf{Technical Focus:} As a technically-oriented survey, we emphasize algorithmic approaches and system architecture. We provide less coverage of:
+\begin{itemize}
+    \item User experience design and interface considerations
+    \item Business model implications and monetization strategies
+    \item Organizational challenges in deploying recommendation systems
+    \item Product management and A/B testing best practices
+    \item Legal and compliance aspects beyond high-level ethical concerns
+\end{itemize}
+
+\subsubsection{Reproducibility and Artifact Limitations}
+
+\textbf{No Released Artifacts:} Unlike some modern surveys, we do not provide:
+\begin{itemize}
+    \item Curated and annotated bibliography in machine-readable format
+    \item Code implementations of surveyed algorithms for benchmarking
+    \item Standardized evaluation protocols and datasets
+    \item Interactive visualization tools for exploring the taxonomy
+    \item Living survey website with ongoing updates
+\end{itemize}
+
+\textbf{Snapshot Nature:} This survey represents a snapshot of knowledge as of early 2025. The rapid pace of research means:
+\begin{itemize}
+    \item New methods (especially LLM-based approaches) emerging monthly
+    \item Recent papers may not have undergone thorough community evaluation
+    \item Long-term impact of cited works not yet clear
+    \item Field evolution may invalidate some conclusions within 2-3 years
+\end{itemize}
+
+\subsubsection{Implications and Future Work}
+
+These limitations suggest several directions for improving future survey work:
+
+\begin{enumerate}
+    \item \textbf{Living Survey Approach}: Maintain a continuously updated web-based version with community contributions and regular revisions.
+    
+    \item \textbf{Collaborative Community Effort}: Engage multiple researchers across institutions to reduce individual biases and expand coverage.
+    
+    \item \textbf{Multilingual Inclusion}: Partner with researchers in non-English-speaking regions to systematically include international work.
+    
+    \item \textbf{Industry Partnerships}: Collaborate with companies to document practical deployment challenges and solutions.
+    
+    \item \textbf{Formal Meta-Analysis}: Conduct rigorous statistical meta-analysis with proper heterogeneity assessment and publication bias correction.
+    
+    \item \textbf{Artifact Release}: Develop open-source tools, standardized benchmarks, and curated datasets to support reproducible research.
+    
+    \item \textbf{User-Centric Surveys}: Future work should complement this technical survey with user-focused research examining preferences, behaviors, and impacts.
+\end{enumerate}
+
+\textbf{Transparency Statement:} We acknowledge these limitations openly to help readers critically evaluate our contributions and identify opportunities for complementary research. Science advances through accumulation of imperfect but honest efforts, and we hope this candid assessment sets a standard for future survey work in recommender systems.
+

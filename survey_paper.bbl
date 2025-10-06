@@ -124,6 +124,12 @@
 \newblock {\em ACM Transactions on Management Information Systems (TMIS) 6}, 4
   (2015), 1--19.
 
+\bibitem{gulla2017adressa}
+{\sc Gulla, J.~A., Zhang, L., Liu, P., {\"O}zg{\"o}bek, {\"O}., and Su, X.}
+\newblock The adressa dataset for news recommendation.
+\newblock In {\em Proceedings of the International Conference on Web
+  Intelligence\/} (2017), ACM, pp.~1042--1048.
+
 \bibitem{he2020lightgcn}
 {\sc He, X., Deng, K., Wang, X., Li, Y., Zhang, Y., and Wang, M.}
 \newblock Lightgcn: Simplifying and powering graph convolution network for
@@ -175,6 +181,12 @@
   W.~X.}
 \newblock Large language models are zero-shot rankers for recommender systems.
 \newblock {\em arXiv preprint arXiv:2305.08845\/} (2023).
+
+\bibitem{hu2020graph}
+{\sc Hu, L., Li, C., Shi, C., Yang, C., and Shao, C.}
+\newblock Graph neural news recommendation with long-term and short-term
+  interest modeling.
+\newblock {\em Information Processing \& Management 57}, 2 (2020), 102142.
 
 \bibitem{hu2008collaborative}
 {\sc Hu, Y., Koren, Y., and Volinsky, C.}
@@ -228,14 +240,6 @@
 \newblock Learning the parts of objects by non-negative matrix factorization.
 \newblock {\em Nature 401}, 6755 (1999), 788--791.
 
-\bibitem{wu2020mind}
-{\sc Li, C., Liu, Z., Wu, M., Xu, Y., Zhao, P., Sun, L., Huang, F., Li, C.,
-  Wei, B., Li, G., et~al.}
-\newblock Mind: Multi-interest network with dynamic routing for recommendation
-  at tmall.
-\newblock {\em Proceedings of the 29th ACM International Conference on
-  Information and Knowledge Management\/} (2020), 2025--2034.
-
 \bibitem{lian2017cccfnet}
 {\sc Lian, J., Zhang, F., Xie, X., and Sun, G.}
 \newblock Cccfnet: A content-boosted collaborative filtering neural network for
@@ -253,6 +257,12 @@
 \newblock Multimodal pretraining for dense video captioning.
 \newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence
   36}, 2 (2022), 2183--2191.
+
+\bibitem{liu2010personalized}
+{\sc Liu, J., Dolan, P., and Pedersen, E.~R.}
+\newblock Personalized news recommendation based on click behavior.
+\newblock {\em Proceedings of the 15th International Conference on Intelligent
+  User Interfaces\/} (2010), 31--40.
 
 \bibitem{liu2018stamp}
 {\sc Liu, Q., Zeng, Y., Mokhosi, R., and Zhang, H.}
@@ -287,6 +297,12 @@
 \newblock In {\em Proceedings of the 15th ACM SIGKDD international conference
   on Knowledge discovery and data mining\/} (2009), pp.~627--636.
 
+\bibitem{okura2017embedding}
+{\sc Okura, S., Tagami, Y., Ono, S., and Tajima, A.}
+\newblock Embedding-based news recommendation for millions of users.
+\newblock In {\em Proceedings of the 23rd ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining\/} (2017), pp.~1933--1942.
+
 \bibitem{pan2008one}
 {\sc Pan, R., Zhou, Y., Cao, B., Liu, N.~N., Lukose, R., Scholz, M., and Yang,
   Q.}
@@ -304,6 +320,12 @@
 \newblock User action interpretation for online content optimization.
 \newblock {\em IEEE Transactions on Knowledge and Data Engineering 25}, 2
   (2013), 317--330.
+
+\bibitem{qi2021causal}
+{\sc Qi, T., Wu, F., Wu, C., Huang, Y., and Xie, X.}
+\newblock Causal inference for news recommendation.
+\newblock {\em Proceedings of the 14th ACM International Conference on Web
+  Search and Data Mining\/} (2021), 994--1002.
 
 \bibitem{rendle2012factorization}
 {\sc Rendle, S.}
@@ -417,6 +439,30 @@
 \newblock Wsabie: Scaling up to large vocabulary image annotation.
 \newblock {\em Proceedings of the 22nd international joint conference on
   Artificial Intelligence\/} (2011), 2764--2770.
+
+\bibitem{wu2019neural}
+{\sc Wu, C., Wu, F., Ge, S., Qi, T., Huang, Y., and Xie, X.}
+\newblock Neural news recommendation with attentive multi-view learning.
+\newblock In {\em Proceedings of the 28th International Joint Conference on
+  Artificial Intelligence\/} (2019), pp.~3863--3869.
+
+\bibitem{wu2019npa}
+{\sc Wu, C., Wu, F., Ge, S., Qi, T., Huang, Y., and Xie, X.}
+\newblock Npa: Neural news recommendation with personalized attention.
+\newblock In {\em Proceedings of the 25th ACM SIGKDD International Conference
+  on Knowledge Discovery \& Data Mining\/} (2019), pp.~2576--2584.
+
+\bibitem{wu2021empowering}
+{\sc Wu, C., Wu, F., Qi, T., Huang, Y., and Xie, X.}
+\newblock Empowering news recommendation with pre-trained language models.
+\newblock {\em Proceedings of the 44th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval\/} (2021), 1652--1656.
+
+\bibitem{wu2020mind_news}
+{\sc Wu, F., Qiu, Y., Chen, Q., Zhao, X., Caverlee, J., and Huang, Y.}
+\newblock Mind: A large-scale dataset for news recommendation.
+\newblock In {\em Proceedings of the 58th Annual Meeting of the Association for
+  Computational Linguistics\/} (2020), pp.~3597--3606.
 
 \bibitem{wu2021self}
 {\sc Wu, J., Wang, X., Feng, F., He, X., Chen, L., Lian, J., and Xie, X.}

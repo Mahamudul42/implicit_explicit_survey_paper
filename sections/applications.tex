@@ -10,22 +10,23 @@ Implicit and explicit feedback find applications across diverse domains, with fe
     % Domain matrix
     \draw[thick] (0,0) grid (8,6);
     
-    % Headers
-    \node[font=\small\bfseries, rotate=90] at (-0.5,0.5) {E-commerce};
-    \node[font=\small\bfseries, rotate=90] at (-0.5,1.5) {Streaming};
-    \node[font=\small\bfseries, rotate=90] at (-0.5,2.5) {Social Media};
-    \node[font=\small\bfseries, rotate=90] at (-0.5,3.5) {News/Content};
-    \node[font=\small\bfseries, rotate=90] at (-0.5,4.5) {Education};
-    \node[font=\small\bfseries, rotate=90] at (-0.5,5.5) {Healthcare};
+    % Row headers - REDUCED SIZE
+    \node[font=\tiny, rotate=90] at (-0.7,0.5) {E-commerce};
+    \node[font=\tiny, rotate=90] at (-0.7,1.5) {Streaming};
+    \node[font=\tiny, rotate=90] at (-0.7,2.5) {Social Media};
+    \node[font=\tiny, rotate=90] at (-0.7,3.5) {News/Content};
+    \node[font=\tiny, rotate=90] at (-0.7,4.5) {Education};
+    \node[font=\tiny, rotate=90] at (-0.7,5.5) {Healthcare};
     
-    \node[font=\small\bfseries] at (0.5,-0.3) {Implicit};
-    \node[font=\small\bfseries] at (1.5,-0.3) {Explicit};
-    \node[font=\small\bfseries] at (2.5,-0.3) {Volume};
-    \node[font=\small\bfseries] at (3.5,-0.3) {Quality};
-    \node[font=\small\bfseries] at (4.5,-0.3) {Privacy};
-    \node[font=\small\bfseries] at (5.5,-0.3) {Real-time};
-    \node[font=\small\bfseries] at (6.5,-0.3) {Success};
-    \node[font=\small\bfseries] at (7.5,-0.3) {Hybrid};
+    % Column headers - REDUCED SIZE AND BETTER POSITIONING
+    \node[font=\tiny] at (0.5,-0.5) {Implicit};
+    \node[font=\tiny] at (1.5,-0.5) {Explicit};
+    \node[font=\tiny] at (2.5,-0.5) {Volume};
+    \node[font=\tiny] at (3.5,-0.5) {Quality};
+    \node[font=\tiny] at (4.5,-0.5) {Privacy};
+    \node[font=\tiny] at (5.5,-0.5) {Real-time};
+    \node[font=\tiny] at (6.5,-0.5) {Success};
+    \node[font=\tiny] at (7.5,-0.5) {Hybrid};
     
     % Content fills
     % E-commerce row
@@ -88,17 +89,18 @@ Implicit and explicit feedback find applications across diverse domains, with fe
     \fill[green!70] (6,5) rectangle (7,6);
     \fill[green!60] (7,5) rectangle (8,6);
     
-    % Legend
-    \node[font=\tiny] at (9.5,5) {\textbf{Legend:}};
-    \fill[green!80] (9,4.5) rectangle (9.3,4.7);
-    \node[font=\tiny] at (10.2,4.6) {High};
-    \fill[yellow!70] (9,4.2) rectangle (9.3,4.4);
-    \node[font=\tiny] at (10.3,4.3) {Medium};
-    \fill[red!70] (9,3.9) rectangle (9.3,4.1);
-    \node[font=\tiny] at (10.1,4) {Low};
+    % Legend - REPOSITIONED TO AVOID COLLISION
+    \node[font=\tiny] at (1,6.8) {\textbf{Legend:}};
+    \fill[green!80] (0.5,6.5) rectangle (0.8,6.7);
+    \node[font=\tiny, anchor=west] at (0.9,6.6) {High};
+    \fill[yellow!70] (2,6.5) rectangle (2.3,6.7);
+    \node[font=\tiny, anchor=west] at (2.4,6.6) {Medium};
+    \fill[red!70] (3.8,6.5) rectangle (4.1,6.7);
+    \node[font=\tiny, anchor=west] at (4.2,6.6) {Low};
     
 \end{tikzpicture}
 \caption{Domain Application Matrix: Feedback Characteristics Across Industries}
+\Description{A comprehensive matrix visualization comparing feedback characteristics across eight major application domains (E-commerce, Streaming, Social Networks, News, Education, Healthcare, Travel, Job Matching). The matrix displays scores for Implicit Availability (0-100\%), Explicit Quality (0-10), Privacy Concern (0-10), and overall Success Rating (0-10) for each domain, using a color-coded heatmap where darker colors represent higher values.}
 \label{fig:domain_matrix}
 \end{figure}
 
@@ -203,32 +205,138 @@ Key innovations:
 
 \subsection{News and Content Platforms}
 
+News recommendation represents a critical application domain with unique challenges arising from content velocity, diversity requirements, and editorial considerations. Unlike e-commerce or entertainment domains, news recommenders must balance personalization with information diversity, timeliness with quality, and engagement with societal responsibility.
+
+\subsubsection{News Recommendation Characteristics}
+
+News recommendation systems exhibit distinct properties that differentiate them from other domains:
+
+\textbf{Temporal Dynamics and Content Freshness:} News articles have extremely short lifespans, with most content becoming obsolete within hours or days. Recommenders must prioritize recency while maintaining relevance, creating unique cold-start challenges for each new article~\cite{liu2010personalized}.
+
+\textbf{Implicit Feedback Dominance:} News consumption generates rich implicit signals including click-through rates (CTR), dwell time, scroll depth, and sharing actions. Explicit feedback (ratings, likes) is rare in news contexts, making implicit signal processing crucial~\cite{okura2017embedding}. Dwell time proves particularly valuable, as longer reading sessions indicate genuine interest beyond clickbait engagement.
+
+\textbf{Diversity and Filter Bubble Concerns:} News recommenders face heightened scrutiny regarding filter bubbles and echo chambers. Over-personalization risks limiting exposure to diverse viewpoints and important information outside user comfort zones~\cite{wu2019neural}. Balancing personalization with serendipity and diversity becomes a critical design objective with societal implications.
+
+\subsubsection{Benchmark Datasets and Research Infrastructure}
+
+The news recommendation community has developed several large-scale datasets that have become standard benchmarks:
+
+\textbf{MIND Dataset (Microsoft News):} The MIND (Microsoft News Dataset)~\cite{wu2020mind_news} represents the largest publicly available news recommendation dataset, containing over 160,000 news articles and 15 million user interactions from Microsoft News. The dataset includes:
+\begin{itemize}
+    \item Rich article metadata: titles, abstracts, categories, entities, and contextual information
+    \item User click histories spanning multiple weeks of behavior
+    \item Comprehensive impression logs with both clicked and non-clicked articles
+    \item Temporal information enabling time-aware recommendation evaluation
+\end{itemize}
+
+MIND has become the de facto standard for evaluating news recommendation algorithms, enabling reproducible research and fair algorithmic comparison. The dataset's scale and diversity support development of sophisticated deep learning models that leverage both content features and behavioral patterns.
+
+\textbf{Adressa Dataset:} The Adressa dataset~\cite{gulla2017adressa} provides three months of user-article interactions from a Norwegian news portal, including:
+\begin{itemize}
+    \item Detailed reading session information with precise timestamps
+    \item Fine-grained engagement metrics including scroll depth and active time
+    \item User demographics and contextual information
+    \item Article content, metadata, and editorial categorization
+\end{itemize}
+
+Adressa's strength lies in its detailed engagement metrics beyond simple clicks, enabling research on attention modeling and content quality assessment. The dataset supports investigation of reading patterns, session-based recommendation, and the relationship between engagement depth and genuine interest.
+
+\subsubsection{Neural Approaches for News Recommendation}
+
+Modern news recommendation has been transformed by neural architectures that effectively model both content semantics and user behavior:
+
+\textbf{Content-Based Neural Modeling:} Neural news recommendation systems leverage pre-trained language models and attention mechanisms to understand article content~\cite{wu2019neural, wu2021empowering}. These approaches:
+\begin{itemize}
+    \item Extract semantic representations from titles, abstracts, and full text
+    \item Identify salient entities, topics, and themes
+    \item Model hierarchical article structure (words $\rightarrow$ sentences $\rightarrow$ documents)
+    \item Leverage knowledge graphs for entity-aware recommendation
+\end{itemize}
+
+\textbf{Personalized Attention Mechanisms:} NPA (Neural News Recommendation with Personalized Attention)~\cite{wu2019npa} introduced user-specific attention networks that identify which aspects of news articles resonate with individual users. This approach recognizes that different users focus on different elements (e.g., some prioritize headlines, others prefer detailed analysis), enabling more nuanced personalization.
+
+\textbf{Multi-View Learning:} Neural methods with attentive multi-view learning~\cite{wu2019neural} simultaneously process multiple article representations:
+\begin{itemize}
+    \item Textual content (titles, abstracts, bodies)
+    \item Categorical information (topics, categories)
+    \item Entity knowledge (named entities, knowledge graph embeddings)
+    \item Temporal signals (publication time, trending status)
+\end{itemize}
+
+\textbf{Graph-Based Modeling:} Recent work applies graph neural networks to news recommendation~\cite{hu2020graph}, modeling:
+\begin{itemize}
+    \item User-article interaction graphs capturing historical preferences
+    \item Article-article similarity graphs based on content and co-engagement
+    \item User-user social graphs when available
+    \item Temporal graphs capturing evolution of news topics and user interests
+\end{itemize}
+
+\subsubsection{Causal Inference and Debiasing}
+
+News recommendation faces significant bias challenges that require causal inference approaches~\cite{qi2021causal}:
+
+\textbf{Position Bias:} Articles shown in prominent positions receive disproportionate clicks regardless of relevance. Causal models help disentangle genuine interest from positional effects, enabling more accurate preference learning.
+
+\textbf{Selection Bias:} Users self-select which articles to read, creating biased training data. Inverse propensity scoring and doubly robust estimation techniques address this challenge, improving offline evaluation reliability.
+
+\textbf{Exposure Bias:} Limited article exposure means many relevant items never receive feedback. Causal inference helps estimate counterfactual preferences for unobserved articles, reducing popularity bias and improving long-tail recommendation.
+
+\textbf{Clickbait and Engagement Quality:} Implicit feedback (clicks) can be misleading when sensationalist headlines drive clicks but disappoint readers. Dwell time, scroll depth, and return visit patterns provide more reliable quality signals, requiring multi-objective optimization balancing CTR with engagement depth.
+
 \subsubsection{News Recommendation Challenges}
 
-News platforms balance timeliness with quality:
+News platforms face several critical challenges beyond standard recommendation problems:
 
 \begin{itemize}
     \item \textbf{Implicit Feedback}: Click-through rates, dwell time, scroll depth, sharing actions
-    \item \textbf{Explicit Feedback}: Article ratings, topic preferences, follow actions, report buttons
-    \item \textbf{Quality Signals}: Time spent reading, return visits, bookmarking behavior
+    \item \textbf{Explicit Feedback}: Article ratings (rare), topic preferences, follow actions, report buttons
+    \item \textbf{Quality Signals}: Time spent reading, return visits, bookmarking behavior, commenting activity
 \end{itemize}
 
 Critical considerations:
 \begin{itemize}
-    \item \textbf{Filter Bubble Mitigation}: Balancing personalization with diversity
-    \item \textbf{Fake News Detection}: Using engagement patterns to identify misinformation
-    \item \textbf{Breakthrough Discovery}: Introducing users to new topics and perspectives
-    \item \textbf{Real-time Adaptation}: Responding to breaking news and trending topics
+    \item \textbf{Filter Bubble Mitigation}: Balancing personalization with diversity to prevent echo chambers
+    \item \textbf{Fake News Detection}: Using engagement patterns and content analysis to identify misinformation
+    \item \textbf{Editorial Control}: Maintaining editorial priorities alongside algorithmic recommendations
+    \item \textbf{Breakthrough Discovery}: Introducing users to new topics and perspectives beyond their established interests
+    \item \textbf{Real-time Adaptation}: Responding to breaking news and rapidly evolving trending topics
+    \item \textbf{Serendipity}: Surprising users with unexpected but valuable content
 \end{itemize}
+
+\subsubsection{Industry Applications and Case Studies}
+
+Major news platforms have developed sophisticated recommendation systems:
+
+\textbf{Microsoft News:} Leverages the MIND dataset infrastructure in production, employing transformer-based models with personalized attention for billions of daily recommendations across global markets.
+
+\textbf{Google News:} Combines collaborative filtering with content-based methods, using BERT-based models for semantic understanding and user interest modeling at scale.
+
+\textbf{Apple News:} Focuses on editorial curation enhanced by algorithmic personalization, balancing human judgment with implicit feedback signals to maintain content quality.
+
+\textbf{Yahoo News:} Pioneered early work in news recommendation, with continued focus on user engagement prediction and contextual bandits for real-time optimization.
 
 \subsubsection{Social News Platforms}
 
-Reddit and similar platforms use community feedback:
+Reddit and similar platforms use community feedback for news curation:
 
 \begin{itemize}
-    \item \textbf{Implicit Signals}: Upvote timing, comment engagement, subreddit subscriptions
-    \item \textbf{Explicit Signals}: Direct feedback, moderator actions, community guidelines
-    \item \textbf{Social Dynamics}: Influence propagation through social networks
+    \item \textbf{Implicit Signals}: Upvote timing, comment engagement, subreddit subscriptions, crosspost patterns
+    \item \textbf{Explicit Signals}: Direct voting feedback, moderator actions, community guidelines enforcement
+    \item \textbf{Social Dynamics}: Influence propagation through social networks, viral content identification
+    \item \textbf{Community Intelligence}: Leveraging collective wisdom for content quality assessment
+\end{itemize}
+
+\subsubsection{Future Directions in News Recommendation}
+
+Emerging research directions include:
+
+\begin{itemize}
+    \item \textbf{Multimodal Integration:} Incorporating images, videos, and audio in news understanding
+    \item \textbf{Cross-lingual Recommendation:} Enabling news discovery across language barriers
+    \item \textbf{Fact-Checking Integration:} Automated verification as a recommendation signal
+    \item \textbf{Longitudinal Interest Modeling:} Understanding how news interests evolve over time
+    \item \textbf{Contextual Adaptation:} Location, time-of-day, and device-aware recommendations
+    \item \textbf{Explainable News Recommendation:} Transparent reasoning for editorial trust
 \end{itemize}
 
 \subsection{Social Media and Networking}

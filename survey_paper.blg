@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: survey_paper.aux
 The style file: acm.bst
 Database file #1: references.bib
-You've used 78 entries,
+You've used 86 entries,
             2253 wiz_defined-function locations,
-            945 strings with 20455 characters,
-and the built_in function-call counts, 32211 in all, are:
-= -- 3120
-> -- 1791
+            983 strings with 21968 characters,
+and the built_in function-call counts, 36128 in all, are:
+= -- 3508
+> -- 1977
 < -- 0
-+ -- 737
-- -- 654
-* -- 2655
-:= -- 5144
-add.period$ -- 234
-call.type$ -- 78
-change.case$ -- 557
++ -- 814
+- -- 722
+* -- 2950
+:= -- 5716
+add.period$ -- 258
+call.type$ -- 86
+change.case$ -- 616
 chr.to.int$ -- 0
-cite$ -- 78
-duplicate$ -- 1036
-empty$ -- 2356
-format.name$ -- 654
-if$ -- 6638
+cite$ -- 86
+duplicate$ -- 1193
+empty$ -- 2660
+format.name$ -- 722
+if$ -- 7491
 int.to.chr$ -- 0
-int.to.str$ -- 78
-missing$ -- 79
-newline$ -- 393
-num.names$ -- 156
-pop$ -- 546
+int.to.str$ -- 86
+missing$ -- 87
+newline$ -- 433
+num.names$ -- 172
+pop$ -- 618
 preamble$ -- 1
-purify$ -- 480
+purify$ -- 531
 quote$ -- 0
-skip$ -- 728
+skip$ -- 854
 stack$ -- 0
-substring$ -- 2207
-swap$ -- 326
+substring$ -- 2513
+swap$ -- 392
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 310
+type$ -- 342
 warning$ -- 0
-while$ -- 312
-width$ -- 80
-write$ -- 783
+while$ -- 348
+width$ -- 88
+write$ -- 864

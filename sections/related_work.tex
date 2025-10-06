@@ -9,41 +9,41 @@ This section establishes the theoretical foundations for understanding feedback 
     % Timeline axis
     \draw[thick, ->] (0,0) -- (14,0) node[right] {Time};
     
-    % Year markers
-    \draw (1,0) -- (1,-0.2) node[below, font=\small] {1995};
-    \draw (2,0) -- (2,-0.2) node[below, font=\small] {2000};
-    \draw (4,0) -- (4,-0.2) node[below, font=\small] {2005};
-    \draw (6,0) -- (6,-0.2) node[below, font=\small] {2010};
-    \draw (8,0) -- (8,-0.2) node[below, font=\small] {2015};
-    \draw (10,0) -- (10,-0.2) node[below, font=\small] {2020};
-    \draw (12,0) -- (12,-0.2) node[below, font=\small] {2025};
+    % Year markers - FIXED POSITIONING
+    \draw (1,0) -- (1,-0.1) node[below, font=\tiny, yshift=-2pt] {1995};
+    \draw (2,0) -- (2,-0.1) node[below, font=\tiny, yshift=-2pt] {2000};
+    \draw (4,0) -- (4,-0.1) node[below, font=\tiny, yshift=-2pt] {2005};
+    \draw (6,0) -- (6,-0.1) node[below, font=\tiny, yshift=-2pt] {2010};
+    \draw (8,0) -- (8,-0.1) node[below, font=\tiny, yshift=-2pt] {2015};
+    \draw (10,0) -- (10,-0.1) node[below, font=\tiny, yshift=-2pt] {2020};
+    \draw (12,0) -- (12,-0.1) node[below, font=\tiny, yshift=-2pt] {2025};
     
-    % Era backgrounds
-    \fill[blue!10] (1,-0.5) rectangle (4,3.5);
-    \fill[red!10] (4,-0.5) rectangle (8,3.5);
-    \fill[green!10] (8,-0.5) rectangle (12,3.5);
+    % Era backgrounds - ADJUSTED FOR BETTER POSITIONING
+    \fill[blue!10] (1,-0.3) rectangle (4,3.5);
+    \fill[red!10] (4,-0.3) rectangle (8,3.5);
+    \fill[green!10] (8,-0.3) rectangle (12,3.5);
     
-    % Era labels
+    % Era annotations
     \node[font=\small\bfseries] at (2.5,3.2) {Explicit Era};
     \node[font=\small\bfseries] at (6,3.2) {Implicit Revolution};
     \node[font=\small\bfseries] at (10,3.2) {Deep Learning \& Hybrid};
     
-    % Milestones
-    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (1.5,2.5) {GroupLens\\1994};
-    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (3,1.5) {Content-Based\\Filtering};
-    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (4.5,2.8) {Netflix Prize\\2006};
-    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (5.5,1.8) {Hu et al.\\Implicit CF};
+    % Milestones - IMPROVED VERTICAL SPACING
+    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (1.5,2.6) {GroupLens\\1994};
+    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (3,1.4) {Content-Based\\Filtering};
+    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (4.5,3.0) {Netflix Prize\\2006};
+    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (5.5,2.0) {Hu et al.\\Implicit CF};
     \node[rectangle, draw, fill=white, align=center, font=\tiny] at (6.5,0.8) {BPR\\2009};
-    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (8.5,2.5) {Neural CF\\2015};
-    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (9.5,1.5) {Attention\\Mechanisms};
+    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (8.5,2.6) {Neural CF\\2015};
+    \node[rectangle, draw, fill=white, align=center, font=\tiny] at (9.5,1.4) {Attention\\Mechanisms};
     \node[rectangle, draw, fill=white, align=center, font=\tiny] at (10.5,0.8) {Graph Neural\\Networks};
     \node[rectangle, draw, fill=white, align=center, font=\tiny] at (11.5,2.2) {Transformer-based\\Recommenders};
     
     % Connecting lines
-    \draw[dashed] (1.5,2.5) -- (1.5,0);
-    \draw[dashed] (4.5,2.8) -- (4.5,0);
-    \draw[dashed] (5.5,1.8) -- (5.5,0);
-    \draw[dashed] (8.5,2.5) -- (8.5,0);
+    \draw[dashed] (1.5,2.6) -- (1.5,0);
+    \draw[dashed] (4.5,3.0) -- (4.5,0);
+    \draw[dashed] (5.5,2.0) -- (5.5,0);
+    \draw[dashed] (8.5,2.6) -- (8.5,0);
     \draw[dashed] (11.5,2.2) -- (11.5,0);
     
 \end{tikzpicture}
@@ -56,10 +56,10 @@ Figure~\ref{fig:evolution_timeline} illustrates the historical evolution of reco
 
 \begin{figure*}[ht]
 \centering
-\begin{tikzpicture}[scale=1.0, transform shape]
+\begin{tikzpicture}[scale=0.85, transform shape]
     % Axes
     \draw[thick, ->] (0,0) -- (14,0) node[right] {\textbf{Feedback Type}};
-    \draw[thick, ->] (0,0) -- (0,10) node[above] {\textbf{Model Complexity}};
+    \draw[thick, ->] (0,0) -- (0,11) node[above] {\textbf{Model Complexity}};
     
     % Axis labels
     \node[below] at (2,-0.3) {Explicit Only};
@@ -97,40 +97,40 @@ Figure~\ref{fig:evolution_timeline} illustrates the historical evolution of reco
     \node[circle, draw, fill=blue!70, minimum size=1.3cm, align=center, font=\tiny] (ncf) at (3.5,7.5) {NCF};
     \node[circle, draw, fill=blue!70, minimum size=1.2cm, align=center, font=\tiny] (autorec) at (2,8.5) {AutoRec};
     
-    % Deep Learning - Hybrid (Complex)
-    \node[circle, draw, fill=purple!60, minimum size=1.6cm, align=center, font=\tiny] (deepfm) at (7,7.5) {DeepFM};
-    \node[circle, draw, fill=purple!60, minimum size=1.5cm, align=center, font=\tiny] (widened) at (6,8.5) {Wide\\\&Deep};
-    \node[circle, draw, fill=purple!60, minimum size=1.4cm, align=center, font=\tiny] (xdeepfm) at (8,8.8) {xDeepFM};
+    % Deep Learning - Hybrid (Complex) - ADJUSTED POSITIONS
+    \node[circle, draw, fill=purple!60, minimum size=1.5cm, align=center, font=\tiny] (deepfm) at (7,7.2) {DeepFM};
+    \node[circle, draw, fill=purple!60, minimum size=1.1cm, align=center, font=\tiny] (widened) at (5.5,8.8) {Wide\\\&Deep};
+    \node[circle, draw, fill=purple!60, minimum size=1.1cm, align=center, font=\tiny] (xdeepfm) at (8.5,8.5) {xDeepFM};
     
-    % Deep Learning - Implicit (Complex)
-    \node[circle, draw, fill=red!70, minimum size=1.7cm, align=center, font=\tiny] (lightgcn) at (11.5,7.8) {LightGCN};
-    \node[circle, draw, fill=red!70, minimum size=1.4cm, align=center, font=\tiny] (ngcf) at (10,8.5) {NGCF};
-    \node[circle, draw, fill=red!60, minimum size=1.2cm, align=center, font=\tiny] (pinsage) at (12.5,8.5) {PinSage};
+    % Deep Learning - Implicit (Complex) - ADJUSTED POSITIONS
+    \node[circle, draw, fill=red!70, minimum size=1.6cm, align=center, font=\tiny] (lightgcn) at (11.8,7.5) {LightGCN};
+    \node[circle, draw, fill=red!70, minimum size=1.3cm, align=center, font=\tiny] (ngcf) at (10.2,8.2) {NGCF};
+    \node[circle, draw, fill=red!60, minimum size=1.1cm, align=center, font=\tiny] (pinsage) at (12.8,8.8) {PinSage};
     
-    % Sequential Models (Hybrid, Complex)
-    \node[circle, draw, fill=green!60, minimum size=1.3cm, align=center, font=\tiny] (sasrec) at (8.5,9.2) {SASRec};
-    \node[circle, draw, fill=green!60, minimum size=1.3cm, align=center, font=\tiny] (bert4rec) at (7.5,9.5) {BERT4Rec};
-    \node[circle, draw, fill=green!50, minimum size=1.1cm, align=center, font=\tiny] (gru4rec) at (9.5,8.7) {GRU4Rec};
+    % Sequential Models (Hybrid, Complex) - ADJUSTED POSITIONS
+    \node[circle, draw, fill=green!60, minimum size=1.1cm, align=center, font=\tiny] (sasrec) at (9.2,9.8) {SASRec};
+    \node[circle, draw, fill=green!60, minimum size=1.1cm, align=center, font=\tiny] (bert4rec) at (7.2,10.2) {BERT4Rec};
+    \node[circle, draw, fill=green!50, minimum size=1cm, align=center, font=\tiny] (gru4rec) at (10.5,9.2) {GRU4Rec};
     
-    % Emerging Methods (Various positions, Complex)
-    \node[circle, draw, fill=orange!50, minimum size=1.2cm, align=center, font=\tiny] (llm) at (5,9.5) {LLM\\-Rec};
-    \node[circle, draw, fill=orange!50, minimum size=1cm, align=center, font=\tiny] (diff) at (10.5,9.3) {Diff-Rec};
+    % Emerging Methods (Various positions, Complex) - ADJUSTED POSITIONS
+    \node[circle, draw, fill=orange!50, minimum size=1.1cm, align=center, font=\tiny] (llm) at (4.5,10) {LLM\\-Rec};
+    \node[circle, draw, fill=orange!50, minimum size=1cm, align=center, font=\tiny] (diff) at (11.2,10) {Diff-Rec};
     
-    % Legend
-    \node[font=\small\bfseries] at (13.5,9.5) {Legend:};
-    \node[circle, draw, fill=blue!50, minimum size=0.4cm] at (13,9) {};
-    \node[right, font=\tiny] at (13.2,9) {Explicit};
-    \node[circle, draw, fill=red!50, minimum size=0.4cm] at (13,8.5) {};
-    \node[right, font=\tiny] at (13.2,8.5) {Implicit};
-    \node[circle, draw, fill=purple!50, minimum size=0.4cm] at (13,8) {};
-    \node[right, font=\tiny] at (13.2,8) {Hybrid};
-    \node[circle, draw, fill=green!50, minimum size=0.4cm] at (13,7.5) {};
-    \node[right, font=\tiny] at (13.2,7.5) {Sequential};
-    \node[circle, draw, fill=orange!50, minimum size=0.4cm] at (13,7) {};
-    \node[right, font=\tiny] at (13.2,7) {Emerging};
+    % Legend - ADJUSTED POSITION FOR SCALE 0.85
+    \node[font=\small\bfseries] at (12.8,9.5) {Legend:};
+    \node[circle, draw, fill=blue!50, minimum size=0.4cm] at (12.3,9) {};
+    \node[right, font=\tiny] at (12.5,9) {Explicit};
+    \node[circle, draw, fill=red!50, minimum size=0.4cm] at (12.3,8.5) {};
+    \node[right, font=\tiny] at (12.5,8.5) {Implicit};
+    \node[circle, draw, fill=purple!50, minimum size=0.4cm] at (12.3,8) {};
+    \node[right, font=\tiny] at (12.5,8) {Hybrid};
+    \node[circle, draw, fill=green!50, minimum size=0.4cm] at (12.3,7.5) {};
+    \node[right, font=\tiny] at (12.5,7.5) {Sequential};
+    \node[circle, draw, fill=orange!50, minimum size=0.4cm] at (12.3,7) {};
+    \node[right, font=\tiny] at (12.5,7) {Emerging};
     
-    % Size indication
-    \node[font=\tiny, align=center] at (13.5,6.3) {Bubble size\\$\propto$ Impact};
+    % Size indication - ADJUSTED POSITION
+    \node[font=\tiny, align=center] at (12.8,6.3) {Bubble size\\$\propto$ Impact};
     
     % Era annotations
     \node[font=\small, blue!70] at (2.5,0.8) {\textbf{Classical Era}};
@@ -138,7 +138,7 @@ Figure~\ref{fig:evolution_timeline} illustrates the historical evolution of reco
     \node[font=\small, red!70] at (11.5,0.8) {\textbf{Implicit Era}};
     
 \end{tikzpicture}
-\caption{Research Landscape Map: Recommendation Algorithms by Feedback Type and Complexity. Bubble size indicates research impact and adoption. The map reveals three distinct research trajectories: classical explicit methods (left), implicit-focused approaches (right), and modern hybrid systems (center), with increasing complexity from bottom to top.}
+\caption{Research Landscape Map: Recommendation Algorithms by Feedback Type and Complexity. Bubble size indicates research impact. Three trajectories: classical explicit methods (left), implicit approaches (right), hybrid systems (center).}
 \Description{A two-dimensional scatter plot showing recommender system algorithms positioned by feedback type (explicit to implicit on x-axis) and model complexity (simple to complex on y-axis). Algorithms are shown as circles with varying sizes indicating their research impact. The plot shows clustering of classical methods in the explicit-simple region, implicit methods in the implicit-moderate region, and modern deep learning approaches in the hybrid-complex region.}
 \label{fig:research_landscape}
 \end{figure*}
@@ -370,7 +370,15 @@ Purchase prediction dominates e-commerce recommendations. Amazon's system levera
 Content discovery in video and music streaming relies heavily on implicit feedback. Netflix's system combines viewing behaviors with explicit ratings~\cite{gomez2015netflix}, while Spotify's algorithmic playlists leverage listening patterns~\cite{van2013deep}. Completion prediction and abandonment analysis are critical.
 
 \paragraph{Social Media and News}
-Feed optimization balances engagement with quality. Facebook and Twitter systems process massive implicit signals~\cite{wu2020mind}, while news recommenders must balance timeliness, diversity, and credibility. Echo chamber mitigation remains a significant challenge.
+Feed optimization balances engagement with quality. Facebook and Twitter systems process massive implicit signals from user interactions, while news recommenders must balance timeliness, diversity, and credibility. 
+
+News recommendation has emerged as a critical research area with unique challenges stemming from content velocity, diversity requirements, and societal impact. The development of large-scale datasets like MIND~\cite{wu2020mind_news} (Microsoft News Dataset with 160K+ articles and 15M+ interactions) and Adressa~\cite{gulla2017adressa} (Norwegian news portal data with detailed engagement metrics) has accelerated research by providing standardized benchmarks for reproducible evaluation.
+
+Neural approaches have proven particularly effective for news recommendation. NPA~\cite{wu2019npa} introduced personalized attention mechanisms that adapt to individual user preferences, while multi-view learning methods~\cite{wu2019neural} effectively integrate textual content, categorical information, and entity knowledge. Recent work leverages pre-trained language models~\cite{wu2021empowering} for enhanced semantic understanding and applies graph neural networks~\cite{hu2020graph} to model complex user-article interaction patterns.
+
+News recommendation relies almost exclusively on implicit feedback (clicks, dwell time, scrolling) due to the low engagement threshold for explicit rating collection. This creates unique challenges: clickbait detection, position bias mitigation, and distinguishing genuine interest from curiosity clicks. Causal inference methods~\cite{qi2021causal} have emerged to address these biases, employing inverse propensity scoring and counterfactual reasoning to improve recommendation quality.
+
+Echo chamber mitigation remains a significant challenge, as over-personalization risks creating filter bubbles that limit exposure to diverse viewpoints. Balancing engagement optimization with diversity, serendipity, and editorial priorities requires multi-objective frameworks that go beyond simple click-through rate maximization.
 
 \paragraph{Education and Learning}
 Personalized learning paths require careful feedback integration. Systems adapt content difficulty based on performance~\cite{tang2019towards}, while peer assessment and progress tracking provide additional signals.
